@@ -28,7 +28,7 @@ public class MainTarget_CS_EF : MonoBehaviour
 
             yield return null;
 
-            print(lifetime);
+            //print(lifetime);
         }
 
 

@@ -20,6 +20,15 @@ public class Projectile_CS_EF : MonoBehaviour
         StartCoroutine("Lifetime");
     }
 
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.transform.gameObject.name == "Special_EF")
+        {
+            print("Adding Time");
+            //LevelManager_CS_EF.IncreaseTimer.
+        }
+    }
+
     IEnumerator Lifetime()
     {
         yield return new WaitForSeconds(lifetime);

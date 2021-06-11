@@ -24,6 +24,7 @@ public class LevelManager_CS_EF : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
+            print("pressed1");
             IncreaseTimer();
         }
     }
@@ -42,7 +43,7 @@ public class LevelManager_CS_EF : MonoBehaviour
         }
     }
 
-    void IncreaseTimer()
+    public void IncreaseTimer()
     {
         currentTime = currentTime + increaseAmount;
         timerText.text = "Timer: " + currentTime;
