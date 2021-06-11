@@ -7,7 +7,7 @@ public class Projectile_CS_EF : MonoBehaviour
     Rigidbody rb;
     public int forwardSpeed = 2000;
     public int upwardSpeed = 200;
-    public float lifetime = 2.5f;
+    public float lifetime = 7.5f;
 
 
     // Start is called before the first frame update
@@ -15,18 +15,31 @@ public class Projectile_CS_EF : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
 
+        // rb.AddForce(transform.forward * forwardSpeed);
+
+        StartCoroutine("MoveForward");
+    }
+
+    public void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.GetComponent<MainTarget_CS_EF>())
+        {
+            LevelManager_CS_EF.instance.TargetHit();
+        }
+
+        if (other.gameObject.GetComponent<TimeTarget_CS_EF>())
+        {
+            LevelManager_CS_EF.instance.IncreaseTimer();
+        }
+    }
+
+    IEnumerator MoveForward()
+    {
+        yield return new WaitForSeconds(1.0f);
+
         rb.AddForce(transform.forward * forwardSpeed);
 
         StartCoroutine("Lifetime");
-    }
-
-    public void OnTriggerEnter(Collider other)
-    {
-        if(other.transform.gameObject.name == "Special_EF")
-        {
-            print("Adding Time");
-            //LevelManager_CS_EF.IncreaseTimer.
-        }
     }
 
     IEnumerator Lifetime()

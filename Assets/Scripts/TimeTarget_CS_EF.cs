@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainTarget_CS_EF : MonoBehaviour
+public class TimeTarget_CS_EF : MonoBehaviour
 {
     // VARIABLES
-        // isActive = checks whether the target is currently active - not used for anything at the moment
-        // lifetime = how long the target will remain inactive
-        // GameObject target = the mesh of the whole target to be moved
+    // isActive = checks whether the target is currently active - not used for anything at the moment
+    // lifetime = how long the target will remain inactive
+    // GameObject target = the mesh of the whole target to be moved
 
     public bool isActive = true;
     public float lifetime = 5.0f;
