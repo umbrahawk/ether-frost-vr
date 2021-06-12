@@ -47,9 +47,15 @@ public class MainTarget_CS_EF : MonoBehaviour
 
     public void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.GetComponent<Projectile_CS_EF>())
+        if (other.gameObject.GetComponent<Projectile_CS_EF>() && isActive == true)
         {
+            //this will only work if the isActive is set to true/When the target is up.
+            LevelManager_CS_EF.instance.TargetHit();
             StartCoroutine("ToggleTarget");
+        }
+        else
+        {
+            print("You hit a non active main Target!");
         }
     }
 }

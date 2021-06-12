@@ -20,7 +20,7 @@ public class Projectile_CS_EF : MonoBehaviour
         StartCoroutine("MoveForward");
     }
 
-    public void OnCollisionEnter(Collision other)
+    /*public void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.GetComponent<MainTarget_CS_EF>())
         {
@@ -32,6 +32,7 @@ public class Projectile_CS_EF : MonoBehaviour
             LevelManager_CS_EF.instance.IncreaseTimer();
         }
     }
+    */
 
     IEnumerator MoveForward()
     {
