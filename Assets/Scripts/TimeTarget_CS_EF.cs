@@ -5,9 +5,9 @@ using UnityEngine;
 public class TimeTarget_CS_EF : MonoBehaviour
 {
     // VARIABLES
-    // isActive = checks whether the target is currently active - not used for anything at the moment
-    // lifetime = how long the target will remain inactive
-    // GameObject target = the mesh of the whole target to be moved
+        // isActive = checks whether the target is currently active - not used for anything at the moment
+        // lifetime = how long the target will remain inactive
+        // GameObject target = the mesh of the whole target to be moved
 
     public bool isActive = true;
     public float lifetime = 5.0f;
@@ -18,32 +18,52 @@ public class TimeTarget_CS_EF : MonoBehaviour
         // Deactives the target
         isActive = false;
 
-        // Moves the target down on a 90 degree angle
-        target.transform.Rotate(0, 0, 90);
+        // How many times the loop will run below
+        float t = 10;
 
-        float t = lifetime;
-
-        // Timer to wait for the targets cooldown
+        // This loop will push the target down into the lying down position
         while (t > 0)
         {
-            t -= Time.deltaTime;
+            target.transform.rotation = Quaternion.Euler(9f, 0, 0 * Time.deltaTime) * target.transform.rotation;
+
+            t--;
+
+            yield return null;
+        }
+        
+        // Variable for how long they will be deactived
+        float timer = lifetime;
+
+        // Timer to wait for the targets cooldown
+        while (timer > 0)
+        {
+            timer -= Time.deltaTime;
 
             yield return null;
         }
 
         // Reactivates the target
-        ActivateTarget();
+        StartCoroutine("ReactivateTarget");
     }
 
-    public void ActivateTarget()
+    // IEnumerator to return the target back to their regular position
+    IEnumerator ReactivateTarget()
     {
-        // Reactivates the target
+        // How many times the loop will run below
+        float t = 10;
+
+        // This loop will bring the target back up to the standing position
+        while (t > 0)
+        {
+            print(t);
+            target.transform.rotation = Quaternion.Euler(-9f, 0, 0 * Time.deltaTime) * target.transform.rotation;
+            t--;
+            yield return null;
+        }
+
+        // This will reactive the target, allowing for it to be hit again 
         isActive = true;
-
-        // Moves the target back up so it can be fired on again
-        target.transform.Rotate(0, 0, -90);
     }
-
 
     public void OnCollisionEnter(Collision other)
     {
@@ -52,7 +72,6 @@ public class TimeTarget_CS_EF : MonoBehaviour
             if (other.gameObject.GetComponent<Projectile_CS_EF>() && isActive == true)
             {
                 //this will only work if the isActive is set to true/When the target is up.
-                LevelManager_CS_EF.instance.TargetHit();
                 LevelManager_CS_EF.instance.IncreaseTimer();
                 StartCoroutine("ToggleTarget");
             }
