@@ -15,6 +15,9 @@ public class LevelManager_CS_EF : MonoBehaviour
     public int targetsHit = 0;
     public Text targetText;
 
+    [Header("GUN STATS")]
+    public Text gunText;
+
     public static LevelManager_CS_EF instance;
 
     void Start()
@@ -23,6 +26,8 @@ public class LevelManager_CS_EF : MonoBehaviour
         {
             instance = this;
         }
+
+        gunText.gameObject.SetActive(false);
 
         currentTime = startingTime;
 
@@ -70,5 +75,20 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         currentTime = currentTime + increaseAmount;
         timerText.text = "Timer: " + currentTime;
+    }
+
+    public void LevelGun()
+    {
+        //starts coroutine to enable gun text for a few seconds.
+        StartCoroutine("GunPrompt");
+    }
+
+    IEnumerator GunPrompt()
+    {
+        gunText.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(5);
+
+        gunText.gameObject.SetActive(false); ;
     }
 }
