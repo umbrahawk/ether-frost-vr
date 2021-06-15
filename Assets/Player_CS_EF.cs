@@ -8,12 +8,10 @@ public class Player_CS_EF : MonoBehaviour
         // spawnPoint = where the projectile gets spawned from
         // projectile = the projectile prefab that gets spawned in
         // canFire = checks whether the player can fire
-        // fireRate = how fast the player does fire
 
     public Transform spawnPoint;
     public GameObject projectile;
     public bool canFire = true;
-    public float fireRate = 0.5f;
 
     
     void Update()
@@ -36,7 +34,7 @@ public class Player_CS_EF : MonoBehaviour
         Instantiate(projectile, spawnPoint);
 
         // Waits for the fire rate
-        yield return new WaitForSeconds(fireRate);
+        yield return new WaitForSeconds(LevelManager_CS_EF.instance.fireRate);
 
         // Flickers whether the player can fire
         canFire = true;

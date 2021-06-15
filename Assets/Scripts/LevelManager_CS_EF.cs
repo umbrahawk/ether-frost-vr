@@ -15,6 +15,9 @@ public class LevelManager_CS_EF : MonoBehaviour
     public int targetsHit = 0;
     public Text targetText;
 
+    [Header("PLAYER STATS")]
+    public float fireRate = 0.5f;
+
     [Header("GUN STATS")]
     public Text gunText;
 
@@ -66,6 +69,12 @@ public class LevelManager_CS_EF : MonoBehaviour
         // This will increase the score and the UI
         targetsHit++;
         targetText.text = "Targets Hit: " + targetsHit;
+
+        // Checks if the required targets have been hit before upgrading the controller
+        if (targetsHit == 10)
+        {
+            UpgradeCannon();
+        }
     }
 
     public void IncreaseTimer()
@@ -83,12 +92,21 @@ public class LevelManager_CS_EF : MonoBehaviour
         StartCoroutine("GunPrompt");
     }
 
+    // Increase the firerate depending on targets hit
+    public void UpgradeCannon()
+    {
+        if (targetsHit == 10)
+        {
+            fireRate = .2f;
+        }
+    }
+
     IEnumerator GunPrompt()
     {
         gunText.gameObject.SetActive(true);
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(5.0f);
 
-        gunText.gameObject.SetActive(false); ;
+        gunText.gameObject.SetActive(false);
     }
 }
