@@ -17,7 +17,7 @@ public class Projectile_CS_EF : MonoBehaviour
 
         // rb.AddForce(transform.forward * forwardSpeed);
 
-        StartCoroutine("MoveForward");
+        MoveForward();
     }
 
     /*public void OnCollisionEnter(Collision other)
@@ -34,10 +34,8 @@ public class Projectile_CS_EF : MonoBehaviour
     }
     */
 
-    IEnumerator MoveForward()
+    void MoveForward()
     {
-        yield return new WaitForSeconds(1.0f);
-
         rb.AddForce(transform.forward * forwardSpeed);
 
         StartCoroutine("Lifetime");

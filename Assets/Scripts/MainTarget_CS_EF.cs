@@ -11,6 +11,7 @@ public class MainTarget_CS_EF : MonoBehaviour
 
     public bool isActive = true;
     public float lifetime = 5.0f;
+    public int speed = 1;
     public GameObject target;
 
     IEnumerator ToggleTarget()
@@ -19,17 +20,21 @@ public class MainTarget_CS_EF : MonoBehaviour
         isActive = false;
 
         // How many times the loop will run below
-        float t = 10;
+        float t = 0;
 
         // This loop will push the target down into the lying down position
-        while (t > 0)
+        while (t < 1)
         {
-            target.transform.rotation = Quaternion.Euler(9f, 0, 0 * Time.deltaTime) * target.transform.rotation;
+            // Will move the object based on the t variable
+            target.transform.localEulerAngles = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(0, 0, 90), t);
 
-            t--;
+            t += Time.deltaTime * speed;
 
             yield return null;
         }
+
+        // Puts the target in the correct location
+        target.transform.localEulerAngles = new Vector3(0, 0, 90);
 
         // Variable for how long they will be deactived
         float timer = lifetime;
@@ -50,15 +55,18 @@ public class MainTarget_CS_EF : MonoBehaviour
     IEnumerator ReactivateTarget()
     {
         // How many times the loop will run below
-        float t = 10;
+        float t = 0;
 
         // This loop will bring the target back up to the standing position
-        while (t > 0)
+        while (t < 1)
         {
-            target.transform.rotation = Quaternion.Euler(-9f, 0, 0 * Time.deltaTime) * target.transform.rotation;
-            t--;
+            target.transform.localEulerAngles = Vector3.Lerp(new Vector3(0, 0, 90), new Vector3(0, 0, 0), t);
+
+            t += Time.deltaTime * speed;
             yield return null;
         }
+
+        target.transform.localEulerAngles = new Vector3(0, 0, 0);
 
         // This will reactive the target, allowing for it to be hit again 
         isActive = true;
