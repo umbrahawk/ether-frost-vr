@@ -13,15 +13,16 @@ public class Player_CS_EF : MonoBehaviour
     public GameObject projectile;
     public bool canFire = true;
 
-    
+
     void Update()
     {
         // Checks if the player has input the fire button and can fire
-        if (Input.GetKeyDown("1") && canFire)
+        if (Input.GetButtonDown("Fire1") && canFire)
         {
             // Runs the coroutine
             StartCoroutine("FireProjectile");
         }
+
     }
 
     // Coroutine to fire the projectile

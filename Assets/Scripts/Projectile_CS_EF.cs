@@ -36,6 +36,7 @@ public class Projectile_CS_EF : MonoBehaviour
 
     void MoveForward()
     {
+        // This will shoot forward regardless of where the target is looking, needs to be fixed
         rb.AddForce(transform.forward * forwardSpeed);
 
         StartCoroutine("Lifetime");
