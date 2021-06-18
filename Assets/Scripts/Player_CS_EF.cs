@@ -13,8 +13,17 @@ public class Player_CS_EF : MonoBehaviour
     public GameObject projectile;
     public bool canFire = true;
 
+    public static Player_CS_EF instance;
 
-    void Update()
+    void Start()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+
+        void Update()
     {
         // Checks if the player has input the fire button and can fire
         if (Input.GetButtonDown("Fire1") && canFire)

@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class LevelManager_CS_EF : MonoBehaviour
 {
     [Header("TIMER STATS")]
-    public int startingTime = 150;
-    public int currentTime;
-    public int increaseAmount = 5;
+    public float startingTime = 150;
+    public float currentTime;
+    public float increaseAmount = 5;
     public Text timerText;
 
     [Header("TARGET STATS")]
@@ -21,6 +21,10 @@ public class LevelManager_CS_EF : MonoBehaviour
     [Header("GUN STATS")]
     public Text gunText;
 
+    [Header("MISC")]
+    public Text gameOverText;
+
+
     public static LevelManager_CS_EF instance;
 
     void Start()
@@ -31,6 +35,7 @@ public class LevelManager_CS_EF : MonoBehaviour
         }
 
         gunText.gameObject.SetActive(false);
+        gameOverText.gameObject.SetActive(false);
 
         currentTime = startingTime;
 
@@ -51,16 +56,38 @@ public class LevelManager_CS_EF : MonoBehaviour
 
     IEnumerator UpdateTimer()
     {
-        int t = currentTime;
-
-        while (t > 0)
+        while (currentTime >= 1)
         {
+            if(currentTime == 40)
+            {
+                //insert event code here
+                //like gun upgrade, fireworks etc.
+                print("Event 1 Ping, Gun Upgrading!");
+            }
+
+            if (currentTime == 20)
+            {
+                //insert event code here
+                //like gun upgrade, fireworks etc.
+                print("Event 2 Ping, GO CRAZY!!!");
+            }
             yield return new WaitForSeconds(1);
 
             currentTime--;
-
-            timerText.text = "Timer: " + currentTime;
+            //Converting timer to minutes and seconds
+            float minutes = Mathf.FloorToInt(currentTime / 60);
+            float seconds = Mathf.FloorToInt(currentTime % 60);
+            
+            //print(currentTime);
+            
+            //Making a String Format.
+            timerText.text = string.Format("Time Remaining: " +" {0:00}:{1:00}", minutes, seconds);
         }
+        //Once timer hits 0, player can no longer shoot
+        Player_CS_EF.instance.canFire = false;
+        gameOverText.gameObject.SetActive(true);
+        print("Finish!");
+
     }
 
     public void TargetHit()
