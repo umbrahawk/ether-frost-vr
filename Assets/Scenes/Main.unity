@@ -1469,7 +1469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e990d8229262834884c389a5c31b1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTime: 10
+  startingTime: 60
   currentTime: 0
   increaseAmount: 5
   timerText: {fileID: 1448642994}
