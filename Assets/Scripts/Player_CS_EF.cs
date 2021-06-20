@@ -26,7 +26,7 @@ public class Player_CS_EF : MonoBehaviour
         void Update()
     {
         // Checks if the player has input the fire button and can fire
-        if (Input.GetButtonDown("Fire1") && canFire)
+        if (Input.GetButton("Fire1") && canFire)
         {
             // Runs the coroutine
             StartCoroutine("FireProjectile");
@@ -44,7 +44,7 @@ public class Player_CS_EF : MonoBehaviour
         Instantiate(projectile, spawnPoint);
 
         // Waits for the fire rate
-        yield return new WaitForSeconds(LevelManager_CS_EF.instance.fireRate);
+        yield return new WaitForSeconds(LevelManager_CS_EF.instance.attackSpeed);
 
         // Flickers whether the player can fire
         canFire = true;

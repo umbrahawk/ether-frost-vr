@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class LevelManager_CS_EF : MonoBehaviour
 {
+    // VARIABLES
+        // startingTime =
+        // currentTime =
+        // increaseAmount =
+
     [Header("TIMER STATS")]
     public float startingTime = 150;
     public float currentTime;
@@ -16,10 +21,14 @@ public class LevelManager_CS_EF : MonoBehaviour
     public Text targetText;
 
     [Header("PLAYER STATS")]
+    public bool rapidFireActive = false;
+    public float attackSpeed;
     public float fireRate = 0.5f;
+    public float rapidFireRate = 0.2f;
 
     [Header("GUN STATS")]
     public Text gunText;
+
 
     [Header("MISC")]
     public Text gameOverText;
@@ -34,12 +43,14 @@ public class LevelManager_CS_EF : MonoBehaviour
             instance = this;
         }
 
+        attackSpeed = fireRate;
+
         gunText.gameObject.SetActive(false);
         gameOverText.gameObject.SetActive(false);
 
         currentTime = startingTime;
 
-        timerText.text = "Timer: " + currentTime;
+        timerText.text = "Time Remaining: " + currentTime;
 
         targetText.text = "Targets Hit: " + targetsHit;
 
@@ -48,10 +59,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
-        {
-            IncreaseTimer();
-        }
+
     }
 
     IEnumerator UpdateTimer()
@@ -110,7 +118,6 @@ public class LevelManager_CS_EF : MonoBehaviour
         // This will increase the time and the UI
 
         currentTime = currentTime + increaseAmount;
-        timerText.text = "Timer: " + currentTime;
     }
 
     public void LevelGun()
@@ -122,9 +129,31 @@ public class LevelManager_CS_EF : MonoBehaviour
     // Increase the firerate depending on targets hit
     public void UpgradeCannon()
     {
+        // Make the gun turn into rapid fire
         if (targetsHit == 10)
         {
-            fireRate = .2f;
+            attackSpeed = rapidFireRate;
+        }
+
+        // Make the gun turn into the three burst gun
+        // Remove the rapid fire temporarily (may decide against this idea after some play testing)
+        // Add new mesh
+        if (targetsHit == 30)
+        {
+            attackSpeed = fireRate;
+        }
+
+        // Make the gun turn into the five/star burst gun
+        // Add new mesh
+        if (targetsHit == 50)
+        {
+
+        }
+
+        // Make the gun turn into a nine burst gun with rapid fire
+        // Add new mesh
+        if (targetsHit == 70)
+        {
         }
     }
 
