@@ -41,7 +41,7 @@ public class Player_CS_EF : MonoBehaviour
         canFire = false;
 
         // Spawns in the projectile
-        Instantiate(projectile, spawnPoint);
+        Instantiate(projectile, spawnPoint.position, spawnPoint.rotation);
 
         // Waits for the fire rate
         yield return new WaitForSeconds(LevelManager_CS_EF.instance.attackSpeed);
