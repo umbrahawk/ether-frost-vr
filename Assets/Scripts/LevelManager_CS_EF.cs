@@ -24,7 +24,13 @@ public class LevelManager_CS_EF : MonoBehaviour
     public bool rapidFireActive = false;
     public float attackSpeed;
     public float fireRate = 0.5f;
-    public float rapidFireRate = 0.2f;
+    public float rapidFireRate = 0.25f;
+
+    [Header("CANNON STATS")]
+    public bool basicCannon = true;
+    public bool threeBurstActive = false;
+    public bool fiveBurstActive = false;
+    public bool nineBurstActive = false;
 
     [Header("GUN STATS")]
     public Text gunText;
@@ -43,7 +49,7 @@ public class LevelManager_CS_EF : MonoBehaviour
             instance = this;
         }
 
-        attackSpeed = fireRate;
+        ResetCannon();
 
         gunText.gameObject.SetActive(false);
 
@@ -59,10 +65,6 @@ public class LevelManager_CS_EF : MonoBehaviour
         StartCoroutine("UpdateTimer");
     }
 
-    void Update()
-    {
-
-    }
 
     IEnumerator UpdateTimer()
     {
@@ -112,6 +114,16 @@ public class LevelManager_CS_EF : MonoBehaviour
         {
             UpgradeCannon();
         }
+
+        if (targetsHit == 20)
+        {
+            UpgradeCannon();
+        }
+
+        if (targetsHit == 40)
+        {
+            UpgradeCannon();
+        }
     }
 
     public void IncreaseTimer()
@@ -140,23 +152,36 @@ public class LevelManager_CS_EF : MonoBehaviour
         // Make the gun turn into the three burst gun
         // Remove the rapid fire temporarily (may decide against this idea after some play testing)
         // Add new mesh
-        if (targetsHit == 30)
+        if (targetsHit == 20)
         {
-            attackSpeed = fireRate;
+            basicCannon = false;
+            threeBurstActive = true;
         }
 
         // Make the gun turn into the five/star burst gun
         // Add new mesh
         if (targetsHit == 50)
         {
-
+            threeBurstActive = false;
+            fiveBurstActive = true;
         }
 
         // Make the gun turn into a nine burst gun with rapid fire
         // Add new mesh
         if (targetsHit == 70)
         {
+
         }
+    }
+
+    void ResetCannon()
+    {
+        attackSpeed = fireRate;
+        basicCannon = true;
+        threeBurstActive = false;
+        fiveBurstActive = false;
+        nineBurstActive = false;
+
     }
 
     IEnumerator GunPrompt()

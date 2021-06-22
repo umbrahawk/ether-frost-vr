@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: EtherFrost
-  productName: Project Carnival
+  productName: Carnival
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -160,7 +160,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.EtherFrost.Project Carnival
+    Android: com.EtherFrost.Carnival
     Standalone: com.EtherFrost.Project Carnival
   buildNumber: {}
   AndroidBundleVersionCode: 1
@@ -713,7 +713,7 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
-    Build: 1
+    Build: 0
     UNet: 1
   luminIcon:
     m_Name: 
@@ -734,10 +734,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 734fea03-bc96-4627-9715-d7d017ca77f7
+  cloudProjectId: f34bfea3-9963-4bee-85f5-20ea9c7e2819
   framebufferDepthMemorylessMode: 0
-  projectName: Liminal
-  organizationId: liminal-vr
+  projectName: Project Carnival
+  organizationId: scottalecmiller1995
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

@@ -5,11 +5,18 @@ using UnityEngine;
 public class Player_CS_EF : MonoBehaviour
 {
     // VARIABLES:
-        // spawnPoint = where the projectile gets spawned from
-        // projectile = the projectile prefab that gets spawned in
-        // canFire = checks whether the player can fire
+    // spawnPoint = where the projectile gets spawned from
+    // projectile = the projectile prefab that gets spawned in
+    // canFire = checks whether the player can fire
 
-    public Transform spawnPoint;
+    [Header("PROJECTILE SPAWN POINTS")]
+    public Transform mainSpawnPoint;
+    public Transform extraSpawnPoint1;
+    public Transform extraSpawnPoint2;
+    public Transform extraSpawnPoint3;
+    public Transform extraSpawnPoint4;
+
+
     public GameObject projectile;
     public bool canFire = true;
 
@@ -23,15 +30,28 @@ public class Player_CS_EF : MonoBehaviour
         }
     }
 
-        void Update()
+    void Update()
     {
         // Checks if the player has input the fire button and can fire
         if (Input.GetButton("Fire1") && canFire)
         {
-            // Runs the coroutine
-            StartCoroutine("FireProjectile");
-        }
+            // Checks if the basic cannon is unlocked
+            if (LevelManager_CS_EF.instance.basicCannon == true)
+            {
+                // Runs the coroutine
+                StartCoroutine("FireProjectile");
+            }
 
+            if (LevelManager_CS_EF.instance.threeBurstActive == true)
+            {
+                StartCoroutine("FireThreeBurst");
+            }
+
+            if (LevelManager_CS_EF.instance.fiveBurstActive == true)
+            {
+                StartCoroutine("FireFiveBurst");
+            }
+        }
     }
 
     // Coroutine to fire the projectile
@@ -41,7 +61,7 @@ public class Player_CS_EF : MonoBehaviour
         canFire = false;
 
         // Spawns in the projectile
-        Instantiate(projectile, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(projectile, mainSpawnPoint.position, mainSpawnPoint.rotation);
 
         // Waits for the fire rate
         yield return new WaitForSeconds(LevelManager_CS_EF.instance.attackSpeed);
@@ -50,4 +70,39 @@ public class Player_CS_EF : MonoBehaviour
         canFire = true;
     }
 
+    IEnumerator FireThreeBurst()
+    {
+        // Flickers whether the player can fire
+        canFire = false;
+
+        // Spawns in the projectile
+        Instantiate(projectile, mainSpawnPoint.position, mainSpawnPoint.rotation);
+        Instantiate(projectile, extraSpawnPoint1.position, extraSpawnPoint1.rotation);
+        Instantiate(projectile, extraSpawnPoint2.position, extraSpawnPoint2.rotation);
+
+        // Waits for the fire rate
+        yield return new WaitForSeconds(LevelManager_CS_EF.instance.attackSpeed);
+
+        // Flickers whether the player can fire
+        canFire = true;
+    }
+
+    IEnumerator FireFiveBurst()
+    {
+        // Flickers whether the player can fire
+        canFire = false;
+
+        // Spawns in the projectile
+        Instantiate(projectile, mainSpawnPoint.position, mainSpawnPoint.rotation);
+        Instantiate(projectile, extraSpawnPoint1.position, extraSpawnPoint1.rotation);
+        Instantiate(projectile, extraSpawnPoint2.position, extraSpawnPoint2.rotation);
+        Instantiate(projectile, extraSpawnPoint3.position, extraSpawnPoint3.rotation);
+        Instantiate(projectile, extraSpawnPoint4.position, extraSpawnPoint4.rotation);
+
+        // Waits for the fire rate
+        yield return new WaitForSeconds(LevelManager_CS_EF.instance.attackSpeed);
+
+        // Flickers whether the player can fire
+        canFire = true;
+    }
 }
