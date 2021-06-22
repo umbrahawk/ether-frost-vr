@@ -31,7 +31,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
 
     [Header("MISC")]
-    public Text gameOverText;
+    // public Text gameOverText;
 
 
     public static LevelManager_CS_EF instance;
@@ -46,7 +46,9 @@ public class LevelManager_CS_EF : MonoBehaviour
         attackSpeed = fireRate;
 
         gunText.gameObject.SetActive(false);
-        gameOverText.gameObject.SetActive(false);
+
+        // This will need to be fixed 
+        //gameOverText.gameObject.SetActive(false);
 
         currentTime = startingTime;
 
@@ -93,7 +95,7 @@ public class LevelManager_CS_EF : MonoBehaviour
         }
         //Once timer hits 0, player can no longer shoot
         Player_CS_EF.instance.canFire = false;
-        gameOverText.gameObject.SetActive(true);
+        // gameOverText.gameObject.SetActive(true);
         print("Finish!");
 
     }
