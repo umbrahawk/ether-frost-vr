@@ -160,7 +160,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         // Make the gun turn into the five/star burst gun
         // Add new mesh
-        if (targetsHit == 50)
+        if (targetsHit == 40)
         {
             threeBurstActive = false;
             fiveBurstActive = true;
