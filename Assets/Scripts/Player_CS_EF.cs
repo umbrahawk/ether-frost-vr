@@ -5,9 +5,9 @@ using UnityEngine;
 public class Player_CS_EF : MonoBehaviour
 {
     // VARIABLES:
-    // spawnPoint = where the projectile gets spawned from
-    // projectile = the projectile prefab that gets spawned in
-    // canFire = checks whether the player can fire
+        // spawnPoint = where the projectile gets spawned from
+        // projectile = the projectile prefab that gets spawned in
+        // canFire = checks whether the player can fire
 
     [Header("PROJECTILE SPAWN POINTS")]
     public Transform mainSpawnPoint;
@@ -16,7 +16,10 @@ public class Player_CS_EF : MonoBehaviour
     public Transform extraSpawnPoint3;
     public Transform extraSpawnPoint4;
 
+    [Header("CANNON AUDIO")]
+    public AudioClip basicCannonSFX;
 
+    [Header("PLAYER STATS")]
     public GameObject projectile;
     public bool canFire = true;
 
@@ -60,6 +63,9 @@ public class Player_CS_EF : MonoBehaviour
         // Flickers whether the player can fire
         canFire = false;
 
+        // Plays an audio sound of the cannon
+        AudioSource.PlayClipAtPoint(basicCannonSFX, new Vector3(0, 0, 0));
+
         // Spawns in the projectile
         Instantiate(projectile, mainSpawnPoint.position, mainSpawnPoint.rotation);
 
@@ -74,6 +80,9 @@ public class Player_CS_EF : MonoBehaviour
     {
         // Flickers whether the player can fire
         canFire = false;
+
+        // Plays an audio sound of the cannon
+        AudioSource.PlayClipAtPoint(basicCannonSFX, new Vector3(0, 0, 0));
 
         // Spawns in the projectile
         Instantiate(projectile, mainSpawnPoint.position, mainSpawnPoint.rotation);
