@@ -7,7 +7,7 @@ public class Projectile_CS_EF : MonoBehaviour
     Rigidbody rb;
     public int forwardSpeed = 2000;
     public int upwardSpeed = 200;
-    public float lifetime = 7.5f;
+    public float lifetime = 2.5f;
 
 
     // Start is called before the first frame update
@@ -47,5 +47,18 @@ public class Projectile_CS_EF : MonoBehaviour
         yield return new WaitForSeconds(lifetime);
 
         Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.GetComponent<MainTarget_CS_EF>())
+        {
+            Destroy(gameObject);
+        }
+
+        if (other.gameObject.GetComponent<TimeTarget_CS_EF>())
+        {
+            Destroy(gameObject);
+        }
     }
 }
