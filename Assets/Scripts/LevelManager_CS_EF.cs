@@ -35,6 +35,9 @@ public class LevelManager_CS_EF : MonoBehaviour
     [Header("GUN STATS")]
     public Text gunText;
 
+    [Header("SOUND EFFECTS")]
+    public AudioClip gameBackgroundMusic;
+
 
     [Header("MISC")]
     // public Text gameOverText;
@@ -44,6 +47,8 @@ public class LevelManager_CS_EF : MonoBehaviour
 
     void Start()
     {
+        AudioSource.PlayClipAtPoint(gameBackgroundMusic, new Vector3(0, 0, 0));
+
         if (instance == null)
         {
             instance = this;

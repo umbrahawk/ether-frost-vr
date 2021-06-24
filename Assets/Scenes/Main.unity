@@ -1844,6 +1844,7 @@ MonoBehaviour:
   fiveBurstActive: 0
   nineBurstActive: 0
   gunText: {fileID: 1753785825}
+  gameBackgroundMusic: {fileID: 8300000, guid: 3ce02814723aff34e809c6a1def60fad, type: 3}
 --- !u!4 &1068086126
 Transform:
   m_ObjectHideFlags: 0
