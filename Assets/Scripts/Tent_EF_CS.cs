@@ -2,28 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotatingTable_CS_EF : MonoBehaviour
+public class Tent_EF_CS : MonoBehaviour
 {
+
     public GameObject starterTargetOne;
     public GameObject starterTargetTwo;
+    public GameObject starterTargetThree;
     public GameObject extraTargetOne;
     public GameObject extraTargetTwo;
+    public GameObject extraTargetThree;
 
-    public float rotateSpeed;
+    // Start is called before the first frame update
     void Start()
     {
         StarterTargets();
         ExtraTargets();
     }
 
+    // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, rotateSpeed, 0);
-
-        if (LevelManager_CS_EF.instance.targetsHit == 10)
+        if (LevelManager_CS_EF.instance.targetsHit == 20)
         {
             ActivateExtraTargets();
-            rotateSpeed = 1.0f;
         }
     }
 
@@ -31,16 +32,19 @@ public class RotatingTable_CS_EF : MonoBehaviour
     {
         starterTargetOne.SetActive(true);
         starterTargetTwo.SetActive(true);
+        starterTargetThree.SetActive(true);
     }
     public void ExtraTargets()
     {
         extraTargetOne.SetActive(false);
         extraTargetTwo.SetActive(false);
+        extraTargetThree.SetActive(false);
     }
 
     public void ActivateExtraTargets()
     {
         extraTargetOne.SetActive(true);
         extraTargetTwo.SetActive(true);
+        extraTargetThree.SetActive(true);
     }
 }

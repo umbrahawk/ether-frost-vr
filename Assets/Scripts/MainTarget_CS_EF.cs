@@ -14,6 +14,12 @@ public class MainTarget_CS_EF : MonoBehaviour
     public int speed = 1;
     public GameObject target;
 
+    // For targets which start inactive
+    void OnEnable()
+    {
+        ReactivateTarget();
+    }
+
     IEnumerator ToggleTarget()
     {
         // Deactives the target
