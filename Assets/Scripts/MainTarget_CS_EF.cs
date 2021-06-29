@@ -14,14 +14,20 @@ public class MainTarget_CS_EF : MonoBehaviour
     public int speed = 1;
     public GameObject target;
 
+    // Where the sound should play from
+    public AudioClip hitSoundSFX;
+
     // For targets which start inactive
     void OnEnable()
     {
         ReactivateTarget();
     }
-
+    
     IEnumerator ToggleTarget()
     {
+        // 
+        AudioSource.PlayClipAtPoint(hitSoundSFX, new Vector3(0, 0, 0));
+
         // Deactives the target
         isActive = false;
 
