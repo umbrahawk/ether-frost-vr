@@ -130,6 +130,11 @@ public class LevelManager_CS_EF : MonoBehaviour
             UpgradeCannon();
         }
 
+        if (targetsHit == 30)
+        {
+            UpgradeCannon();
+        }
+
         if (targetsHit == 40)
         {
             UpgradeCannon();
@@ -172,7 +177,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         // Make the gun turn into the five/star burst gun
         // Add new mesh
-        if (targetsHit == 40)
+        if (targetsHit == 30)
         {
             threeBurstActive = false;
             fiveBurstActive = true;
@@ -182,9 +187,10 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         // Make the gun turn into a nine burst gun with rapid fire
         // Add new mesh
-        if (targetsHit == 70)
+        if (targetsHit == 40)
         {
-
+            fiveBurstActive = false;
+            nineBurstActive = true;
         }
     }
 
