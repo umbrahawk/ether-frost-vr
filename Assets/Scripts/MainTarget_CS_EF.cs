@@ -13,6 +13,11 @@ public class MainTarget_CS_EF : MonoBehaviour
     public float lifetime = 5.0f;
     public int speed = 1;
     public GameObject target;
+    
+    public bool movingTaget = false;
+    public float pivotTime = 2.0f;
+    public float moveSpeed = 3.0f;
+    public bool dirRight = true;
 
     // Where the sound should play from
     public AudioClip hitSoundSFX;
@@ -22,7 +27,36 @@ public class MainTarget_CS_EF : MonoBehaviour
     {
         ReactivateTarget();
     }
-    
+
+    void Start()
+    {
+
+        // Checks if the target is a moving ring or not
+        if (movingTaget == true)
+        {
+            StartCoroutine("MoveRing");
+        }
+    }
+
+    void Update()
+    {
+        // Will move the ring relative to its current location
+        if (movingTaget == true)
+        {
+            if (dirRight)
+                transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+            else if (!dirRight)
+                transform.Translate(Vector3.back * moveSpeed * Time.deltaTime);
+        }
+
+        // Checks if the game has 20 seconds left
+        if (LevelManager_CS_EF.instance.currentTime == 20)
+        {
+            // Makes it so all the targets come back up very quickly
+            lifetime = 1.0f;
+        }
+    }
+
     IEnumerator ToggleTarget()
     {
         // 
@@ -84,6 +118,23 @@ public class MainTarget_CS_EF : MonoBehaviour
         isActive = true;
     }
 
+    // Helps move the rings relative to time elapsed
+    IEnumerator MoveRing()
+    {
+        if (dirRight)
+        {
+            yield return new WaitForSeconds(pivotTime);
+        }
+
+        else if (!dirRight)
+        {
+            yield return new WaitForSeconds(pivotTime);
+        }
+
+        dirRight = !dirRight;
+
+        StartCoroutine("MoveRing");
+    }
 
     public void OnCollisionEnter(Collision other)
     {

@@ -10,15 +10,15 @@ public class Player_CS_EF : MonoBehaviour
     // canFire = checks whether the player can fire
 
     [Header("PROJECTILE SPAWN POINTS")]
-    public Transform mainSpawnPoint;
-    public Transform extraSpawnPoint1;
-    public Transform extraSpawnPoint2;
-    public Transform extraSpawnPoint3;
-    public Transform extraSpawnPoint4;
-    public Transform extraSpawnPoint5;
-    public Transform extraSpawnPoint6;
-    public Transform extraSpawnPoint7;
-    public Transform extraSpawnPoint8;
+    public Transform rightMainSpawnPoint;
+    public Transform rightExtraSpawnPoint1;
+    public Transform rightExtraSpawnPoint2;
+    public Transform rightExtraSpawnPoint3;
+    public Transform rightExtraSpawnPoint4;
+    public Transform rightExtraSpawnPoint5;
+    public Transform rightExtraSpawnPoint6;
+    public Transform rightExtraSpawnPoint7;
+    public Transform rightExtraSpawnPoint8;
 
     [Header("CANNON AUDIO")]
     public AudioClip basicCannonSFX;
@@ -76,7 +76,7 @@ public class Player_CS_EF : MonoBehaviour
         AudioSource.PlayClipAtPoint(basicCannonSFX, new Vector3(0, 0, 0));
 
         // Spawns in the projectile
-        Instantiate(projectile, mainSpawnPoint.position, mainSpawnPoint.rotation);
+        Instantiate(projectile, rightMainSpawnPoint.position, rightMainSpawnPoint.rotation);
 
         // Waits for the fire rate
         yield return new WaitForSeconds(LevelManager_CS_EF.instance.attackSpeed);
@@ -94,9 +94,9 @@ public class Player_CS_EF : MonoBehaviour
         AudioSource.PlayClipAtPoint(basicCannonSFX, new Vector3(0, 0, 0));
 
         // Spawns in the projectile
-        Instantiate(projectile, mainSpawnPoint.position, mainSpawnPoint.rotation);
-        Instantiate(projectile, extraSpawnPoint1.position, extraSpawnPoint1.rotation);
-        Instantiate(projectile, extraSpawnPoint2.position, extraSpawnPoint2.rotation);
+        Instantiate(projectile, rightMainSpawnPoint.position, rightMainSpawnPoint.rotation);
+        Instantiate(projectile, rightExtraSpawnPoint1.position, rightExtraSpawnPoint1.rotation);
+        Instantiate(projectile, rightExtraSpawnPoint2.position, rightExtraSpawnPoint2.rotation);
 
         // Waits for the fire rate
         yield return new WaitForSeconds(LevelManager_CS_EF.instance.attackSpeed);
@@ -111,11 +111,11 @@ public class Player_CS_EF : MonoBehaviour
         canFire = false;
 
         // Spawns in the projectile
-        Instantiate(projectile, mainSpawnPoint.position, mainSpawnPoint.rotation);
-        Instantiate(projectile, extraSpawnPoint1.position, extraSpawnPoint1.rotation);
-        Instantiate(projectile, extraSpawnPoint2.position, extraSpawnPoint2.rotation);
-        Instantiate(projectile, extraSpawnPoint3.position, extraSpawnPoint3.rotation);
-        Instantiate(projectile, extraSpawnPoint4.position, extraSpawnPoint4.rotation);
+        Instantiate(projectile, rightMainSpawnPoint.position, rightMainSpawnPoint.rotation);
+        Instantiate(projectile, rightExtraSpawnPoint1.position, rightExtraSpawnPoint1.rotation);
+        Instantiate(projectile, rightExtraSpawnPoint2.position, rightExtraSpawnPoint2.rotation);
+        Instantiate(projectile, rightExtraSpawnPoint3.position, rightExtraSpawnPoint3.rotation);
+        Instantiate(projectile, rightExtraSpawnPoint4.position, rightExtraSpawnPoint4.rotation);
 
         // Waits for the fire rate
         yield return new WaitForSeconds(LevelManager_CS_EF.instance.attackSpeed);
@@ -130,15 +130,15 @@ public class Player_CS_EF : MonoBehaviour
         canFire = false;
 
         // Spawns in the projectile
-        Instantiate(projectile, mainSpawnPoint.position, mainSpawnPoint.rotation);
-        Instantiate(projectile, extraSpawnPoint1.position, extraSpawnPoint1.rotation);
-        Instantiate(projectile, extraSpawnPoint2.position, extraSpawnPoint2.rotation);
-        Instantiate(projectile, extraSpawnPoint3.position, extraSpawnPoint3.rotation);
-        Instantiate(projectile, extraSpawnPoint4.position, extraSpawnPoint4.rotation);
-        Instantiate(projectile, extraSpawnPoint5.position, extraSpawnPoint5.rotation);
-        Instantiate(projectile, extraSpawnPoint6.position, extraSpawnPoint6.rotation);
-        Instantiate(projectile, extraSpawnPoint7.position, extraSpawnPoint7.rotation);
-        Instantiate(projectile, extraSpawnPoint8.position, extraSpawnPoint8.rotation);
+        Instantiate(projectile, rightMainSpawnPoint.position, rightMainSpawnPoint.rotation);
+        Instantiate(projectile, rightExtraSpawnPoint1.position, rightExtraSpawnPoint1.rotation);
+        Instantiate(projectile, rightExtraSpawnPoint2.position, rightExtraSpawnPoint2.rotation);
+        Instantiate(projectile, rightExtraSpawnPoint3.position, rightExtraSpawnPoint3.rotation);
+        Instantiate(projectile, rightExtraSpawnPoint4.position, rightExtraSpawnPoint4.rotation);
+        Instantiate(projectile, rightExtraSpawnPoint5.position, rightExtraSpawnPoint5.rotation);
+        Instantiate(projectile, rightExtraSpawnPoint6.position, rightExtraSpawnPoint6.rotation);
+        Instantiate(projectile, rightExtraSpawnPoint7.position, rightExtraSpawnPoint7.rotation);
+        Instantiate(projectile, rightExtraSpawnPoint8.position, rightExtraSpawnPoint8.rotation);
 
         // Waits for the fire rate
         yield return new WaitForSeconds(LevelManager_CS_EF.instance.attackSpeed);
