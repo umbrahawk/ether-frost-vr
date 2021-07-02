@@ -80,11 +80,13 @@ public class LevelManager_CS_EF : MonoBehaviour
     {
         while (currentTime >= 1)
         {
-            if(currentTime == 40)
+
+
+            if(currentTime == 55)
             {
-                //insert event code here
+                //CartWayPoint_CS_EF.instance.cartActive = true;
                 //like gun upgrade, fireworks etc.
-                print("Event 1 Ping, Gun Upgrading!");
+                print("Event 1 Ping, Cart Moving!");
             }
 
             if (currentTime == 20)
