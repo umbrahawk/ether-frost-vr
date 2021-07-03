@@ -32,6 +32,8 @@ public class CartWayPoint_CS_EF : MonoBehaviour
         //only activates last vehicle.
         //if (cartActive == true)
         //{
+        if (LevelManager_CS_EF.instance.targetsHit >= 25)
+        {
             // check if we have somewere to walk
             if (currentWayPoint < this.wayPointList.Length)
             {
@@ -39,6 +41,7 @@ public class CartWayPoint_CS_EF : MonoBehaviour
                     targetWayPoint = wayPointList[currentWayPoint];
                 walk();
             }
+        }
         //}
     }
 

@@ -108,7 +108,8 @@ public class LevelManager_CS_EF : MonoBehaviour
             timerText.text = string.Format("Time Remaining: " +" {0:00}:{1:00}", minutes, seconds);
         }
         //Once timer hits 0, player can no longer shoot
-        Player_CS_EF.instance.canFire = false;
+        Player_CS_EF.instance.rightCanFire = false;
+
         // gameOverText.gameObject.SetActive(true);
         print("Finish!");
 

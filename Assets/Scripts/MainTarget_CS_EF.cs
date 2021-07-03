@@ -19,6 +19,9 @@ public class MainTarget_CS_EF : MonoBehaviour
     public float moveSpeed = 3.0f;
     public bool dirRight = true;
 
+    [Header("CONNECTIONS")]
+    ParticleSystem sparks;    
+
     // Where the sound should play from
     public AudioClip hitSoundSFX;
 
@@ -30,6 +33,7 @@ public class MainTarget_CS_EF : MonoBehaviour
 
     void Start()
     {
+        sparks = GetComponent<ParticleSystem>();
 
         // Checks if the target is a moving ring or not
         if (movingTaget == true)
@@ -142,6 +146,9 @@ public class MainTarget_CS_EF : MonoBehaviour
         {
             //this will only work if the isActive is set to true/When the target is up.
             LevelManager_CS_EF.instance.TargetHit();
+
+            sparks.Play();
+
             StartCoroutine("ToggleTarget");
         }
         else

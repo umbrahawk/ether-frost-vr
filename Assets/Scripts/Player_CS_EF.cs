@@ -9,7 +9,7 @@ public class Player_CS_EF : MonoBehaviour
     // projectile = the projectile prefab that gets spawned in
     // canFire = checks whether the player can fire
 
-    [Header("PROJECTILE SPAWN POINTS")]
+    [Header("PROJECTILE SPAWN POINTS // Right")]
     public Transform rightMainSpawnPoint;
     public Transform rightExtraSpawnPoint1;
     public Transform rightExtraSpawnPoint2;
@@ -20,12 +20,24 @@ public class Player_CS_EF : MonoBehaviour
     public Transform rightExtraSpawnPoint7;
     public Transform rightExtraSpawnPoint8;
 
+    [Header("PROJECTILE SPAWN POINTS // Left")]
+    public Transform leftMainSpawnPoint;
+    public Transform leftExtraSpawnPoint1;
+    public Transform leftExtraSpawnPoint2;
+    public Transform leftExtraSpawnPoint3;
+    public Transform leftExtraSpawnPoint4;
+    public Transform leftExtraSpawnPoint5;
+    public Transform leftExtraSpawnPoint6;
+    public Transform leftExtraSpawnPoint7;
+    public Transform leftExtraSpawnPoint8;
+
     [Header("CANNON AUDIO")]
     public AudioClip basicCannonSFX;
 
     [Header("PLAYER STATS")]
     public GameObject projectile;
-    public bool canFire = true;
+    public bool rightCanFire = true;
+    public bool leftCanFire = true;
 
     public static Player_CS_EF instance;
 
@@ -40,37 +52,63 @@ public class Player_CS_EF : MonoBehaviour
     void Update()
     {
         // Checks if the player has input the fire button and can fire
-        if (Input.GetButton("Fire1") && canFire)
+        if (Input.GetButton("Fire1") && rightCanFire)
         {
             // Checks if the basic cannon is unlocked
             if (LevelManager_CS_EF.instance.basicCannon == true)
             {
                 // Runs the coroutine
-                StartCoroutine("FireProjectile");
+                StartCoroutine("FireRightProjectile");
             }
 
             if (LevelManager_CS_EF.instance.threeBurstActive == true)
             {
-                StartCoroutine("FireThreeBurst");
+                StartCoroutine("FireRightThreeBurst");
             }
 
             if (LevelManager_CS_EF.instance.fiveBurstActive == true)
             {
-                StartCoroutine("FireFiveBurst");
+                StartCoroutine("FireRightFiveBurst");
             }
 
             if (LevelManager_CS_EF.instance.nineBurstActive == true)
             {
-                StartCoroutine("FireNineBurst");
+                StartCoroutine("FireRightNineBurst");
+            }
+        }
+
+        // Checks if the player has input the fire button and can fire
+        if (Input.GetButton("Fire1") && leftCanFire)
+        {
+            // Checks if the basic cannon is unlocked
+            if (LevelManager_CS_EF.instance.basicCannon == true)
+            {
+                // Runs the coroutine
+                StartCoroutine("FireLeftProjectile");
+            }
+
+            if (LevelManager_CS_EF.instance.threeBurstActive == true)
+            {
+                StartCoroutine("FireLeftThreeBurst");
+            }
+
+            if (LevelManager_CS_EF.instance.fiveBurstActive == true)
+            {
+                StartCoroutine("FireLeftFiveBurst");
+            }
+
+            if (LevelManager_CS_EF.instance.nineBurstActive == true)
+            {
+                StartCoroutine("FireLeftNineBurst");
             }
         }
     }
 
     // Coroutine to fire the projectile
-    IEnumerator FireProjectile()
+    IEnumerator FireRightProjectile()
     {
         // Flickers whether the player can fire
-        canFire = false;
+        rightCanFire = false;
 
         // Plays an audio sound of the cannon
         AudioSource.PlayClipAtPoint(basicCannonSFX, new Vector3(0, 0, 0));
@@ -82,13 +120,32 @@ public class Player_CS_EF : MonoBehaviour
         yield return new WaitForSeconds(LevelManager_CS_EF.instance.attackSpeed);
 
         // Flickers whether the player can fire
-        canFire = true;
+        rightCanFire = true;
     }
-
-    IEnumerator FireThreeBurst()
+    
+    // Coroutine to fire the projectile
+    IEnumerator FireLeftProjectile()
     {
         // Flickers whether the player can fire
-        canFire = false;
+        leftCanFire = false;
+
+        // Plays an audio sound of the cannon
+        AudioSource.PlayClipAtPoint(basicCannonSFX, new Vector3(0, 0, 0));
+
+        // Spawns in the projectile
+        Instantiate(projectile, leftMainSpawnPoint.position, leftMainSpawnPoint.rotation);
+
+        // Waits for the fire rate
+        yield return new WaitForSeconds(LevelManager_CS_EF.instance.attackSpeed);
+
+        // Flickers whether the player can fire
+        leftCanFire = true;
+    }
+
+    IEnumerator FireRightThreeBurst()
+    {
+        // Flickers whether the player can fire
+        rightCanFire = false;
 
         // Plays an audio sound of the cannon
         AudioSource.PlayClipAtPoint(basicCannonSFX, new Vector3(0, 0, 0));
@@ -102,13 +159,32 @@ public class Player_CS_EF : MonoBehaviour
         yield return new WaitForSeconds(LevelManager_CS_EF.instance.attackSpeed);
 
         // Flickers whether the player can fire
-        canFire = true;
+        rightCanFire = true;
     }
-
-    IEnumerator FireFiveBurst()
+    IEnumerator FireLeftThreeBurst()
     {
         // Flickers whether the player can fire
-        canFire = false;
+        leftCanFire = false;
+
+        // Plays an audio sound of the cannon
+        AudioSource.PlayClipAtPoint(basicCannonSFX, new Vector3(0, 0, 0));
+
+        // Spawns in the projectile
+        Instantiate(projectile, leftMainSpawnPoint.position, leftMainSpawnPoint.rotation);
+        Instantiate(projectile, leftExtraSpawnPoint1.position, leftExtraSpawnPoint1.rotation);
+        Instantiate(projectile, leftExtraSpawnPoint2.position, leftExtraSpawnPoint2.rotation);
+
+        // Waits for the fire rate
+        yield return new WaitForSeconds(LevelManager_CS_EF.instance.attackSpeed);
+
+        // Flickers whether the player can fire
+        leftCanFire = true;
+    }
+
+    IEnumerator FireRightFiveBurst()
+    {
+        // Flickers whether the player can fire
+        rightCanFire = false;
 
         // Spawns in the projectile
         Instantiate(projectile, rightMainSpawnPoint.position, rightMainSpawnPoint.rotation);
@@ -121,13 +197,31 @@ public class Player_CS_EF : MonoBehaviour
         yield return new WaitForSeconds(LevelManager_CS_EF.instance.attackSpeed);
 
         // Flickers whether the player can fire
-        canFire = true;
+        rightCanFire = true;
+    }
+    IEnumerator FireLeftFiveBurst()
+    {
+        // Flickers whether the player can fire
+        leftCanFire = false;
+
+        // Spawns in the projectile
+        Instantiate(projectile, leftMainSpawnPoint.position, leftMainSpawnPoint.rotation);
+        Instantiate(projectile, leftExtraSpawnPoint1.position, leftExtraSpawnPoint1.rotation);
+        Instantiate(projectile, leftExtraSpawnPoint2.position, leftExtraSpawnPoint2.rotation);
+        Instantiate(projectile, leftExtraSpawnPoint3.position, leftExtraSpawnPoint3.rotation);
+        Instantiate(projectile, leftExtraSpawnPoint4.position, leftExtraSpawnPoint4.rotation);
+
+        // Waits for the fire rate
+        yield return new WaitForSeconds(LevelManager_CS_EF.instance.attackSpeed);
+
+        // Flickers whether the player can fire
+        leftCanFire = true;
     }
 
-    IEnumerator FireNineBurst()
-    { 
+    IEnumerator FireRightNineBurst()
+    {
         // Flickers whether the player can fire
-        canFire = false;
+        rightCanFire = false;
 
         // Spawns in the projectile
         Instantiate(projectile, rightMainSpawnPoint.position, rightMainSpawnPoint.rotation);
@@ -144,6 +238,28 @@ public class Player_CS_EF : MonoBehaviour
         yield return new WaitForSeconds(LevelManager_CS_EF.instance.attackSpeed);
 
         // Flickers whether the player can fire
-        canFire = true;
+        rightCanFire = true;
+    }
+    IEnumerator FireLeftNineBurst()
+    {
+        // Flickers whether the player can fire
+        leftCanFire = false;
+
+        // Spawns in the projectile
+        Instantiate(projectile, rightMainSpawnPoint.position, rightMainSpawnPoint.rotation);
+        Instantiate(projectile, leftExtraSpawnPoint1.position, leftExtraSpawnPoint1.rotation);
+        Instantiate(projectile, leftExtraSpawnPoint2.position, leftExtraSpawnPoint2.rotation);
+        Instantiate(projectile, leftExtraSpawnPoint3.position, leftExtraSpawnPoint3.rotation);
+        Instantiate(projectile, leftExtraSpawnPoint4.position, leftExtraSpawnPoint4.rotation);
+        Instantiate(projectile, leftExtraSpawnPoint5.position, leftExtraSpawnPoint5.rotation);
+        Instantiate(projectile, leftExtraSpawnPoint6.position, leftExtraSpawnPoint6.rotation);
+        Instantiate(projectile, leftExtraSpawnPoint7.position, leftExtraSpawnPoint7.rotation);
+        Instantiate(projectile, leftExtraSpawnPoint8.position, leftExtraSpawnPoint8.rotation);
+
+        // Waits for the fire rate
+        yield return new WaitForSeconds(LevelManager_CS_EF.instance.attackSpeed);
+
+        // Flickers whether the player can fire
+        leftCanFire = true;
     }
 }
