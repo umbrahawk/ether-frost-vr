@@ -82,10 +82,15 @@ public class TimeTarget_CS_EF : MonoBehaviour
         {
             if (other.gameObject.GetComponent<Projectile_CS_EF>() && isActive == true)
             {
-                //this will only work if the isActive is set to true/When the target is up.
-                LevelManager_CS_EF.instance.IncreaseTimer();
+                if (LevelManager_CS_EF.instance.gameActive == true)
+                {
+                    //this will only work if the isActive is set to true/When the target is up.
+                    LevelManager_CS_EF.instance.IncreaseTimer();
+                }
+
                 StartCoroutine("ToggleTarget");
             }
+
             else
             {
                 //if isActive is not true, then it will not add the points.

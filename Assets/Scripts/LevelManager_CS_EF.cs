@@ -6,9 +6,12 @@ using UnityEngine.UI;
 public class LevelManager_CS_EF : MonoBehaviour
 {
     // VARIABLES
-        // startingTime =
-        // currentTime =
-        // increaseAmount =
+    // startingTime =
+    // currentTime =
+    // increaseAmount =
+
+    [Header("GAME STATS")]
+    public bool gameActive = false;
 
     [Header("TIMER STATS")]
     public float startingTime = 150;
@@ -52,8 +55,6 @@ public class LevelManager_CS_EF : MonoBehaviour
 
     void Start()
     {
-        AudioSource.PlayClipAtPoint(gameBackgroundMusic, new Vector3(0, 0, 0));
-
         if (instance == null)
         {
             instance = this;
@@ -68,11 +69,9 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         currentTime = startingTime;
 
-        timerText.text = "Time Remaining: " + currentTime;
+        timerText.text = "Time Remaining: " + "2:30";
 
         targetText.text = "Targets Hit: " + targetsHit;
-
-        StartCoroutine("UpdateTimer");
     }
 
 
@@ -80,9 +79,7 @@ public class LevelManager_CS_EF : MonoBehaviour
     {
         while (currentTime >= 1)
         {
-
-
-            if(currentTime == 55)
+            if (currentTime == 55)
             {
                 //CartWayPoint_CS_EF.instance.cartActive = true;
                 //like gun upgrade, fireworks etc.
@@ -95,24 +92,24 @@ public class LevelManager_CS_EF : MonoBehaviour
                 //like gun upgrade, fireworks etc.
                 print("Event 2 Ping, GO CRAZY!!!");
             }
+
             yield return new WaitForSeconds(1);
 
             currentTime--;
             //Converting timer to minutes and seconds
             float minutes = Mathf.FloorToInt(currentTime / 60);
             float seconds = Mathf.FloorToInt(currentTime % 60);
-            
+
             //print(currentTime);
-            
+
             //Making a String Format.
-            timerText.text = string.Format("Time Remaining: " +" {0:00}:{1:00}", minutes, seconds);
+            timerText.text = string.Format("Time Remaining: " + " {0:00}:{1:00}", minutes, seconds);
         }
         //Once timer hits 0, player can no longer shoot
         Player_CS_EF.instance.rightCanFire = false;
 
         // gameOverText.gameObject.SetActive(true);
         print("Finish!");
-
     }
 
     public void TargetHit()
@@ -214,5 +211,14 @@ public class LevelManager_CS_EF : MonoBehaviour
         yield return new WaitForSeconds(5.0f);
 
         gunText.gameObject.SetActive(false);
+    }
+
+    public void BeginGame()
+    {
+        gameActive = true;
+
+        AudioSource.PlayClipAtPoint(gameBackgroundMusic, new Vector3(0, 0, 0));
+
+        StartCoroutine("UpdateTimer");
     }
 }

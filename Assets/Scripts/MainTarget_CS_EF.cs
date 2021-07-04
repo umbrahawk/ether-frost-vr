@@ -19,6 +19,8 @@ public class MainTarget_CS_EF : MonoBehaviour
     public float moveSpeed = 3.0f;
     public bool dirRight = true;
 
+    public bool startTarget = false;
+
     [Header("CONNECTIONS")]
     ParticleSystem sparks;    
 
@@ -63,11 +65,13 @@ public class MainTarget_CS_EF : MonoBehaviour
 
     IEnumerator ToggleTarget()
     {
-        // 
         AudioSource.PlayClipAtPoint(hitSoundSFX, new Vector3(0, 0, 0));
 
-        // Deactives the target
-        isActive = false;
+        if (!startTarget)
+        {
+            // Deactives the target
+            isActive = false;
+        }
 
         // How many times the loop will run below
         float t = 0;
@@ -86,19 +90,32 @@ public class MainTarget_CS_EF : MonoBehaviour
         // Puts the target in the correct location
         target.transform.localEulerAngles = new Vector3(0, 0, 90);
 
-        // Variable for how long they will be deactived
-        float timer = lifetime;
-
-        // Timer to wait for the targets cooldown
-        while (timer > 0)
+        if (!startTarget)
         {
-            timer -= Time.deltaTime;
+            // Variable for how long they will be deactived
+            float timer = lifetime;
 
-            yield return null;
+            // Timer to wait for the targets cooldown
+            while (timer > 0)
+            {
+                timer -= Time.deltaTime;
+
+                yield return null;
+            }
+
+            // Reactivates the target
+            StartCoroutine("ReactivateTarget");
         }
 
-        // Reactivates the target
-        StartCoroutine("ReactivateTarget");
+        else if (startTarget)
+        {
+            LevelManager_CS_EF.instance.BeginGame();
+
+            if (!startTarget)
+            {
+                StartCoroutine("ReactivateTarget");
+            }
+        }
     }
 
     // IEnumerator to return the target back to their regular position
@@ -144,8 +161,11 @@ public class MainTarget_CS_EF : MonoBehaviour
     {
         if (other.gameObject.GetComponent<Projectile_CS_EF>() && isActive == true)
         {
-            //this will only work if the isActive is set to true/When the target is up.
-            LevelManager_CS_EF.instance.TargetHit();
+            if (LevelManager_CS_EF.instance.gameActive)
+            {
+                // this will only work if the isActive is set to true/When the target is up.
+                LevelManager_CS_EF.instance.TargetHit();
+            }
 
             sparks.Play();
 
