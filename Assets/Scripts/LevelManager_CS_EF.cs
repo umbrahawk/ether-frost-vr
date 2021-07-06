@@ -12,6 +12,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
     [Header("GAME STATS")]
     public bool gameActive = false;
+    public int gameLevel = 0;
 
     [Header("TIMER STATS")]
     public float startingTime = 150;
@@ -128,17 +129,25 @@ public class LevelManager_CS_EF : MonoBehaviour
         if (targetsHit == 20)
         {
             UpgradeCannon();
+            IncreaseRound();
         }
 
         if (targetsHit == 30)
         {
             UpgradeCannon();
+            IncreaseRound();
         }
 
-        if (targetsHit == 40)
+        if (targetsHit == 50)
         {
             UpgradeCannon();
+            IncreaseRound();
         }
+    }
+
+    public void IncreaseRound()
+    { 
+        gameLevel++;
     }
 
     public void IncreaseTimer()
@@ -187,7 +196,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         // Make the gun turn into a nine burst gun with rapid fire
         // Add new mesh
-        if (targetsHit == 40)
+        if (targetsHit == 50)
         {
             fiveBurstActive = false;
             nineBurstActive = true;
@@ -216,6 +225,8 @@ public class LevelManager_CS_EF : MonoBehaviour
     public void BeginGame()
     {
         gameActive = true;
+
+        IncreaseRound();
 
         AudioSource.PlayClipAtPoint(gameBackgroundMusic, new Vector3(0, 0, 0));
 

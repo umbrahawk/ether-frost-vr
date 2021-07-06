@@ -510,6 +510,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6581f2f30a784f14aa2e964841d0981c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targets:
+  - {fileID: 2083175641335895858}
+  - {fileID: 2083175641247315519}
+  - {fileID: 2083175641537335013}
+  - {fileID: 888735471807949651}
+  - {fileID: 6394624184955129125}
+  - {fileID: 4126361718115753540}
   starterTargetOne: {fileID: 2083175641335895858}
   starterTargetTwo: {fileID: 2083175641247315519}
   starterTargetThree: {fileID: 2083175641537335013}

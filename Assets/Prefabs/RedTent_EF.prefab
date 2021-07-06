@@ -105,6 +105,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6581f2f30a784f14aa2e964841d0981c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targets:
+  - {fileID: 4920169709424769880}
+  - {fileID: 4920169708077182891}
+  - {fileID: 4920169709519679219}
+  - {fileID: 8142866653601435882}
+  - {fileID: 8880902296939212785}
+  - {fileID: 8229609694054052830}
   starterTargetOne: {fileID: 4920169709424769880}
   starterTargetTwo: {fileID: 4920169708077182891}
   starterTargetThree: {fileID: 4920169709519679219}

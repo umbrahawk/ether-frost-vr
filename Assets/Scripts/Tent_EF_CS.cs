@@ -4,47 +4,39 @@ using UnityEngine;
 
 public class Tent_EF_CS : MonoBehaviour
 {
-
-    public GameObject starterTargetOne;
-    public GameObject starterTargetTwo;
-    public GameObject starterTargetThree;
-    public GameObject extraTargetOne;
-    public GameObject extraTargetTwo;
-    public GameObject extraTargetThree;
+    public GameObject[] targets;
+    public bool targetsActivated = false;
 
     // Start is called before the first frame update
     void Start()
     {
         StarterTargets();
-        ExtraTargets();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (LevelManager_CS_EF.instance.targetsHit == 20)
+        if (LevelManager_CS_EF.instance.gameLevel == 2 && !targetsActivated)
         {
-            ActivateExtraTargets();
+            ActivateTargets();
         }
     }
 
     public void StarterTargets()
     {
-        starterTargetOne.SetActive(true);
-        starterTargetTwo.SetActive(true);
-        starterTargetThree.SetActive(true);
-    }
-    public void ExtraTargets()
-    {
-        extraTargetOne.SetActive(false);
-        extraTargetTwo.SetActive(false);
-        extraTargetThree.SetActive(false);
+        for (int i = 0; i < targets.Length; i++)
+        {
+            targets[i].SetActive(false);
+        }
     }
 
-    public void ActivateExtraTargets()
+    public void ActivateTargets()
     {
-        extraTargetOne.SetActive(true);
-        extraTargetTwo.SetActive(true);
-        extraTargetThree.SetActive(true);
+        targetsActivated = true;
+
+        for (int i = 0; i < targets.Length; i++)
+        {
+            targets[i].SetActive(true);
+        }
     }
 }
