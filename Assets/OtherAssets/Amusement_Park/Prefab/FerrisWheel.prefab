@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 8810865473522063063}
   - component: {fileID: 4200432686480847375}
   - component: {fileID: 6661234957130476100}
-  - component: {fileID: 671494991268820766}
+  - component: {fileID: 5806804408436328360}
+  - component: {fileID: 8545170572957525874}
+  - component: {fileID: 8033144874888126890}
   m_Layer: 0
   m_Name: cabin_ferris7
   m_TagString: Untagged
@@ -26,12 +28,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 894763672451090837}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -38.283134, y: 117.09865, z: 226.32379}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.742363, y: 45.505264, z: 0.0029144287}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 5
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4200432686480847375
 MeshFilter:
@@ -78,8 +80,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &671494991268820766
-MeshCollider:
+--- !u!65 &5806804408436328360
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88,10 +90,60 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -9218303113294467121, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 4.3466883, z: 5.75905}
+  m_Center: {x: 0.742363, y: 0.000003814698, z: -2.5725944}
+--- !u!54 &8545170572957525874
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894763672451090837}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &8033144874888126890
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894763672451090837}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.742363, y: 45.505264, z: 0.0029144287}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &1329297224330519384
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,7 +155,9 @@ GameObject:
   - component: {fileID: 1286948972278830832}
   - component: {fileID: 7798253999064984096}
   - component: {fileID: 6193429365511042673}
-  - component: {fileID: 7786667887677051600}
+  - component: {fileID: 2061308629938229859}
+  - component: {fileID: 1306711559381593423}
+  - component: {fileID: 438807179813167159}
   m_Layer: 0
   m_Name: cabin_ferris22
   m_TagString: Untagged
@@ -119,11 +173,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1329297224330519384}
   m_LocalRotation: {x: 0.38268346, y: -0, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: -38.283134, y: 39.207897, z: 194.14609}
+  m_LocalPosition: {x: -0.742363, y: -32.385487, z: -32.17479}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 20
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7798253999064984096
 MeshFilter:
@@ -170,8 +224,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7786667887677051600
-MeshCollider:
+--- !u!65 &2061308629938229859
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -180,10 +234,60 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -2179878526786545380, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 5.3754463, z: 5.3754425}
+  m_Center: {x: 0.742363, y: -2.3047009, z: 2.3046942}
+--- !u!54 &1306711559381593423
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329297224330519384}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &438807179813167159
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329297224330519384}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.742363, y: -32.385487, z: -32.17479}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &2207768418003213905
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,7 +299,9 @@ GameObject:
   - component: {fileID: 7191033357729653719}
   - component: {fileID: 7537464075780992866}
   - component: {fileID: 4814031513061485518}
-  - component: {fileID: 9114251692328870893}
+  - component: {fileID: 5521611215617079973}
+  - component: {fileID: 5317998526187240151}
+  - component: {fileID: 5631197895424822219}
   m_Layer: 0
   m_Name: cabin_ferris24
   m_TagString: Untagged
@@ -211,11 +317,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2207768418003213905}
   m_LocalRotation: {x: 0.25881907, y: -0, z: -0, w: 0.9659259}
-  m_LocalPosition: {x: -38.283134, y: 48.6708, z: 186.88495}
+  m_LocalPosition: {x: -0.742363, y: -22.922585, z: -39.43593}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 22
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7537464075780992866
 MeshFilter:
@@ -262,8 +368,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &9114251692328870893
-MeshCollider:
+--- !u!65 &5521611215617079973
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -272,10 +378,60 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 7486087054410530066, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 5.845993, z: 5.166336}
+  m_Center: {x: 0.742363, y: -2.5686302, z: 1.6924839}
+--- !u!54 &5317998526187240151
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2207768418003213905}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &5631197895424822219
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2207768418003213905}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.742363, y: -22.922585, z: -39.43593}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &2680301732941400977
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +443,9 @@ GameObject:
   - component: {fileID: 1090361452265753515}
   - component: {fileID: 3957902704190316513}
   - component: {fileID: 5451970830854422842}
-  - component: {fileID: 3947378357829989232}
+  - component: {fileID: 1155687719592154173}
+  - component: {fileID: 7575368992977391144}
+  - component: {fileID: 7470605459787876621}
   m_Layer: 0
   m_Name: cabin_ferris3
   m_TagString: Untagged
@@ -302,12 +460,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2680301732941400977}
-  m_LocalRotation: {x: -0.25881907, y: 0, z: -0, w: 0.9659259}
-  m_LocalPosition: {x: -38.283134, y: 94.28461, z: 186.75137}
+  m_LocalRotation: {x: -0.25881907, y: -0, z: -0, w: 0.9659259}
+  m_LocalPosition: {x: -0.742363, y: 22.691223, z: -39.569504}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 2
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3957902704190316513
 MeshFilter:
@@ -354,8 +512,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &3947378357829989232
-MeshCollider:
+--- !u!65 &1155687719592154173
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -364,10 +522,60 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -3468978492532947916, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 5.8459854, z: 5.1663513}
+  m_Center: {x: 0.742363, y: -2.568615, z: -1.692503}
+--- !u!54 &7575368992977391144
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2680301732941400977}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &7470605459787876621
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2680301732941400977}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.742363, y: 22.691223, z: -39.569504}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &3030029614744914211
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,7 +587,9 @@ GameObject:
   - component: {fileID: 2237550864480299307}
   - component: {fileID: 828116413794070450}
   - component: {fileID: 3692796038995480297}
-  - component: {fileID: 4152836523647849463}
+  - component: {fileID: 6263510779532277120}
+  - component: {fileID: 655117752235803784}
+  - component: {fileID: 1700926924330333671}
   m_Layer: 0
   m_Name: cabin_ferris19
   m_TagString: Untagged
@@ -394,12 +604,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3030029614744914211}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -38.283134, y: 25.74318, z: 226.26645}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.742363, y: -45.850204, z: -0.0544281}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 17
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &828116413794070450
 MeshFilter:
@@ -446,8 +656,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &4152836523647849463
-MeshCollider:
+--- !u!65 &6263510779532277120
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -456,10 +666,60 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -4824525598802141883, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 4.3466806, z: 5.759065}
+  m_Center: {x: 0.742363, y: -0.000007629396, z: 2.5725906}
+--- !u!54 &655117752235803784
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3030029614744914211}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &1700926924330333671
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3030029614744914211}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.742363, y: -45.850204, z: -0.0544281}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &3350541800980915421
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,7 +731,9 @@ GameObject:
   - component: {fileID: 4342892614337128190}
   - component: {fileID: 6673731715250970916}
   - component: {fileID: 1620727136901854335}
-  - component: {fileID: 6542502046878706177}
+  - component: {fileID: 3516209494515080215}
+  - component: {fileID: 3147571117804052408}
+  - component: {fileID: 1001862736580263119}
   m_Layer: 0
   m_Name: cabin_ferris18
   m_TagString: Untagged
@@ -486,12 +748,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3350541800980915421}
-  m_LocalRotation: {x: 0.7933533, y: 0, z: 0, w: 0.6087614}
-  m_LocalPosition: {x: -38.283134, y: 27.536457, z: 238.28014}
+  m_LocalRotation: {x: 0.7933533, y: -0, z: -0, w: 0.6087614}
+  m_LocalPosition: {x: -0.742363, y: -44.056923, z: 11.959259}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 16
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6673731715250970916
 MeshFilter:
@@ -538,8 +800,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6542502046878706177
-MeshCollider:
+--- !u!65 &3516209494515080215
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -548,10 +810,60 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -8243757181354439364, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 4.806934, z: 5.958862}
+  m_Center: {x: 0.742363, y: 0.8821048, z: 2.6371343}
+--- !u!54 &3147571117804052408
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3350541800980915421}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &1001862736580263119
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3350541800980915421}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.742363, y: -44.056923, z: 11.959259}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &3385583763840642755
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,7 +907,9 @@ GameObject:
   - component: {fileID: 594767953229196410}
   - component: {fileID: 3515388724012137786}
   - component: {fileID: 6315444917656325755}
-  - component: {fileID: 8758919678069533178}
+  - component: {fileID: 6540209458876672336}
+  - component: {fileID: 6220209117167750313}
+  - component: {fileID: 7037336934442094085}
   m_Layer: 0
   m_Name: cabin_ferris10
   m_TagString: Untagged
@@ -611,11 +925,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3632343538765191131}
   m_LocalRotation: {x: 0.92388076, y: -0, z: -0, w: -0.38268057}
-  m_LocalPosition: {x: -38.283134, y: 103.97887, z: 258.49567}
+  m_LocalPosition: {x: -0.742363, y: 32.385483, z: 32.17479}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 8
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 225, y: 0, z: 0}
 --- !u!33 &3515388724012137786
 MeshFilter:
@@ -662,8 +976,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8758919678069533178
-MeshCollider:
+--- !u!65 &6540209458876672336
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -672,10 +986,60 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -3592843994080175199, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 5.3754597, z: 5.3754444}
+  m_Center: {x: 0.742363, y: 2.3047035, z: -2.3046968}
+--- !u!54 &6220209117167750313
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3632343538765191131}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &7037336934442094085
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3632343538765191131}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.742363, y: 32.385483, z: 32.17479}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &3671197976371884234
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,7 +1051,9 @@ GameObject:
   - component: {fileID: 6004702415216309865}
   - component: {fileID: 6626903834778127982}
   - component: {fileID: 1982975176881943295}
-  - component: {fileID: 395160228139000258}
+  - component: {fileID: 1807265940512995764}
+  - component: {fileID: 5530872805770649078}
+  - component: {fileID: 8787577307702730333}
   m_Layer: 0
   m_Name: cabin_ferris9
   m_TagString: Untagged
@@ -702,12 +1068,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3671197976371884234}
-  m_LocalRotation: {x: 0.8660254, y: 0, z: 0, w: -0.5}
-  m_LocalPosition: {x: -40.378464, y: 110.88022, z: 249.0922}
+  m_LocalRotation: {x: 0.8660254, y: -0, z: -0, w: -0.5}
+  m_LocalPosition: {x: -2.8376923, y: 39.286835, z: 22.771317}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 7
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6626903834778127982
 MeshFilter:
@@ -754,8 +1120,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &395160228139000258
-MeshCollider:
+--- !u!65 &1807265940512995764
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -764,10 +1130,60 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -4813671834141318112, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 5.166359, z: 5.845993}
+  m_Center: {x: 2.8376923, y: 1.8209267, z: -2.4944706}
+--- !u!54 &5530872805770649078
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3671197976371884234}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &8787577307702730333
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3671197976371884234}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -2.8376923, y: 39.286835, z: 22.771317}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &4088852006702953112
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,7 +1195,9 @@ GameObject:
   - component: {fileID: 5096605526051551738}
   - component: {fileID: 2738048819732421425}
   - component: {fileID: 2574937497557443151}
-  - component: {fileID: 2830869690182007630}
+  - component: {fileID: 9060985778738643033}
+  - component: {fileID: 7430699804121306684}
+  - component: {fileID: 2641953559006873781}
   m_Layer: 0
   m_Name: cabin_ferris12
   m_TagString: Untagged
@@ -795,11 +1213,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4088852006702953112}
   m_LocalRotation: {x: 0.9914453, y: -0, z: -0, w: -0.13052304}
-  m_LocalPosition: {x: -38.283134, y: 83.52813, z: 270.34586}
+  m_LocalPosition: {x: -0.742363, y: 11.934746, z: 44.02498}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 10
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 195, y: 0, z: 0}
 --- !u!33 &2738048819732421425
 MeshFilter:
@@ -846,8 +1264,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &2830869690182007630
-MeshCollider:
+--- !u!65 &9060985778738643033
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -856,10 +1274,60 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 2564924667229219696, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 5.958902, z: 4.806916}
+  m_Center: {x: 0.742363, y: 2.6371353, z: -0.8820956}
+--- !u!54 &7430699804121306684
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4088852006702953112}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &2641953559006873781
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4088852006702953112}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.742363, y: 11.934746, z: 44.02498}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &4253716972710659898
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,33 +1354,9 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 37.54077, y: -71.59338, z: -226.32088}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2633207846628544701}
-  - {fileID: 7682109575880781613}
-  - {fileID: 1090361452265753515}
-  - {fileID: 8063719436322895549}
-  - {fileID: 4909581873309265274}
-  - {fileID: 8810865473522063063}
-  - {fileID: 7746800043328029744}
-  - {fileID: 6004702415216309865}
-  - {fileID: 594767953229196410}
-  - {fileID: 7818678750072599869}
-  - {fileID: 5096605526051551738}
-  - {fileID: 7076514294915292818}
-  - {fileID: 5998585840758974840}
-  - {fileID: 8520861399262128932}
-  - {fileID: 93744430516430632}
-  - {fileID: 2635139419845050471}
-  - {fileID: 4342892614337128190}
-  - {fileID: 2237550864480299307}
-  - {fileID: 7028812482774661310}
-  - {fileID: 8691779323834667870}
-  - {fileID: 1286948972278830832}
-  - {fileID: 4522857727831730252}
-  - {fileID: 7191033357729653719}
-  - {fileID: 1024804564480669348}
+  m_Children: []
   m_Father: {fileID: 3489808570649627790}
-  m_RootOrder: 0
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4269588028202914080
 GameObject:
@@ -925,7 +1369,9 @@ GameObject:
   - component: {fileID: 7076514294915292818}
   - component: {fileID: 7420621368924236885}
   - component: {fileID: 6550944472232824269}
-  - component: {fileID: 2685034183813076450}
+  - component: {fileID: 6215701968491446426}
+  - component: {fileID: 1223235190083447319}
+  - component: {fileID: 5141521272447375985}
   m_Layer: 0
   m_Name: cabin_ferris13
   m_TagString: Untagged
@@ -940,12 +1386,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4269588028202914080}
-  m_LocalRotation: {x: 1, y: 0, z: 0, w: -6.123234e-17}
-  m_LocalPosition: {x: -38.283134, y: 71.43914, z: 272.0118}
+  m_LocalRotation: {x: 1, y: -0, z: -0, w: -6.123234e-17}
+  m_LocalPosition: {x: -0.742363, y: -0.15424347, z: 45.690933}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 11
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7420621368924236885
 MeshFilter:
@@ -992,8 +1438,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &2685034183813076450
-MeshCollider:
+--- !u!65 &6215701968491446426
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1002,10 +1448,60 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -4774175872509830573, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 5.7590485, z: 4.3466797}
+  m_Center: {x: 0.742363, y: 2.572586, z: 0}
+--- !u!54 &1223235190083447319
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4269588028202914080}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &5141521272447375985
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4269588028202914080}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.742363, y: -0.15424347, z: 45.690933}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &4330966877306894338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,7 +1513,9 @@ GameObject:
   - component: {fileID: 7682109575880781613}
   - component: {fileID: 6526481110989973810}
   - component: {fileID: 4574168403718287454}
-  - component: {fileID: 7054026245496293809}
+  - component: {fileID: 5469300986994843601}
+  - component: {fileID: 5651876443380495365}
+  - component: {fileID: 3088124738392610081}
   m_Layer: 0
   m_Name: cabin_ferris2
   m_TagString: Untagged
@@ -1032,12 +1530,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4330966877306894338}
-  m_LocalRotation: {x: -0.13052619, y: 0, z: -0, w: 0.9914449}
-  m_LocalPosition: {x: -38.283134, y: 83.264824, z: 182.18683}
+  m_LocalRotation: {x: -0.13052619, y: -0, z: -0, w: 0.9914449}
+  m_LocalPosition: {x: -0.742363, y: 11.67144, z: -44.13405}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 1
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6526481110989973810
 MeshFilter:
@@ -1084,8 +1582,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7054026245496293809
-MeshCollider:
+--- !u!65 &5469300986994843601
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1094,10 +1592,60 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 2244380416005399898, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 5.9588847, z: 4.8069606}
+  m_Center: {x: 0.742363, y: -2.637121, z: -0.88211817}
+--- !u!54 &5651876443380495365
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4330966877306894338}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &3088124738392610081
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4330966877306894338}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.742363, y: 11.67144, z: -44.13405}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &4491029265750687892
 GameObject:
   m_ObjectHideFlags: 0
@@ -1109,7 +1657,9 @@ GameObject:
   - component: {fileID: 7818678750072599869}
   - component: {fileID: 3029383459360183629}
   - component: {fileID: 8340074660244808455}
-  - component: {fileID: 240908674207668132}
+  - component: {fileID: 4824884371931333585}
+  - component: {fileID: 4296088712809390677}
+  - component: {fileID: 5087337800641976320}
   m_Layer: 0
   m_Name: cabin_ferris11
   m_TagString: Untagged
@@ -1125,11 +1675,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4491029265750687892}
   m_LocalRotation: {x: 0.9659267, y: -0, z: -0, w: -0.25881574}
-  m_LocalPosition: {x: -38.283134, y: 94.234955, z: 265.86752}
+  m_LocalPosition: {x: -0.742363, y: 22.641571, z: 39.546646}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 9
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 210, y: 0, z: 0}
 --- !u!33 &3029383459360183629
 MeshFilter:
@@ -1176,8 +1726,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &240908674207668132
-MeshCollider:
+--- !u!65 &4824884371931333585
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1186,10 +1736,60 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -3271902686646597807, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 5.846008, z: 5.1663203}
+  m_Center: {x: 0.742363, y: 2.5686338, z: -1.692476}
+--- !u!54 &4296088712809390677
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4491029265750687892}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &5087337800641976320
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4491029265750687892}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.742363, y: 22.641571, z: 39.546646}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &4534715416156354592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,7 +1801,9 @@ GameObject:
   - component: {fileID: 5998585840758974840}
   - component: {fileID: 179806108137488349}
   - component: {fileID: 2292444905534250638}
-  - component: {fileID: 2111080513369714560}
+  - component: {fileID: 7755333537861236335}
+  - component: {fileID: 1528842306677858211}
+  - component: {fileID: 5027400695002233706}
   m_Layer: 0
   m_Name: cabin_ferris14
   m_TagString: Untagged
@@ -1217,11 +1819,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4534715416156354592}
   m_LocalRotation: {x: 0.9914445, y: -0, z: -0, w: 0.13052878}
-  m_LocalPosition: {x: -38.283134, y: 59.921944, z: 270.45493}
+  m_LocalPosition: {x: -0.742363, y: -11.67144, z: 44.13405}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 12
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 165, y: -0.000015258789, z: -0.000015258789}
 --- !u!33 &179806108137488349
 MeshFilter:
@@ -1268,8 +1870,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &2111080513369714560
-MeshCollider:
+--- !u!65 &7755333537861236335
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1278,10 +1880,60 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -1068098262828494630, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 5.9588857, z: 4.806977}
+  m_Center: {x: 0.742363, y: 2.6371176, z: 0.882126}
+--- !u!54 &1528842306677858211
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4534715416156354592}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &5027400695002233706
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4534715416156354592}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.742363, y: -11.67144, z: 44.13405}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &4763761118240150164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,7 +1945,9 @@ GameObject:
   - component: {fileID: 93744430516430632}
   - component: {fileID: 9214846433181145995}
   - component: {fileID: 8212682823316961980}
-  - component: {fileID: 3143519399788219064}
+  - component: {fileID: 3082533640412082344}
+  - component: {fileID: 4290303791956200696}
+  - component: {fileID: 4226456299491731864}
   m_Layer: 0
   m_Name: cabin_ferris16
   m_TagString: Untagged
@@ -1308,12 +1962,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4763761118240150164}
-  m_LocalRotation: {x: 0.92387956, y: -0, z: 0, w: 0.38268346}
-  m_LocalPosition: {x: -38.283134, y: 39.434006, z: 258.66916}
+  m_LocalRotation: {x: 0.92387956, y: -0, z: -0, w: 0.38268346}
+  m_LocalPosition: {x: -0.742363, y: -32.159378, z: 32.34828}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 14
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &9214846433181145995
 MeshFilter:
@@ -1360,8 +2014,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &3143519399788219064
-MeshCollider:
+--- !u!65 &3082533640412082344
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1370,10 +2024,60 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -7874211928426624933, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 5.375425, z: 5.375459}
+  m_Center: {x: 0.742363, y: 2.3046937, z: 2.3047023}
+--- !u!54 &4290303791956200696
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4763761118240150164}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &4226456299491731864
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4763761118240150164}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.742363, y: -32.159378, z: 32.34828}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &4780954426194595422
 GameObject:
   m_ObjectHideFlags: 0
@@ -1385,7 +2089,9 @@ GameObject:
   - component: {fileID: 2633207846628544701}
   - component: {fileID: 9022566202862173380}
   - component: {fileID: 549710046873524818}
-  - component: {fileID: 4051834240316718632}
+  - component: {fileID: 9064839442211034953}
+  - component: {fileID: 3520504564144633277}
+  - component: {fileID: 6060714651089205666}
   m_Layer: 0
   m_Name: cabin_ferris1
   m_TagString: Untagged
@@ -1400,12 +2106,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4780954426194595422}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -38.283134, y: 71.43914, z: 180.62994}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.742363, y: -0.15424347, z: -45.690933}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 0
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &9022566202862173380
 MeshFilter:
@@ -1452,8 +2158,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &4051834240316718632
-MeshCollider:
+--- !u!65 &9064839442211034953
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1462,10 +2168,60 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 8444782748536835863, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 5.7590485, z: 4.3466797}
+  m_Center: {x: 0.742363, y: -2.572586, z: 0}
+--- !u!54 &3520504564144633277
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4780954426194595422}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &6060714651089205666
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4780954426194595422}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.742363, y: -0.15424347, z: -45.690933}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &5737078602652085165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1477,7 +2233,9 @@ GameObject:
   - component: {fileID: 4909581873309265274}
   - component: {fileID: 4415004803401838213}
   - component: {fileID: 6823002372539689345}
-  - component: {fileID: 2591589182094525823}
+  - component: {fileID: 8444654859051410404}
+  - component: {fileID: 755020904348222217}
+  - component: {fileID: 1536192985023638992}
   m_Layer: 0
   m_Name: cabin_ferris6
   m_TagString: Untagged
@@ -1492,12 +2250,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5737078602652085165}
-  m_LocalRotation: {x: -0.6087614, y: 0, z: -0, w: 0.7933533}
-  m_LocalPosition: {x: -38.283134, y: 115.650314, z: 214.36162}
+  m_LocalRotation: {x: -0.6087614, y: -0, z: -0, w: 0.7933533}
+  m_LocalPosition: {x: -0.742363, y: 44.05693, z: -11.959259}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 4
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4415004803401838213
 MeshFilter:
@@ -1544,8 +2302,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &2591589182094525823
-MeshCollider:
+--- !u!65 &8444654859051410404
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1554,10 +2312,60 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 9085834623718031061, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 4.80693, z: 5.9588923}
+  m_Center: {x: 0.742363, y: -0.8821029, z: -2.6371305}
+--- !u!54 &755020904348222217
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5737078602652085165}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &1536192985023638992
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5737078602652085165}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.742363, y: 44.05693, z: -11.959259}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &5897650824000237820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,7 +2377,9 @@ GameObject:
   - component: {fileID: 4522857727831730252}
   - component: {fileID: 565608580165784390}
   - component: {fileID: 8840524620057448998}
-  - component: {fileID: 1439165344892340785}
+  - component: {fileID: 6812467510476253764}
+  - component: {fileID: 3120017266547123920}
+  - component: {fileID: 2287038587391755861}
   m_Layer: 0
   m_Name: cabin_ferris23
   m_TagString: Untagged
@@ -1585,11 +2395,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5897650824000237820}
   m_LocalRotation: {x: 0.13052619, y: -0, z: -0, w: 0.9914449}
-  m_LocalPosition: {x: -38.283134, y: 59.626335, z: 182.1664}
+  m_LocalPosition: {x: -0.742363, y: -11.967049, z: -44.15448}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 21
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &565608580165784390
 MeshFilter:
@@ -1636,8 +2446,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1439165344892340785
-MeshCollider:
+--- !u!65 &6812467510476253764
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1646,10 +2456,60 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 2917114046241215599, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 5.9588885, z: 4.8069453}
+  m_Center: {x: 0.742363, y: -2.6371286, z: 0.8820953}
+--- !u!54 &3120017266547123920
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5897650824000237820}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &2287038587391755861
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5897650824000237820}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.742363, y: -11.967049, z: -44.15448}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &6013308357797680055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1661,7 +2521,9 @@ GameObject:
   - component: {fileID: 2635139419845050471}
   - component: {fileID: 276405925605016412}
   - component: {fileID: 4953364124236382340}
-  - component: {fileID: 4874229899837761722}
+  - component: {fileID: 7033076438223031687}
+  - component: {fileID: 1674690483480838111}
+  - component: {fileID: 535053736056047599}
   m_Layer: 0
   m_Name: cabin_ferris17
   m_TagString: Untagged
@@ -1676,12 +2538,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6013308357797680055}
-  m_LocalRotation: {x: 0.8660254, y: -0, z: 0, w: 0.5}
-  m_LocalPosition: {x: -38.283134, y: 31.869633, z: 249.16635}
+  m_LocalRotation: {x: 0.8660254, y: -0, z: -0, w: 0.5}
+  m_LocalPosition: {x: -0.742363, y: -39.723747, z: 22.845474}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 15
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &276405925605016412
 MeshFilter:
@@ -1728,8 +2590,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &4874229899837761722
-MeshCollider:
+--- !u!65 &7033076438223031687
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1738,10 +2600,60 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 1252891016530993797, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 5.1663246, z: 5.845993}
+  m_Center: {x: 0.742363, y: 1.6924801, z: 2.5686111}
+--- !u!54 &1674690483480838111
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6013308357797680055}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &535053736056047599
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6013308357797680055}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.742363, y: -39.723747, z: 22.845474}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &6639477861362994668
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,6 +2666,8 @@ GameObject:
   - component: {fileID: 7931475792036586099}
   - component: {fileID: 6230480884930364272}
   - component: {fileID: 7793248360244174528}
+  - component: {fileID: 686553886689210290}
+  - component: {fileID: 4373295463913943174}
   m_Layer: 0
   m_Name: Wheel1
   m_TagString: Untagged
@@ -1772,6 +2686,30 @@ Transform:
   m_LocalPosition: {x: -0.00000047683716, y: 6.911005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1024804564480669348}
+  - {fileID: 7191033357729653719}
+  - {fileID: 4522857727831730252}
+  - {fileID: 1286948972278830832}
+  - {fileID: 8691779323834667870}
+  - {fileID: 7028812482774661310}
+  - {fileID: 2237550864480299307}
+  - {fileID: 4342892614337128190}
+  - {fileID: 2635139419845050471}
+  - {fileID: 93744430516430632}
+  - {fileID: 8520861399262128932}
+  - {fileID: 5998585840758974840}
+  - {fileID: 7076514294915292818}
+  - {fileID: 5096605526051551738}
+  - {fileID: 7818678750072599869}
+  - {fileID: 594767953229196410}
+  - {fileID: 6004702415216309865}
+  - {fileID: 7746800043328029744}
+  - {fileID: 8810865473522063063}
+  - {fileID: 4909581873309265274}
+  - {fileID: 8063719436322895549}
+  - {fileID: 1090361452265753515}
+  - {fileID: 7682109575880781613}
+  - {fileID: 2633207846628544701}
   - {fileID: 1689928451750510421}
   m_Father: {fileID: 1776489346788744400}
   m_RootOrder: 1
@@ -1835,6 +2773,57 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 6634312075306830287, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+--- !u!54 &686553886689210290
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639477861362994668}
+  serializedVersion: 2
+  m_Mass: 2000
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &4373295463913943174
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639477861362994668}
+  m_ConnectedBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 45.99404, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.00000047683716, y: 52.905045, z: 0}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 1
+  m_Motor:
+    targetVelocity: 50
+    force: 100000
+    freeSpin: 1
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &6677172597602928751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1846,7 +2835,9 @@ GameObject:
   - component: {fileID: 8063719436322895549}
   - component: {fileID: 7159804195426318637}
   - component: {fileID: 8740026292386068715}
-  - component: {fileID: 8232968607162921495}
+  - component: {fileID: 4300271286107556201}
+  - component: {fileID: 2457033882639753165}
+  - component: {fileID: 5126664251658292640}
   m_Layer: 0
   m_Name: cabin_ferris5
   m_TagString: Untagged
@@ -1861,12 +2852,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6677172597602928751}
-  m_LocalRotation: {x: -0.5, y: 0, z: -0, w: 0.8660254}
-  m_LocalPosition: {x: -38.283134, y: 111.00865, z: 203.4754}
+  m_LocalRotation: {x: -0.5, y: -0, z: -0, w: 0.8660254}
+  m_LocalPosition: {x: -0.742363, y: 39.415268, z: -22.845474}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 3
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7159804195426318637
 MeshFilter:
@@ -1913,8 +2904,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8232968607162921495
-MeshCollider:
+--- !u!65 &4300271286107556201
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1923,10 +2914,60 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -4024546513964852375, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 5.166321, z: 5.845993}
+  m_Center: {x: 0.742363, y: -1.6924858, z: -2.568613}
+--- !u!54 &2457033882639753165
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6677172597602928751}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &5126664251658292640
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6677172597602928751}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.742363, y: 39.415268, z: -22.845474}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &6973782990368984350
 GameObject:
   m_ObjectHideFlags: 0
@@ -1938,7 +2979,9 @@ GameObject:
   - component: {fileID: 8691779323834667870}
   - component: {fileID: 1529327276560324009}
   - component: {fileID: 775038934065533863}
-  - component: {fileID: 5776941828396151843}
+  - component: {fileID: 1734806570024983982}
+  - component: {fileID: 2124800765464749500}
+  - component: {fileID: 7890318052515293673}
   m_Layer: 0
   m_Name: cabin_ferris21
   m_TagString: Untagged
@@ -1954,11 +2997,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6973782990368984350}
   m_LocalRotation: {x: 0.5, y: -0, z: -0, w: 0.8660254}
-  m_LocalPosition: {x: -38.283134, y: 31.869633, z: 203.4754}
+  m_LocalPosition: {x: -0.742363, y: -39.723747, z: -22.845474}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 19
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1529327276560324009
 MeshFilter:
@@ -2005,8 +3048,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &5776941828396151843
-MeshCollider:
+--- !u!65 &1734806570024983982
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2015,10 +3058,60 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 6948705895569199072, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 5.166355, z: 5.845993}
+  m_Center: {x: 0.742363, y: -1.6924953, z: 2.5686264}
+--- !u!54 &2124800765464749500
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6973782990368984350}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &7890318052515293673
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6973782990368984350}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.742363, y: -39.723747, z: -22.845474}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &7017783394999002376
 GameObject:
   m_ObjectHideFlags: 0
@@ -2030,7 +3123,9 @@ GameObject:
   - component: {fileID: 1024804564480669348}
   - component: {fileID: 3993881596577365561}
   - component: {fileID: 93248442157307088}
-  - component: {fileID: 3958848717817281657}
+  - component: {fileID: 5970451823791721554}
+  - component: {fileID: 1262983604979755420}
+  - component: {fileID: 1324681584158491578}
   m_Layer: 0
   m_Name: cabin_ferris25
   m_TagString: Untagged
@@ -2045,12 +3140,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7017783394999002376}
-  m_LocalRotation: {x: -0.7933533, y: 0, z: -0, w: 0.6087614}
-  m_LocalPosition: {x: -38.283134, y: 103.75276, z: 193.9726}
+  m_LocalRotation: {x: -0.7933533, y: -0, z: -0, w: 0.6087614}
+  m_LocalPosition: {x: -0.742363, y: 32.159378, z: -32.34828}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 23
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3993881596577365561
 MeshFilter:
@@ -2097,8 +3192,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &3958848717817281657
-MeshCollider:
+--- !u!65 &5970451823791721554
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2107,10 +3202,60 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -599386574775556091, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 4.8069606, z: 5.958877}
+  m_Center: {x: 0.742363, y: 0.8821281, z: -2.6371257}
+--- !u!54 &1262983604979755420
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7017783394999002376}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &1324681584158491578
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7017783394999002376}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.742363, y: 32.159378, z: -32.34828}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &8159045838816677325
 GameObject:
   m_ObjectHideFlags: 0
@@ -2122,7 +3267,9 @@ GameObject:
   - component: {fileID: 7746800043328029744}
   - component: {fileID: 128516101673459757}
   - component: {fileID: 1695510962621048024}
-  - component: {fileID: 6511944058290199770}
+  - component: {fileID: 8042553750812603468}
+  - component: {fileID: 8483118004774459853}
+  - component: {fileID: 6495011705053938388}
   m_Layer: 0
   m_Name: cabin_ferris8
   m_TagString: Untagged
@@ -2137,12 +3284,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8159045838816677325}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -41.14952, y: 115.687485, z: 238.01501}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.6087494, y: 44.0941, z: 11.694138}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 6
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &128516101673459757
 MeshFilter:
@@ -2189,8 +3336,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6511944058290199770
-MeshCollider:
+--- !u!65 &8042553750812603468
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2199,10 +3346,60 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -7604373591804671978, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 5.759094, z: 4.3466797}
+  m_Center: {x: 3.6087494, y: -2.5725708, z: -0.017425537}
+--- !u!54 &8483118004774459853
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8159045838816677325}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &6495011705053938388
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8159045838816677325}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -3.6087494, y: 44.0941, z: 11.694138}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &8400476528687044416
 GameObject:
   m_ObjectHideFlags: 0
@@ -2292,7 +3489,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -1889692177063583473, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
 --- !u!1 &9069398161520164754
@@ -2306,7 +3503,9 @@ GameObject:
   - component: {fileID: 7028812482774661310}
   - component: {fileID: 6909546720512452469}
   - component: {fileID: 1175010026427306854}
-  - component: {fileID: 4237463451488844297}
+  - component: {fileID: 1580239997868835443}
+  - component: {fileID: 3961254280849054817}
+  - component: {fileID: 1026444467157008386}
   m_Layer: 0
   m_Name: cabin_ferris20
   m_TagString: Untagged
@@ -2322,11 +3521,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9069398161520164754}
   m_LocalRotation: {x: 0.6087614, y: -0, z: -0, w: 0.7933533}
-  m_LocalPosition: {x: -38.283134, y: 27.49926, z: 214.64418}
+  m_LocalPosition: {x: -0.742363, y: -44.094124, z: -11.676697}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 18
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6909546720512452469
 MeshFilter:
@@ -2373,8 +3572,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &4237463451488844297
-MeshCollider:
+--- !u!65 &1580239997868835443
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2383,10 +3582,60 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -3441740444764914496, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 4.8069606, z: 5.9588923}
+  m_Center: {x: 0.742363, y: -0.8821258, z: 2.637119}
+--- !u!54 &3961254280849054817
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9069398161520164754}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &1026444467157008386
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9069398161520164754}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.742363, y: -44.094124, z: -11.676697}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &9178609211597104371
 GameObject:
   m_ObjectHideFlags: 0
@@ -2398,7 +3647,9 @@ GameObject:
   - component: {fileID: 8520861399262128932}
   - component: {fileID: 5214546393681537433}
   - component: {fileID: 3752670185097385526}
-  - component: {fileID: 3459541283483931198}
+  - component: {fileID: 2437924585762920182}
+  - component: {fileID: 9173345375975665241}
+  - component: {fileID: 6357496517063641488}
   m_Layer: 0
   m_Name: cabin_ferris15
   m_TagString: Untagged
@@ -2413,12 +3664,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9178609211597104371}
-  m_LocalRotation: {x: 0.9659259, y: -0, z: 0, w: 0.25881907}
-  m_LocalPosition: {x: -38.283134, y: 48.55722, z: 265.83887}
+  m_LocalRotation: {x: 0.9659259, y: -0, z: -0, w: 0.25881907}
+  m_LocalPosition: {x: -0.742363, y: -23.036163, z: 39.51799}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689928451750510421}
-  m_RootOrder: 13
+  m_Father: {fileID: 3489808570649627790}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5214546393681537433
 MeshFilter:
@@ -2465,8 +3716,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &3459541283483931198
-MeshCollider:
+--- !u!65 &2437924585762920182
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2475,7 +3726,57 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -6938238173438468485, guid: fdcc8bd0273bed0448bf559f7a15c93d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.217491, y: 5.8459835, z: 5.1663837}
+  m_Center: {x: 0.742363, y: 2.568614, z: 1.6925074}
+--- !u!54 &9173345375975665241
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9178609211597104371}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &6357496517063641488
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9178609211597104371}
+  m_ConnectedBody: {fileID: 686553886689210290}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.742363, y: -23.036163, z: 39.51799}
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0
+    damper: 20
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
