@@ -31,6 +31,11 @@ public class MainTarget_CS_EF : MonoBehaviour
     void OnEnable()
     {
         ReactivateTarget();
+
+        if (movingTaget == true)
+        {
+            StartCoroutine("MoveTarget");
+        }
     }
 
     void Start()
@@ -40,7 +45,7 @@ public class MainTarget_CS_EF : MonoBehaviour
         // Checks if the target is a moving ring or not
         if (movingTaget == true)
         {
-            StartCoroutine("MoveRing");
+            StartCoroutine("MoveTarget");
         }
     }
 
@@ -106,15 +111,16 @@ public class MainTarget_CS_EF : MonoBehaviour
             // Reactivates the target
             StartCoroutine("ReactivateTarget");
         }
-
         else if (startTarget)
         {
             LevelManager_CS_EF.instance.BeginGame();
-
+            gameObject.SetActive(false);
+            /*
             if (!startTarget)
             {
                 StartCoroutine("ReactivateTarget");
             }
+            */
         }
     }
 
@@ -140,7 +146,7 @@ public class MainTarget_CS_EF : MonoBehaviour
     }
 
     // Helps move the rings relative to time elapsed
-    IEnumerator MoveRing()
+    IEnumerator MoveTarget()
     {
         if (dirRight)
         {
@@ -154,7 +160,7 @@ public class MainTarget_CS_EF : MonoBehaviour
 
         dirRight = !dirRight;
 
-        StartCoroutine("MoveRing");
+        StartCoroutine("MoveTarget");
     }
 
     public void OnCollisionEnter(Collision other)
