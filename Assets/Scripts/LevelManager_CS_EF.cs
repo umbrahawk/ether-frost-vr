@@ -70,9 +70,9 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         currentTime = startingTime;
 
-        timerText.text = "Time Remaining: " + "2:30";
+        timerText.text = "Time left: " + "2:30";
 
-        targetText.text = "Targets Hit: " + targetsHit;
+        targetText.text = "Targets hit: " + targetsHit;
     }
 
 
@@ -104,7 +104,7 @@ public class LevelManager_CS_EF : MonoBehaviour
             //print(currentTime);
 
             //Making a String Format.
-            timerText.text = string.Format("Time Remaining: " + " {0:00}:{1:00}", minutes, seconds);
+            timerText.text = string.Format("Time left:" + " {0:00}:{1:00}", minutes, seconds);
         }
         //Once timer hits 0, player can no longer shoot
         Player_CS_EF.instance.rightCanFire = false;
