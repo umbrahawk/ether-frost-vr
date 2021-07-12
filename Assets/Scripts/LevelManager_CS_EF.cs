@@ -44,6 +44,7 @@ public class LevelManager_CS_EF : MonoBehaviour
     [Header("CANNON MESHES")]
     public GameObject mainCannon;
     public GameObject threeBurstCannon;
+    public GameObject fiveBurstCannon;
     public GameObject nineBurstCannon;
 
     [Header("GUN STATS")]
@@ -214,7 +215,7 @@ public class LevelManager_CS_EF : MonoBehaviour
             threeBurstActive = false;
             fiveBurstActive = true;
             threeBurstCannon.SetActive(false);
-            nineBurstCannon.SetActive(true);
+            fiveBurstCannon.SetActive(true);
         }
 
         // Make the gun turn into a nine burst gun with rapid fire
@@ -223,6 +224,8 @@ public class LevelManager_CS_EF : MonoBehaviour
         {
             fiveBurstActive = false;
             nineBurstActive = true;
+            fiveBurstCannon.SetActive(false);
+            nineBurstCannon.SetActive(true);
         }
     }
 
