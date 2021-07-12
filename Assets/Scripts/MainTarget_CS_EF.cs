@@ -85,7 +85,7 @@ public class MainTarget_CS_EF : MonoBehaviour
         while (t < 1)
         {
             // Will move the object based on the t variable
-            target.transform.localEulerAngles = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(0, 0, 90), t);
+            target.transform.localEulerAngles = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(0, 0, -90), t);
 
             t += Time.deltaTime * speed;
 
@@ -93,7 +93,7 @@ public class MainTarget_CS_EF : MonoBehaviour
         }
 
         // Puts the target in the correct location
-        target.transform.localEulerAngles = new Vector3(0, 0, 90);
+        target.transform.localEulerAngles = new Vector3(0, 0, -90);
 
         if (!startTarget)
         {
@@ -108,19 +108,17 @@ public class MainTarget_CS_EF : MonoBehaviour
                 yield return null;
             }
 
-            // Reactivates the target
-            StartCoroutine("ReactivateTarget");
+            if (LevelManager_CS_EF.instance.finalRound == true)
+            {
+                // Reactivates the target
+                StartCoroutine("ReactivateTarget");
+            }
         }
+
         else if (startTarget)
         {
             LevelManager_CS_EF.instance.BeginGame();
             gameObject.SetActive(false);
-            /*
-            if (!startTarget)
-            {
-                StartCoroutine("ReactivateTarget");
-            }
-            */
         }
     }
 
@@ -133,7 +131,7 @@ public class MainTarget_CS_EF : MonoBehaviour
         // This loop will bring the target back up to the standing position
         while (t < 1)
         {
-            target.transform.localEulerAngles = Vector3.Lerp(new Vector3(0, 0, 90), new Vector3(0, 0, 0), t);
+            target.transform.localEulerAngles = Vector3.Lerp(new Vector3(0, 0, -90), new Vector3(0, 0, 0), t);
 
             t += Time.deltaTime * speed;
             yield return null;

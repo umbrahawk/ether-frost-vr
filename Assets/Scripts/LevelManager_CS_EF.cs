@@ -13,9 +13,14 @@ public class LevelManager_CS_EF : MonoBehaviour
     [Header("GAME STATS")]
     public bool gameActive = false;
     public int gameLevel = 0;
+    public bool roundOne = false;
+    public bool roundTwo = false;
+    public bool roundThree = false;
+    public bool roundFour = false;
+    public bool finalRound = false;
 
     [Header("TIMER STATS")]
-    public float startingTime = 150;
+    public float startingTime = 120;
     public float currentTime;
     public float increaseAmount = 5;
     public Text timerText;
@@ -70,7 +75,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         currentTime = startingTime;
 
-        timerText.text = "Time left: " + "2:30";
+        timerText.text = "Time left: " + "2:00";
 
         targetText.text = "Targets hit: " + targetsHit;
     }
@@ -80,20 +85,6 @@ public class LevelManager_CS_EF : MonoBehaviour
     {
         while (currentTime >= 1)
         {
-            if (currentTime == 55)
-            {
-                //CartWayPoint_CS_EF.instance.cartActive = true;
-                //like gun upgrade, fireworks etc.
-                print("Event 1 Ping, Cart Moving!");
-            }
-
-            if (currentTime == 20)
-            {
-                //insert event code here
-                //like gun upgrade, fireworks etc.
-                print("Event 2 Ping, GO CRAZY!!!");
-            }
-
             yield return new WaitForSeconds(1);
 
             currentTime--;
@@ -102,6 +93,11 @@ public class LevelManager_CS_EF : MonoBehaviour
             float seconds = Mathf.FloorToInt(currentTime % 60);
 
             //print(currentTime);
+
+            if (currentTime == 90 || currentTime == 60 || currentTime == 30)
+            {
+                IncreaseRound();
+            }
 
             //Making a String Format.
             timerText.text = string.Format("Time left:" + " {0:00}:{1:00}", minutes, seconds);
@@ -146,8 +142,35 @@ public class LevelManager_CS_EF : MonoBehaviour
     }
 
     public void IncreaseRound()
-    { 
+    {
         gameLevel++;
+
+        if (gameLevel == 1)
+        {
+            roundOne = true;
+        }
+
+        else if (gameLevel == 2)
+        {
+            roundTwo = true;
+        }
+
+        else if (gameLevel == 3)
+        {
+            roundThree = true;
+        }
+
+        else if (gameLevel == 4)
+        {
+            roundFour = true;
+        }
+
+        else if (gameLevel == 5)
+        {
+            finalRound = true;
+        }
+
+        UpgradeCannon();
     }
 
     public void IncreaseTimer()
@@ -176,7 +199,7 @@ public class LevelManager_CS_EF : MonoBehaviour
         // Make the gun turn into the three burst gun
         // Remove the rapid fire temporarily (may decide against this idea after some play testing)
         // Add new mesh
-        if (targetsHit == 20)
+        if (currentTime <= 90 || targetsHit == 20)
         {
             basicCannon = false;
             threeBurstActive = true;
@@ -186,7 +209,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         // Make the gun turn into the five/star burst gun
         // Add new mesh
-        if (targetsHit == 30)
+        if (currentTime <= 60 || targetsHit == 30)
         {
             threeBurstActive = false;
             fiveBurstActive = true;
@@ -196,7 +219,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         // Make the gun turn into a nine burst gun with rapid fire
         // Add new mesh
-        if (targetsHit == 50)
+        if (currentTime <= 30 || targetsHit == 50)
         {
             fiveBurstActive = false;
             nineBurstActive = true;
@@ -225,6 +248,8 @@ public class LevelManager_CS_EF : MonoBehaviour
     public void BeginGame()
     {
         gameActive = true;
+
+        roundOne = true;
 
         IncreaseRound();
 
