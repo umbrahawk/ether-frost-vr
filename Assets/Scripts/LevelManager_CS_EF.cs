@@ -95,7 +95,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
             //print(currentTime);
 
-            if (currentTime == 90 || currentTime == 60 || currentTime == 30)
+            if (currentTime == 90 || currentTime == 60 || currentTime == 35)
             {
                 IncreaseRound();
             }
@@ -123,19 +123,19 @@ public class LevelManager_CS_EF : MonoBehaviour
             UpgradeCannon();
         }
 
-        if (targetsHit == 20)
-        {
-            UpgradeCannon();
-            IncreaseRound();
-        }
-
         if (targetsHit == 30)
         {
             UpgradeCannon();
             IncreaseRound();
         }
 
-        if (targetsHit == 50)
+        if (targetsHit == 45)
+        {
+            UpgradeCannon();
+            IncreaseRound();
+        }
+
+        if (targetsHit == 75)
         {
             UpgradeCannon();
             IncreaseRound();
@@ -200,7 +200,7 @@ public class LevelManager_CS_EF : MonoBehaviour
         // Make the gun turn into the three burst gun
         // Remove the rapid fire temporarily (may decide against this idea after some play testing)
         // Add new mesh
-        if (currentTime <= 90 || targetsHit == 20)
+        if (currentTime <= 90 || targetsHit == 30)
         {
             basicCannon = false;
             threeBurstActive = true;
@@ -210,7 +210,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         // Make the gun turn into the five/star burst gun
         // Add new mesh
-        if (currentTime <= 60 || targetsHit == 30)
+        if (currentTime <= 60 || targetsHit == 45)
         {
             threeBurstActive = false;
             fiveBurstActive = true;
@@ -220,7 +220,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         // Make the gun turn into a nine burst gun with rapid fire
         // Add new mesh
-        if (currentTime <= 30 || targetsHit == 50)
+        if (currentTime <= 35 || targetsHit == 75)
         {
             fiveBurstActive = false;
             nineBurstActive = true;

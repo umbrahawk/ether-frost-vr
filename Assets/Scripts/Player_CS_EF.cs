@@ -186,6 +186,9 @@ public class Player_CS_EF : MonoBehaviour
         // Flickers whether the player can fire
         rightCanFire = false;
 
+        // Plays an audio sound of the cannon
+        AudioSource.PlayClipAtPoint(basicCannonSFX, new Vector3(0, 0, 0));
+
         // Spawns in the projectile
         Instantiate(projectile, rightMainSpawnPoint.position, rightMainSpawnPoint.rotation);
         Instantiate(projectile, rightExtraSpawnPoint1.position, rightExtraSpawnPoint1.rotation);
@@ -203,6 +206,9 @@ public class Player_CS_EF : MonoBehaviour
     {
         // Flickers whether the player can fire
         leftCanFire = false;
+
+        // Plays an audio sound of the cannon
+        AudioSource.PlayClipAtPoint(basicCannonSFX, new Vector3(0, 0, 0));
 
         // Spawns in the projectile
         Instantiate(projectile, leftMainSpawnPoint.position, leftMainSpawnPoint.rotation);
@@ -222,6 +228,9 @@ public class Player_CS_EF : MonoBehaviour
     {
         // Flickers whether the player can fire
         rightCanFire = false;
+
+        // Plays an audio sound of the cannon
+        AudioSource.PlayClipAtPoint(basicCannonSFX, new Vector3(0, 0, 0));
 
         // Spawns in the projectile
         Instantiate(projectile, rightMainSpawnPoint.position, rightMainSpawnPoint.rotation);
@@ -244,6 +253,9 @@ public class Player_CS_EF : MonoBehaviour
     {
         // Flickers whether the player can fire
         leftCanFire = false;
+
+        // Plays an audio sound of the cannon
+        AudioSource.PlayClipAtPoint(basicCannonSFX, new Vector3(0, 0, 0));
 
         // Spawns in the projectile
         Instantiate(projectile, rightMainSpawnPoint.position, rightMainSpawnPoint.rotation);

@@ -20,20 +20,6 @@ public class Projectile_CS_EF : MonoBehaviour
         MoveForward();
     }
 
-    /*public void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.GetComponent<MainTarget_CS_EF>())
-        {
-            LevelManager_CS_EF.instance.TargetHit();
-        }
-
-        if (other.gameObject.GetComponent<TimeTarget_CS_EF>())
-        {
-            LevelManager_CS_EF.instance.IncreaseTimer();
-        }
-    }
-    */
-
     void MoveForward()
     {
         // This will shoot forward regardless of where the target is looking, needs to be fixed
