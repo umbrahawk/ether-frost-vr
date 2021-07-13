@@ -9,10 +9,17 @@ public class GameRound_CS_EF : MonoBehaviour
     public bool roundOne = false;
     public bool roundTwo = false;
     public bool roundThree = false;
-    public bool roundFour = false;
     public bool finalRound = false;
 
     public bool objectsActivated = false;
+
+    private void Start()
+    {
+        for (int i = 0; i < targets.Length; i++)
+        {
+            targets[i].SetActive(false);
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -25,6 +32,13 @@ public class GameRound_CS_EF : MonoBehaviour
         }
 
         if (LevelManager_CS_EF.instance.roundTwo == true && roundTwo == true && objectsActivated == false)
+        {
+            objectsActivated = true;
+
+            ActivateTargets();
+        }
+
+        if (LevelManager_CS_EF.instance.roundThree == true && roundThree == true && objectsActivated == false)
         {
             objectsActivated = true;
 

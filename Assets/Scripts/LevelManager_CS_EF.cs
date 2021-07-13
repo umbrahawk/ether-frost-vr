@@ -16,8 +16,10 @@ public class LevelManager_CS_EF : MonoBehaviour
     public bool roundOne = false;
     public bool roundTwo = false;
     public bool roundThree = false;
-    public bool roundFour = false;
     public bool finalRound = false;
+    public int roundTwoTransition = 93;
+    public int roundThreeTransition = 67;
+    public int finalRoundTransition = 35;
 
     [Header("TIMER STATS")]
     public float startingTime = 120;
@@ -95,7 +97,12 @@ public class LevelManager_CS_EF : MonoBehaviour
 
             //print(currentTime);
 
-            if (currentTime == 90 || currentTime == 60 || currentTime == 35)
+            if (currentTime == 111)
+            {
+                UpgradeCannon();
+            }
+
+            if (currentTime == roundTwoTransition || currentTime == roundThreeTransition || currentTime == finalRoundTransition)
             {
                 IncreaseRound();
             }
@@ -116,30 +123,6 @@ public class LevelManager_CS_EF : MonoBehaviour
         // This will increase the score and the UI
         targetsHit++;
         targetText.text = "Targets Hit: " + targetsHit;
-
-        // Checks if the required targets have been hit before upgrading the controller
-        if (targetsHit == 10)
-        {
-            UpgradeCannon();
-        }
-
-        if (targetsHit == 30)
-        {
-            UpgradeCannon();
-            IncreaseRound();
-        }
-
-        if (targetsHit == 45)
-        {
-            UpgradeCannon();
-            IncreaseRound();
-        }
-
-        if (targetsHit == 75)
-        {
-            UpgradeCannon();
-            IncreaseRound();
-        }
     }
 
     public void IncreaseRound()
@@ -163,11 +146,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         else if (gameLevel == 4)
         {
-            roundFour = true;
-        }
-
-        else if (gameLevel == 5)
-        {
+            print("Final round is true");
             finalRound = true;
         }
 
@@ -192,7 +171,7 @@ public class LevelManager_CS_EF : MonoBehaviour
     public void UpgradeCannon()
     {
         // Make the gun turn into rapid fire
-        if (targetsHit == 10)
+        if (currentTime <= 111)
         {
             attackSpeed = rapidFireRate;
         }
@@ -200,7 +179,7 @@ public class LevelManager_CS_EF : MonoBehaviour
         // Make the gun turn into the three burst gun
         // Remove the rapid fire temporarily (may decide against this idea after some play testing)
         // Add new mesh
-        if (currentTime <= 90 || targetsHit == 30)
+        if (currentTime <= roundTwoTransition)
         {
             basicCannon = false;
             threeBurstActive = true;
@@ -210,7 +189,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         // Make the gun turn into the five/star burst gun
         // Add new mesh
-        if (currentTime <= 60 || targetsHit == 45)
+        if (currentTime <= roundThreeTransition)
         {
             threeBurstActive = false;
             fiveBurstActive = true;
@@ -220,7 +199,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         // Make the gun turn into a nine burst gun with rapid fire
         // Add new mesh
-        if (currentTime <= 35 || targetsHit == 75)
+        if (currentTime <= finalRoundTransition)
         {
             fiveBurstActive = false;
             nineBurstActive = true;

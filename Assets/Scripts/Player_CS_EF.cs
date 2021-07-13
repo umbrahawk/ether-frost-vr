@@ -78,7 +78,7 @@ public class Player_CS_EF : MonoBehaviour
         }
 
         // Checks if the player has input the fire button and can fire
-        if (Input.GetButton("Fire1") && leftCanFire)
+        if (Input.GetButton("Fire2") && leftCanFire)
         {
             // Checks if the basic cannon is unlocked
             if (LevelManager_CS_EF.instance.basicCannon == true)

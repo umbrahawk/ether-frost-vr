@@ -21,6 +21,8 @@ public class MainTarget_CS_EF : MonoBehaviour
 
     public bool startTarget = false;
 
+    public bool finalRound = false;
+
     [Header("CONNECTIONS")]
     ParticleSystem sparks;    
 
@@ -61,10 +63,11 @@ public class MainTarget_CS_EF : MonoBehaviour
         }
 
         // Checks if the game has 20 seconds left
-        if (LevelManager_CS_EF.instance.currentTime == 20)
+        if (LevelManager_CS_EF.instance.finalRound == true && !finalRound)
         {
-            // Makes it so all the targets come back up very quickly
-            lifetime = 1.0f;
+            finalRound = true;
+            print("Before the reactivate");
+            StartCoroutine("ReactivateTarget");
         }
     }
 
@@ -125,6 +128,7 @@ public class MainTarget_CS_EF : MonoBehaviour
     // IEnumerator to return the target back to their regular position
     IEnumerator ReactivateTarget()
     {
+        print("Inside Coroutine");
         // How many times the loop will run below
         float t = 0;
 
