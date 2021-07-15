@@ -24,7 +24,7 @@ public class Balloon_CS_EF : MonoBehaviour
             if (other.gameObject.GetComponent<Projectile_CS_EF>() && isActive == true)
             {
                 //When balloon is hit by projectile, will enable gun upgrade script.
-                LevelManager_CS_EF.instance.LevelGun();
+                //LevelManager_CS_EF.instance.LevelGun();
                 print("You hit a Powerup!!");
             }
             /*else

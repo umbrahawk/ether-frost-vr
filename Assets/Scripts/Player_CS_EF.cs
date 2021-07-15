@@ -38,6 +38,7 @@ public class Player_CS_EF : MonoBehaviour
     public GameObject projectile;
     public bool rightCanFire = true;
     public bool leftCanFire = true;
+    public bool canBothFire = true;
 
     public static Player_CS_EF instance;
 
@@ -52,10 +53,10 @@ public class Player_CS_EF : MonoBehaviour
     void Update()
     {
         // Checks if the player has input the fire button and can fire
-        if (Input.GetButton("Fire1") && rightCanFire)
+        if (Input.GetButton("Fire1") && rightCanFire && canBothFire == true)
         {
             // Checks if the basic cannon is unlocked
-            if (LevelManager_CS_EF.instance.basicCannon == true)
+            if (LevelManager_CS_EF.instance.basicCannon == true )
             {
                 // Runs the coroutine
                 StartCoroutine("FireRightProjectile");
@@ -78,7 +79,7 @@ public class Player_CS_EF : MonoBehaviour
         }
 
         // Checks if the player has input the fire button and can fire
-        if (Input.GetButton("Fire2") && leftCanFire)
+        if (Input.GetButton("Fire2") && leftCanFire && canBothFire == true)
         {
             // Checks if the basic cannon is unlocked
             if (LevelManager_CS_EF.instance.basicCannon == true)

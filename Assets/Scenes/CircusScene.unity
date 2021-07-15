@@ -605,8 +605,10 @@ MonoBehaviour:
   roundOne: 0
   roundTwo: 0
   roundThree: 0
-  roundFour: 0
   finalRound: 0
+  roundTwoTransition: 93
+  roundThreeTransition: 67
+  finalRoundTransition: 35
   startingTime: 120
   currentTime: 0
   increaseAmount: 5
@@ -615,8 +617,7 @@ MonoBehaviour:
   targetText: {fileID: 504875449}
   rapidFireActive: 0
   attackSpeed: 0
-  fireRate: 0.4
-  rapidFireRate: 0.2
+  fireRate: 0.2
   basicCannon: 1
   threeBurstActive: 0
   fiveBurstActive: 0
@@ -627,6 +628,11 @@ MonoBehaviour:
   nineBurstCannon: {fileID: 615878831}
   gunText: {fileID: 950030344}
   gameBackgroundMusic: {fileID: 8300000, guid: 3ce02814723aff34e809c6a1def60fad, type: 3}
+  upgradeEffect: {fileID: 1635975424}
+  gunBarrel:
+  - {fileID: 1214004971}
+  - {fileID: 369142888}
+  - {fileID: 1129371937}
 --- !u!4 &75735238
 Transform:
   m_ObjectHideFlags: 0
@@ -1829,6 +1835,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c3055a3971baf24c99ccee7c58a4c1f, type: 3}
+--- !u!54 &369142888 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 1977317182, guid: c8e5341c837a8834c9e1834ad1d1db78,
+    type: 3}
+  m_PrefabInstance: {fileID: 1388004800}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &372456927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4526,6 +4538,11 @@ PrefabInstance:
       propertyPath: m_EffectDistance.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7753083794441294123, guid: 29b1323cdbc6d4d47af7a3f25c37fbcb,
+        type: 3}
+      propertyPath: m_Text
+      value: Upgrading
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29b1323cdbc6d4d47af7a3f25c37fbcb, type: 3}
 --- !u!114 &950030344 stripped
@@ -4726,7 +4743,6 @@ MonoBehaviour:
   roundOne: 0
   roundTwo: 0
   roundThree: 1
-  roundFour: 0
   finalRound: 0
   objectsActivated: 0
 --- !u!1 &1117359365 stripped
@@ -4734,6 +4750,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8504891547471277367, guid: 9c79c221543665c46bbf7dc71a81a4c3,
     type: 3}
   m_PrefabInstance: {fileID: 1450833431}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1129371937 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 2892723903260082267, guid: c8e5341c837a8834c9e1834ad1d1db78,
+    type: 3}
+  m_PrefabInstance: {fileID: 1388004800}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1130262843
 PrefabInstance:
@@ -4988,6 +5010,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183174362}
   m_CullTransparentMesh: 0
+--- !u!54 &1214004971 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 1641283796734269583, guid: c8e5341c837a8834c9e1834ad1d1db78,
+    type: 3}
+  m_PrefabInstance: {fileID: 1388004800}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1222237713 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8504891547471277367, guid: 9c79c221543665c46bbf7dc71a81a4c3,
@@ -5027,8 +5055,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1365539864}
   - {fileID: 1243852360}
+  - {fileID: 1365539864}
   - {fileID: 1107262877}
   - {fileID: 152582105}
   m_Father: {fileID: 0}
@@ -5136,7 +5164,7 @@ GameObject:
   - component: {fileID: 1243852360}
   - component: {fileID: 1243852361}
   m_Layer: 0
-  m_Name: Round2
+  m_Name: Round1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5172,7 +5200,7 @@ Transform:
   - {fileID: 1948982784}
   - {fileID: 508399587}
   m_Father: {fileID: 1224039179}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -71.05, z: 0}
 --- !u!114 &1243852361
 MonoBehaviour:
@@ -5205,10 +5233,9 @@ MonoBehaviour:
   - {fileID: 1920377804}
   - {fileID: 1948982785}
   - {fileID: 508399588}
-  roundOne: 0
-  roundTwo: 1
+  roundOne: 1
+  roundTwo: 0
   roundThree: 0
-  roundFour: 0
   finalRound: 0
   objectsActivated: 0
 --- !u!1001 &1249003728
@@ -5644,7 +5671,7 @@ GameObject:
   - component: {fileID: 1365539864}
   - component: {fileID: 1365539865}
   m_Layer: 0
-  m_Name: Round1
+  m_Name: Round2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5679,7 +5706,7 @@ Transform:
   - {fileID: 1981316666}
   - {fileID: 704016257}
   m_Father: {fileID: 1224039179}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1365539865
 MonoBehaviour:
@@ -5712,10 +5739,9 @@ MonoBehaviour:
   - {fileID: 916906480}
   - {fileID: 704016252}
   - {fileID: 1981316661}
-  roundOne: 1
-  roundTwo: 0
+  roundOne: 0
+  roundTwo: 1
   roundThree: 0
-  roundFour: 0
   finalRound: 0
   objectsActivated: 0
 --- !u!1 &1375234148
@@ -5940,6 +5966,11 @@ PrefabInstance:
     - target: {fileID: 4809944811233797237, guid: c8e5341c837a8834c9e1834ad1d1db78,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892723903260082267, guid: c8e5341c837a8834c9e1834ad1d1db78,
+        type: 3}
+      propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7190,6 +7221,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8504891547471277367, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
     type: 3}
   m_PrefabInstance: {fileID: 572875757}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1635975424 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 726833203162895590, guid: c8e5341c837a8834c9e1834ad1d1db78,
+    type: 3}
+  m_PrefabInstance: {fileID: 1388004800}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1641996930
 PrefabInstance:

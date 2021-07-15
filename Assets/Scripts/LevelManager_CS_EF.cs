@@ -34,8 +34,7 @@ public class LevelManager_CS_EF : MonoBehaviour
     [Header("PLAYER STATS")]
     public bool rapidFireActive = false;
     public float attackSpeed;
-    public float fireRate = 0.5f;
-    public float rapidFireRate = 0.25f;
+    public float fireRate = 0.25f;
 
     [Header("CANNON STATS")]
     public bool basicCannon = true;
@@ -55,9 +54,11 @@ public class LevelManager_CS_EF : MonoBehaviour
     [Header("SOUND EFFECTS")]
     public AudioClip gameBackgroundMusic;
 
+    [Header("VISUAL EFFECTS")]
+    public GameObject upgradeEffect;
 
     [Header("MISC")]
-    // public Text gameOverText;
+    public Rigidbody[] gunBarrel;
 
 
     public static LevelManager_CS_EF instance;
@@ -81,6 +82,8 @@ public class LevelManager_CS_EF : MonoBehaviour
         timerText.text = "Time left: " + "2:00";
 
         targetText.text = "Targets hit: " + targetsHit;
+
+        upgradeEffect.SetActive(false);
     }
 
 
@@ -97,10 +100,6 @@ public class LevelManager_CS_EF : MonoBehaviour
 
             //print(currentTime);
 
-            if (currentTime == 111)
-            {
-                UpgradeCannon();
-            }
 
             if (currentTime == roundTwoTransition || currentTime == roundThreeTransition || currentTime == finalRoundTransition)
             {
@@ -161,50 +160,48 @@ public class LevelManager_CS_EF : MonoBehaviour
         currentTime = currentTime + increaseAmount;
     }
 
-    public void LevelGun()
-    {
-        //starts coroutine to enable gun text for a few seconds.
-        StartCoroutine("GunPrompt");
-    }
+
 
     // Increase the firerate depending on targets hit
     public void UpgradeCannon()
     {
-        // Make the gun turn into rapid fire
-        if (currentTime <= 111)
-        {
-            attackSpeed = rapidFireRate;
-        }
 
         // Make the gun turn into the three burst gun
         // Remove the rapid fire temporarily (may decide against this idea after some play testing)
         // Add new mesh
         if (currentTime <= roundTwoTransition)
         {
+            gunBarrel[0].transform.parent = null;
+            gunBarrel[0].GetComponent<Rigidbody>().useGravity = true;
+            StartCoroutine("UpgradeGun1");
             basicCannon = false;
             threeBurstActive = true;
-            mainCannon.SetActive(false);
-            threeBurstCannon.SetActive(true);
+
+
         }
 
         // Make the gun turn into the five/star burst gun
         // Add new mesh
         if (currentTime <= roundThreeTransition)
         {
+            gunBarrel[1].transform.parent = null;
+            gunBarrel[1].GetComponent<Rigidbody>().useGravity = true;
+            StartCoroutine("UpgradeGun2");
             threeBurstActive = false;
             fiveBurstActive = true;
-            threeBurstCannon.SetActive(false);
-            fiveBurstCannon.SetActive(true);
+
         }
 
         // Make the gun turn into a nine burst gun with rapid fire
         // Add new mesh
         if (currentTime <= finalRoundTransition)
         {
+            gunBarrel[2].transform.parent = null;
+            gunBarrel[2].GetComponent<Rigidbody>().useGravity = true;
+            StartCoroutine("UpgradeGun3");
             fiveBurstActive = false;
             nineBurstActive = true;
-            fiveBurstCannon.SetActive(false);
-            nineBurstCannon.SetActive(true);
+
         }
     }
 
@@ -218,14 +215,6 @@ public class LevelManager_CS_EF : MonoBehaviour
 
     }
 
-    IEnumerator GunPrompt()
-    {
-        gunText.gameObject.SetActive(true);
-
-        yield return new WaitForSeconds(5.0f);
-
-        gunText.gameObject.SetActive(false);
-    }
 
     public void BeginGame()
     {
@@ -238,5 +227,50 @@ public class LevelManager_CS_EF : MonoBehaviour
         AudioSource.PlayClipAtPoint(gameBackgroundMusic, new Vector3(0, 0, 0));
 
         StartCoroutine("UpdateTimer");
+    }
+
+    IEnumerator UpgradeGun1()
+    {
+        Player_CS_EF.instance.canBothFire = false;
+        upgradeEffect.SetActive(true);
+        gunText.gameObject.SetActive(true);
+        print("Gun Down");
+        yield return new WaitForSeconds(2f);
+        Destroy(gunBarrel[0].gameObject);
+        mainCannon.SetActive(false);
+        threeBurstCannon.SetActive(true);
+        upgradeEffect.SetActive(false);
+        gunText.gameObject.SetActive(false);
+        Player_CS_EF.instance.canBothFire = true;
+        print("Gun Upgraded");
+    }
+
+    IEnumerator UpgradeGun2()
+    {
+        Player_CS_EF.instance.canBothFire = false;
+        upgradeEffect.SetActive(true);
+        gunText.gameObject.SetActive(true);
+        print("Gun Down");
+        yield return new WaitForSeconds(2f);
+        threeBurstCannon.SetActive(false);
+        fiveBurstCannon.SetActive(true);
+        upgradeEffect.SetActive(false);
+        gunText.gameObject.SetActive(false);
+        Player_CS_EF.instance.canBothFire = true;
+        print("Gun Upgraded");
+    }
+    IEnumerator UpgradeGun3()
+    {
+        Player_CS_EF.instance.canBothFire = false;
+        upgradeEffect.SetActive(true);
+        gunText.gameObject.SetActive(true);
+        print("Gun Down");
+        yield return new WaitForSeconds(2f);
+        fiveBurstCannon.SetActive(false);
+        nineBurstCannon.SetActive(true);
+        upgradeEffect.SetActive(false);
+        gunText.gameObject.SetActive(false);
+        Player_CS_EF.instance.canBothFire = true;
+        print("Gun Upgraded");
     }
 }
