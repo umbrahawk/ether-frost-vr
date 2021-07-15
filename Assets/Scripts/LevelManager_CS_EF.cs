@@ -173,6 +173,8 @@ public class LevelManager_CS_EF : MonoBehaviour
         {
             gunBarrel[0].transform.parent = null;
             gunBarrel[0].GetComponent<Rigidbody>().useGravity = true;
+            gunBarrel[1].transform.parent = null;
+            gunBarrel[1].GetComponent<Rigidbody>().useGravity = true;
             StartCoroutine("UpgradeGun1");
             basicCannon = false;
             threeBurstActive = true;
@@ -184,8 +186,10 @@ public class LevelManager_CS_EF : MonoBehaviour
         // Add new mesh
         if (currentTime <= roundThreeTransition)
         {
-            gunBarrel[1].transform.parent = null;
-            gunBarrel[1].GetComponent<Rigidbody>().useGravity = true;
+            gunBarrel[2].transform.parent = null;
+            gunBarrel[2].GetComponent<Rigidbody>().useGravity = true;
+            gunBarrel[3].transform.parent = null;
+            gunBarrel[3].GetComponent<Rigidbody>().useGravity = true;
             StartCoroutine("UpgradeGun2");
             threeBurstActive = false;
             fiveBurstActive = true;
@@ -196,8 +200,10 @@ public class LevelManager_CS_EF : MonoBehaviour
         // Add new mesh
         if (currentTime <= finalRoundTransition)
         {
-            gunBarrel[2].transform.parent = null;
-            gunBarrel[2].GetComponent<Rigidbody>().useGravity = true;
+            gunBarrel[4].transform.parent = null;
+            gunBarrel[4].GetComponent<Rigidbody>().useGravity = true;
+            gunBarrel[5].transform.parent = null;
+            gunBarrel[5].GetComponent<Rigidbody>().useGravity = true;
             StartCoroutine("UpgradeGun3");
             fiveBurstActive = false;
             nineBurstActive = true;
@@ -236,7 +242,7 @@ public class LevelManager_CS_EF : MonoBehaviour
         gunText.gameObject.SetActive(true);
         print("Gun Down");
         yield return new WaitForSeconds(2f);
-        Destroy(gunBarrel[0].gameObject);
+        //Destroy(gunBarrel[0].gameObject);
         mainCannon.SetActive(false);
         threeBurstCannon.SetActive(true);
         upgradeEffect.SetActive(false);

@@ -631,8 +631,11 @@ MonoBehaviour:
   upgradeEffect: {fileID: 1635975424}
   gunBarrel:
   - {fileID: 1214004971}
+  - {fileID: 1684857551}
   - {fileID: 369142888}
+  - {fileID: 1441381103}
   - {fileID: 1129371937}
+  - {fileID: 1287883511}
 --- !u!4 &75735238
 Transform:
   m_ObjectHideFlags: 0
@@ -5451,6 +5454,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c79c221543665c46bbf7dc71a81a4c3, type: 3}
+--- !u!54 &1287883511 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 4501216503988488915, guid: c8e5341c837a8834c9e1834ad1d1db78,
+    type: 3}
+  m_PrefabInstance: {fileID: 1388004800}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1294069626
 GameObject:
   m_ObjectHideFlags: 0
@@ -5913,6 +5922,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[ExperienceApp]'
       objectReference: {fileID: 0}
+    - target: {fileID: 2892723903260082267, guid: c8e5341c837a8834c9e1834ad1d1db78,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4809944811233797237, guid: c8e5341c837a8834c9e1834ad1d1db78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5966,11 +5980,6 @@ PrefabInstance:
     - target: {fileID: 4809944811233797237, guid: c8e5341c837a8834c9e1834ad1d1db78,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892723903260082267, guid: c8e5341c837a8834c9e1834ad1d1db78,
-        type: 3}
-      propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6082,6 +6091,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8504891547471277367, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
     type: 3}
   m_PrefabInstance: {fileID: 162627030}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1441381103 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 4324348052264292289, guid: c8e5341c837a8834c9e1834ad1d1db78,
+    type: 3}
+  m_PrefabInstance: {fileID: 1388004800}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1450833431
 PrefabInstance:
@@ -7428,6 +7443,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8504891547471277367, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
     type: 3}
   m_PrefabInstance: {fileID: 1672125834}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1684857551 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 4187750835756010579, guid: c8e5341c837a8834c9e1834ad1d1db78,
+    type: 3}
+  m_PrefabInstance: {fileID: 1388004800}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1692298982 stripped
 GameObject:
