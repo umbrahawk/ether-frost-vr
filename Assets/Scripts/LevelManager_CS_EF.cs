@@ -17,9 +17,9 @@ public class LevelManager_CS_EF : MonoBehaviour
     public bool roundTwo = false;
     public bool roundThree = false;
     public bool finalRound = false;
-    public int roundTwoTransition = 93;
-    public int roundThreeTransition = 67;
-    public int finalRoundTransition = 35;
+    public int roundTwoTransition = 95;
+    public int roundThreeTransition = 69;
+    public int finalRoundTransition = 37;
 
     [Header("TIMER STATS")]
     public float startingTime = 120;

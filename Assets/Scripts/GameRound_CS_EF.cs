@@ -28,29 +28,40 @@ public class GameRound_CS_EF : MonoBehaviour
         {
             objectsActivated = true;
 
-            ActivateTargets();
+            ActivateFirstRound();
         }
 
         if (LevelManager_CS_EF.instance.roundTwo == true && roundTwo == true && objectsActivated == false)
         {
             objectsActivated = true;
 
-            ActivateTargets();
+            StartCoroutine("ActivateTargets");
         }
 
         if (LevelManager_CS_EF.instance.roundThree == true && roundThree == true && objectsActivated == false)
         {
             objectsActivated = true;
 
-            ActivateTargets();
+            StartCoroutine("ActivateTargets");
         }
     }
 
-    public void ActivateTargets()
+    IEnumerator ActivateTargets()
+    {
+        yield return new WaitForSeconds(2);
+
+        for (int i = 0; i < targets.Length; i++)
+        {
+            targets[i].SetActive(true);
+        }
+    }
+    
+    public void ActivateFirstRound()
     {
         for (int i = 0; i < targets.Length; i++)
         {
             targets[i].SetActive(true);
         }
     }
+    
 }

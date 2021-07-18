@@ -53,7 +53,7 @@ public class Player_CS_EF : MonoBehaviour
     void Update()
     {
         // Checks if the player has input the fire button and can fire
-        if (Input.GetButton("Fire1") && rightCanFire && canBothFire == true)
+        if (Input.GetButton("Oculus_GearVR_RIndexTrigger") && rightCanFire && canBothFire == true)
         {
             // Checks if the basic cannon is unlocked
             if (LevelManager_CS_EF.instance.basicCannon == true )
@@ -79,7 +79,7 @@ public class Player_CS_EF : MonoBehaviour
         }
 
         // Checks if the player has input the fire button and can fire
-        if (Input.GetButton("Fire2") && leftCanFire && canBothFire == true)
+        if (Input.GetButton("Oculus_GearVR_LIndexTrigger") && leftCanFire && canBothFire == true)
         {
             // Checks if the basic cannon is unlocked
             if (LevelManager_CS_EF.instance.basicCannon == true)
@@ -259,7 +259,7 @@ public class Player_CS_EF : MonoBehaviour
         AudioSource.PlayClipAtPoint(basicCannonSFX, new Vector3(0, 0, 0));
 
         // Spawns in the projectile
-        Instantiate(projectile, rightMainSpawnPoint.position, rightMainSpawnPoint.rotation);
+        Instantiate(projectile, leftMainSpawnPoint.position, leftMainSpawnPoint.rotation);
         Instantiate(projectile, leftExtraSpawnPoint1.position, leftExtraSpawnPoint1.rotation);
         Instantiate(projectile, leftExtraSpawnPoint2.position, leftExtraSpawnPoint2.rotation);
         Instantiate(projectile, leftExtraSpawnPoint3.position, leftExtraSpawnPoint3.rotation);
