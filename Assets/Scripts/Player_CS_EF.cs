@@ -31,6 +31,18 @@ public class Player_CS_EF : MonoBehaviour
     public Transform leftExtraSpawnPoint7;
     public Transform leftExtraSpawnPoint8;
 
+    [Header("PROJECTILE SPAWN POINTS // 5 Burst Right")]
+    public Transform rightFiveBurst1;
+    public Transform rightFiveBurst2;
+    public Transform rightFiveBurst3;
+    public Transform rightFiveBurst4;
+
+    [Header("PROJECTILE SPAWN POINTS // 5 Burst Left")]
+    public Transform leftFiveBurst1;
+    public Transform leftFiveBurst2;
+    public Transform leftFiveBurst3;
+    public Transform leftFiveBurst4;
+
     [Header("CANNON AUDIO")]
     public AudioClip basicCannonSFX;
 
@@ -53,7 +65,7 @@ public class Player_CS_EF : MonoBehaviour
     void Update()
     {
         // Checks if the player has input the fire button and can fire
-        if (Input.GetButton("Oculus_GearVR_RIndexTrigger") && rightCanFire && canBothFire == true)
+        if (Input.GetButton("Fire1") && rightCanFire && canBothFire == true)
         {
             // Checks if the basic cannon is unlocked
             if (LevelManager_CS_EF.instance.basicCannon == true )
@@ -79,7 +91,7 @@ public class Player_CS_EF : MonoBehaviour
         }
 
         // Checks if the player has input the fire button and can fire
-        if (Input.GetButton("Oculus_GearVR_LIndexTrigger") && leftCanFire && canBothFire == true)
+        if (Input.GetButton("Fire1") && leftCanFire && canBothFire == true)
         {
             // Checks if the basic cannon is unlocked
             if (LevelManager_CS_EF.instance.basicCannon == true)
@@ -192,10 +204,10 @@ public class Player_CS_EF : MonoBehaviour
 
         // Spawns in the projectile
         Instantiate(projectile, rightMainSpawnPoint.position, rightMainSpawnPoint.rotation);
-        Instantiate(projectile, rightExtraSpawnPoint1.position, rightExtraSpawnPoint1.rotation);
-        Instantiate(projectile, rightExtraSpawnPoint2.position, rightExtraSpawnPoint2.rotation);
-        Instantiate(projectile, rightExtraSpawnPoint3.position, rightExtraSpawnPoint3.rotation);
-        Instantiate(projectile, rightExtraSpawnPoint4.position, rightExtraSpawnPoint4.rotation);
+        Instantiate(projectile, rightFiveBurst1.position, rightFiveBurst1.rotation);
+        Instantiate(projectile, rightFiveBurst2.position, rightFiveBurst2.rotation);
+        Instantiate(projectile, rightFiveBurst3.position, rightFiveBurst3.rotation);
+        Instantiate(projectile, rightFiveBurst4.position, rightFiveBurst4.rotation);
 
         // Waits for the fire rate
         yield return new WaitForSeconds(LevelManager_CS_EF.instance.attackSpeed);
@@ -213,10 +225,10 @@ public class Player_CS_EF : MonoBehaviour
 
         // Spawns in the projectile
         Instantiate(projectile, leftMainSpawnPoint.position, leftMainSpawnPoint.rotation);
-        Instantiate(projectile, leftExtraSpawnPoint1.position, leftExtraSpawnPoint1.rotation);
-        Instantiate(projectile, leftExtraSpawnPoint2.position, leftExtraSpawnPoint2.rotation);
-        Instantiate(projectile, leftExtraSpawnPoint3.position, leftExtraSpawnPoint3.rotation);
-        Instantiate(projectile, leftExtraSpawnPoint4.position, leftExtraSpawnPoint4.rotation);
+        Instantiate(projectile, leftFiveBurst1.position, leftFiveBurst1.rotation);
+        Instantiate(projectile, leftFiveBurst2.position, leftFiveBurst2.rotation);
+        Instantiate(projectile, leftFiveBurst3.position, leftFiveBurst3.rotation);
+        Instantiate(projectile, leftFiveBurst4.position, leftFiveBurst4.rotation);
 
         // Waits for the fire rate
         yield return new WaitForSeconds(LevelManager_CS_EF.instance.attackSpeed);
