@@ -9,18 +9,20 @@ public class MainTarget_CS_EF : MonoBehaviour
         // lifetime = how long the target will remain inactive
         // GameObject target = the mesh of the whole target to be moved
 
+    [Header("MAIN STATS")]
     public bool isActive = true;
     public float lifetime = 5.0f;
     public int speed = 1;
     public GameObject target;
     
+    [Header("MOVING TARGET")]
     public bool movingTaget = false;
     public float pivotTime = 2.0f;
     public float moveSpeed = 3.0f;
     public bool dirRight = true;
 
+    [Header("MISC")]
     public bool startTarget = false;
-
     public bool finalRound = false;
 
     [Header("CONNECTIONS")]
