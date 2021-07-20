@@ -81,7 +81,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         timerText.text = "Time left: " + "2:00";
 
-        targetText.text = "Targets hit: " + targetsHit;
+        //targetText.text = "Targets hit: " + targetsHit;
 
         upgradeEffect.SetActive(false);
     }
@@ -121,7 +121,7 @@ public class LevelManager_CS_EF : MonoBehaviour
         // Program that runs when a main target is hit
         // This will increase the score and the UI
         targetsHit++;
-        targetText.text = "Targets Hit: " + targetsHit;
+        //targetText.text = "Targets Hit: " + targetsHit;
     }
 
     public void IncreaseRound()
