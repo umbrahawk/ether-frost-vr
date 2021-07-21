@@ -127,12 +127,24 @@ MonoBehaviour:
   lifetime: 3
   speed: 10
   target: {fileID: 6369131675755890382}
+  regularTarget: 1
+  duckTarget: 0
   movingTaget: 0
   pivotTime: 2
   moveSpeed: 3
   dirRight: 1
   startTarget: 0
   finalRound: 0
+  hitSound1VFX: {fileID: 8300000, guid: 1678826df663a2b47a394bf48e73966f, type: 3}
+  hitSound2VFX: {fileID: 8300000, guid: a049543eacb01e24d911c2d695008d5f, type: 3}
+  hitSound3VFX: {fileID: 8300000, guid: 811b136e415c39a46ae750eea511f59f, type: 3}
+  hitSound4VFX: {fileID: 8300000, guid: 3c3c724820b7c964c9656b72fb7cefd2, type: 3}
+  hitSound5VFX: {fileID: 8300000, guid: d60bf9023102d9b45be90997d66c563b, type: 3}
+  hitSound6VFX: {fileID: 8300000, guid: 41b66fd883647f94789cfb5042760a45, type: 3}
+  duckSound1VFX: {fileID: 0}
+  duckSound2VFX: {fileID: 0}
+  duckSound3VFX: {fileID: 0}
+  duckSound4VFX: {fileID: 0}
   hitSoundSFX: {fileID: 8300000, guid: bb9c5b47683c73e4fa37f2a326a92328, type: 3}
 --- !u!54 &954544581164987481
 Rigidbody:

@@ -220,13 +220,25 @@ MonoBehaviour:
   lifetime: 3
   speed: 10
   target: {fileID: 6369131675755890382}
+  regularTarget: 0
+  duckTarget: 1
   movingTaget: 0
   pivotTime: 2
   moveSpeed: 3
   dirRight: 1
   startTarget: 0
   finalRound: 0
-  hitSoundSFX: {fileID: 8300000, guid: bb9c5b47683c73e4fa37f2a326a92328, type: 3}
+  hitSound1VFX: {fileID: 0}
+  hitSound2VFX: {fileID: 0}
+  hitSound3VFX: {fileID: 0}
+  hitSound4VFX: {fileID: 0}
+  hitSound5VFX: {fileID: 0}
+  hitSound6VFX: {fileID: 0}
+  duckSound1VFX: {fileID: 8300000, guid: a7ac6d45de97bd2489e14793ed574df5, type: 3}
+  duckSound2VFX: {fileID: 8300000, guid: 93990dec794891a4a85aee886a4ecc3f, type: 3}
+  duckSound3VFX: {fileID: 8300000, guid: 3bec796c8c9f94f4ba574842b654ac30, type: 3}
+  duckSound4VFX: {fileID: 8300000, guid: fecf7b215fe0cdc47b2b0fbd79076d4e, type: 3}
+  duckSound5VFX: {fileID: 8300000, guid: 72db67affeedab3459cc25e2973302c0, type: 3}
 --- !u!54 &954544581164987481
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5046,6 +5058,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1198192502819225713}
     m_Modifications:
+    - target: {fileID: 1767663768970106, guid: ca9fda2f4d77c4d4f88d4ed8b939f69b, type: 3}
+      propertyPath: m_Name
+      value: Toon Chick
+      objectReference: {fileID: 0}
     - target: {fileID: 4429102427960218, guid: ca9fda2f4d77c4d4f88d4ed8b939f69b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5101,10 +5117,6 @@ PrefabInstance:
     - target: {fileID: 4429102427960218, guid: ca9fda2f4d77c4d4f88d4ed8b939f69b, type: 3}
       propertyPath: m_LocalScale.z
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1767663768970106, guid: ca9fda2f4d77c4d4f88d4ed8b939f69b, type: 3}
-      propertyPath: m_Name
-      value: Toon Chick
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca9fda2f4d77c4d4f88d4ed8b939f69b, type: 3}

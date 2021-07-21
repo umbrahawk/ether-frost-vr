@@ -14,7 +14,11 @@ public class MainTarget_CS_EF : MonoBehaviour
     public float lifetime = 5.0f;
     public int speed = 1;
     public GameObject target;
-    
+
+    [Header("TARGET TYPES")]
+    public bool regularTarget = false;
+    public bool duckTarget = false;
+
     [Header("MOVING TARGET")]
     public bool movingTaget = false;
     public float pivotTime = 2.0f;
@@ -26,10 +30,23 @@ public class MainTarget_CS_EF : MonoBehaviour
     public bool finalRound = false;
 
     [Header("CONNECTIONS")]
-    ParticleSystem sparks;    
+    ParticleSystem sparks;
 
     // Where the sound should play from
-    public AudioClip hitSoundSFX;
+    [Header("NORMAL TARGET SOUNDS")]
+    public AudioClip hitSound1VFX;
+    public AudioClip hitSound2VFX;
+    public AudioClip hitSound3VFX;
+    public AudioClip hitSound4VFX;
+    public AudioClip hitSound5VFX;
+    public AudioClip hitSound6VFX;
+
+    [Header("DUCK TARGET SOUNDS")]
+    public AudioClip duckSound1VFX;
+    public AudioClip duckSound2VFX;
+    public AudioClip duckSound3VFX;
+    public AudioClip duckSound4VFX;
+    public AudioClip duckSound5VFX;
 
     // For targets which start inactive
     void OnEnable()
@@ -75,7 +92,15 @@ public class MainTarget_CS_EF : MonoBehaviour
 
     IEnumerator ToggleTarget()
     {
-        AudioSource.PlayClipAtPoint(hitSoundSFX, new Vector3(0, 0, 0));
+        if (regularTarget)
+        {
+            PlayRegularSound();
+        }
+
+        else if (duckTarget)
+        {
+            PlayDuckSound();
+        }
 
         if (!startTarget)
         {
@@ -165,6 +190,74 @@ public class MainTarget_CS_EF : MonoBehaviour
         dirRight = !dirRight;
 
         StartCoroutine("MoveTarget");
+    }
+
+    public void PlayRegularSound()
+    {
+        int playSound = Random.Range(0, 6);
+        print(playSound);
+
+        switch (playSound)
+        {
+            case 0:
+                AudioSource.PlayClipAtPoint(hitSound1VFX, new Vector3(0, 0, 0));
+                break;
+
+            case 1:
+                AudioSource.PlayClipAtPoint(hitSound2VFX, new Vector3(0, 0, 0));
+                break;
+
+            case 2:
+                AudioSource.PlayClipAtPoint(hitSound3VFX, new Vector3(0, 0, 0));
+                break;
+
+            case 3:
+                AudioSource.PlayClipAtPoint(hitSound4VFX, new Vector3(0, 0, 0));
+                break;
+
+            case 4:
+                AudioSource.PlayClipAtPoint(hitSound5VFX, new Vector3(0, 0, 0));
+                break;
+
+            case 5:
+                AudioSource.PlayClipAtPoint(hitSound6VFX, new Vector3(0, 0, 0));
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    public void PlayDuckSound()
+    {
+        int playSound = Random.Range(0, 5);
+        print(playSound);
+
+        switch (playSound)
+        {
+            case 0:
+                AudioSource.PlayClipAtPoint(duckSound1VFX, new Vector3(0, 0, 0));
+                break;
+
+            case 1:
+                AudioSource.PlayClipAtPoint(duckSound2VFX, new Vector3(0, 0, 0));
+                break;
+
+            case 2:
+                AudioSource.PlayClipAtPoint(duckSound3VFX, new Vector3(0, 0, 0));
+                break;
+
+            case 3:
+                AudioSource.PlayClipAtPoint(duckSound4VFX, new Vector3(0, 0, 0));
+                break;
+
+            case 4:
+                AudioSource.PlayClipAtPoint(duckSound5VFX, new Vector3(0, 0, 0));
+                break;
+
+            default:
+                break;
+        }
     }
 
     public void OnCollisionEnter(Collision other)
