@@ -89,7 +89,7 @@ public class Player_CS_EF : MonoBehaviour
                 StartCoroutine("FireRightNineBurst");
             }
         }
-
+        /*
         // Checks if the player has input the fire button and can fire
         if (Input.GetButton("Fire1") && leftCanFire && canBothFire == true)
         {
@@ -115,6 +115,7 @@ public class Player_CS_EF : MonoBehaviour
                 StartCoroutine("FireLeftNineBurst");
             }
         }
+        */
     }
 
     // Coroutine to fire the projectile
