@@ -883,7 +883,6 @@ MonoBehaviour:
   increaseAmount: 5
   timerText: {fileID: 1401092111}
   targetsHit: 0
-  targetText: {fileID: 0}
   rapidFireActive: 0
   attackSpeed: 0
   fireRate: 0.2
@@ -891,13 +890,18 @@ MonoBehaviour:
   threeBurstActive: 0
   fiveBurstActive: 0
   nineBurstActive: 0
-  mainCannon: {fileID: 497923222}
-  threeBurstCannon: {fileID: 1081991903}
-  fiveBurstCannon: {fileID: 227422875}
-  nineBurstCannon: {fileID: 615878831}
+  mainCannonPrimary: {fileID: 497923222}
+  threeBurstCannonPrimary: {fileID: 1081991903}
+  fiveBurstCannonPrimary: {fileID: 227422875}
+  nineBurstCannonPrimary: {fileID: 615878831}
+  mainCannonSecondary: {fileID: 1562311832}
+  threeBurstCannonSecondary: {fileID: 2125231380}
+  fiveBurstCannonSecondary: {fileID: 1404131695}
+  nineBurstCannonSecondary: {fileID: 1907547931}
   gunText: {fileID: 950030344}
   gameBackgroundMusic: {fileID: 8300000, guid: 3ce02814723aff34e809c6a1def60fad, type: 3}
-  upgradeEffect: {fileID: 1635975424}
+  upgradeEffectPrimary: {fileID: 1635975424}
+  upgradeEffectSecondary: {fileID: 757798093}
   gunBarrel:
   - {fileID: 1214004971}
   - {fileID: 1684857551}
@@ -960,7 +964,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4086165618752856, guid: 40d071ae5a6a80b47a216fbcc9c01115, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4086165618752856, guid: 40d071ae5a6a80b47a216fbcc9c01115, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2970,7 +2974,7 @@ PrefabInstance:
     - target: {fileID: 5407029751185978104, guid: 317a5a84257b67347856af9fc65931ce,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5407029751185978104, guid: 317a5a84257b67347856af9fc65931ce,
         type: 3}
@@ -4769,6 +4773,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 744284641}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &757798093 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7977334958102577778, guid: c8e5341c837a8834c9e1834ad1d1db78,
+    type: 3}
+  m_PrefabInstance: {fileID: 1388004800}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &770228438 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8504891547471277367, guid: 9c79c221543665c46bbf7dc71a81a4c3,
@@ -6446,7 +6456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4379651133708056, guid: 44e900124d15a4d4cba654ab6c243579, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4379651133708056, guid: 44e900124d15a4d4cba654ab6c243579, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6524,7 +6534,7 @@ Transform:
   - {fileID: 1107262877}
   - {fileID: 152582105}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1232593197
 GameObject:
@@ -6615,7 +6625,7 @@ Transform:
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 93.165985, y: -30, z: -25.536987}
 --- !u!1 &1243852359
 GameObject:
@@ -7770,6 +7780,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[ExperienceApp]'
       objectReference: {fileID: 0}
+    - target: {fileID: 8645238919936347412, guid: c8e5341c837a8834c9e1834ad1d1db78,
+        type: 3}
+      propertyPath: m_Name
+      value: Gun_Upgrade_03_Primary
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923442198591874443, guid: c8e5341c837a8834c9e1834ad1d1db78,
+        type: 3}
+      propertyPath: m_Name
+      value: Gun_Upgrade_01_Primary
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597627642483894231, guid: c8e5341c837a8834c9e1834ad1d1db78,
+        type: 3}
+      propertyPath: m_Name
+      value: Gun_Upgrade_04_Primary
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283690377074430716, guid: c8e5341c837a8834c9e1834ad1d1db78,
+        type: 3}
+      propertyPath: m_Name
+      value: Gun_Upgrade_02_Primary
+      objectReference: {fileID: 0}
     - target: {fileID: 2892723903260082267, guid: c8e5341c837a8834c9e1834ad1d1db78,
         type: 3}
       propertyPath: m_UseGravity
@@ -7845,6 +7875,26 @@ PrefabInstance:
       propertyPath: rightFiveBurst4
       value: 
       objectReference: {fileID: 1047615795}
+    - target: {fileID: 4512317216018739523, guid: c8e5341c837a8834c9e1834ad1d1db78,
+        type: 3}
+      propertyPath: m_Name
+      value: Gun_Upgrade_02_Secondary
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698683451262580280, guid: c8e5341c837a8834c9e1834ad1d1db78,
+        type: 3}
+      propertyPath: m_Name
+      value: Gun_Upgrade_01_Secondary
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799116882571280661, guid: c8e5341c837a8834c9e1834ad1d1db78,
+        type: 3}
+      propertyPath: m_Name
+      value: Gun_Upgrade_03_Secondary
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806823382146683290, guid: c8e5341c837a8834c9e1834ad1d1db78,
+        type: 3}
+      propertyPath: m_Name
+      value: Gun_Upgrade_04_Secondary
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8e5341c837a8834c9e1834ad1d1db78, type: 3}
 --- !u!1 &1393862476 stripped
@@ -7871,6 +7921,12 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1404131695 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6799116882571280661, guid: c8e5341c837a8834c9e1834ad1d1db78,
+    type: 3}
+  m_PrefabInstance: {fileID: 1388004800}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1408568963
 GameObject:
   m_ObjectHideFlags: 0
@@ -8819,7 +8875,7 @@ PrefabInstance:
     - target: {fileID: 5407029751185978104, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5407029751185978104, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
         type: 3}
@@ -8853,6 +8909,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1d49526792453ee46bfb13ad2bc65ae2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9, type: 3}
+--- !u!1 &1562311832 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1698683451262580280, guid: c8e5341c837a8834c9e1834ad1d1db78,
+    type: 3}
+  m_PrefabInstance: {fileID: 1388004800}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1567593848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10081,7 +10143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4060561158876430, guid: e428667bead488c4ca3d8dbb7f49cc31, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4060561158876430, guid: e428667bead488c4ca3d8dbb7f49cc31, type: 3}
       propertyPath: m_LocalScale.x
@@ -10556,6 +10618,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8504891547471277367, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
     type: 3}
   m_PrefabInstance: {fileID: 1594511523}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1907547931 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6806823382146683290, guid: c8e5341c837a8834c9e1834ad1d1db78,
+    type: 3}
+  m_PrefabInstance: {fileID: 1388004800}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1909586304
 PrefabInstance:
@@ -12190,7 +12258,7 @@ PrefabInstance:
     - target: {fileID: 239448672931834305, guid: 2b26c130d4321ee48add5c90c530eea3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 239448672931834305, guid: 2b26c130d4321ee48add5c90c530eea3,
         type: 3}
@@ -12263,6 +12331,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.6627138, y: 3.3697205, z: 3.6345882}
   m_Center: {x: 0.004429397, y: 0.53943944, z: -0.10976489}
+--- !u!1 &2125231380 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4512317216018739523, guid: c8e5341c837a8834c9e1834ad1d1db78,
+    type: 3}
+  m_PrefabInstance: {fileID: 1388004800}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2129063252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13281,7 +13355,7 @@ Transform:
   - {fileID: 1692298983}
   - {fileID: 472867673}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7206540309566920291
 GameObject:

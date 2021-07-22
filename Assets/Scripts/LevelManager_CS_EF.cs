@@ -29,7 +29,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
     [Header("TARGET STATS")]
     public int targetsHit = 0;
-    public Text targetText;
+    //public Text targetText;
 
     [Header("PLAYER STATS")]
     public bool rapidFireActive = false;
@@ -43,10 +43,14 @@ public class LevelManager_CS_EF : MonoBehaviour
     public bool nineBurstActive = false;
 
     [Header("CANNON MESHES")]
-    public GameObject mainCannon;
-    public GameObject threeBurstCannon;
-    public GameObject fiveBurstCannon;
-    public GameObject nineBurstCannon;
+    public GameObject mainCannonPrimary;
+    public GameObject threeBurstCannonPrimary;
+    public GameObject fiveBurstCannonPrimary;
+    public GameObject nineBurstCannonPrimary;
+    public GameObject mainCannonSecondary;
+    public GameObject threeBurstCannonSecondary;
+    public GameObject fiveBurstCannonSecondary;
+    public GameObject nineBurstCannonSecondary;
 
     [Header("GUN STATS")]
     public Text gunText;
@@ -55,7 +59,8 @@ public class LevelManager_CS_EF : MonoBehaviour
     public AudioClip gameBackgroundMusic;
 
     [Header("VISUAL EFFECTS")]
-    public GameObject upgradeEffect;
+    public GameObject upgradeEffectPrimary;
+    public GameObject upgradeEffectSecondary;
 
     [Header("MISC")]
     public Rigidbody[] gunBarrel;
@@ -83,7 +88,8 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         //targetText.text = "Targets hit: " + targetsHit;
 
-        upgradeEffect.SetActive(false);
+        upgradeEffectPrimary.SetActive(false);
+        upgradeEffectSecondary.SetActive(false);
     }
 
 
@@ -238,14 +244,18 @@ public class LevelManager_CS_EF : MonoBehaviour
     IEnumerator UpgradeGun1()
     {
         Player_CS_EF.instance.canBothFire = false;
-        upgradeEffect.SetActive(true);
+        upgradeEffectPrimary.SetActive(true);
+        upgradeEffectSecondary.SetActive(true);
         gunText.gameObject.SetActive(true);
         print("Gun Down");
         yield return new WaitForSeconds(2f);
         //Destroy(gunBarrel[0].gameObject);
-        mainCannon.SetActive(false);
-        threeBurstCannon.SetActive(true);
-        upgradeEffect.SetActive(false);
+        mainCannonPrimary.SetActive(false);
+        mainCannonSecondary.SetActive(false);
+        threeBurstCannonPrimary.SetActive(true);
+        threeBurstCannonSecondary.SetActive(true);
+        upgradeEffectPrimary.SetActive(false);
+        upgradeEffectSecondary.SetActive(false);
         gunText.gameObject.SetActive(false);
         Player_CS_EF.instance.canBothFire = true;
         print("Gun Upgraded");
@@ -254,13 +264,17 @@ public class LevelManager_CS_EF : MonoBehaviour
     IEnumerator UpgradeGun2()
     {
         Player_CS_EF.instance.canBothFire = false;
-        upgradeEffect.SetActive(true);
+        upgradeEffectPrimary.SetActive(true);
+        upgradeEffectSecondary.SetActive(true);
         gunText.gameObject.SetActive(true);
         print("Gun Down");
         yield return new WaitForSeconds(2f);
-        threeBurstCannon.SetActive(false);
-        fiveBurstCannon.SetActive(true);
-        upgradeEffect.SetActive(false);
+        threeBurstCannonPrimary.SetActive(false);
+        threeBurstCannonSecondary.SetActive(false);
+        fiveBurstCannonPrimary.SetActive(true);
+        fiveBurstCannonSecondary.SetActive(true);
+        upgradeEffectPrimary.SetActive(false);
+        upgradeEffectSecondary.SetActive(false);
         gunText.gameObject.SetActive(false);
         Player_CS_EF.instance.canBothFire = true;
         print("Gun Upgraded");
@@ -268,13 +282,17 @@ public class LevelManager_CS_EF : MonoBehaviour
     IEnumerator UpgradeGun3()
     {
         Player_CS_EF.instance.canBothFire = false;
-        upgradeEffect.SetActive(true);
+        upgradeEffectPrimary.SetActive(true);
+        upgradeEffectSecondary.SetActive(true);
         gunText.gameObject.SetActive(true);
         print("Gun Down");
         yield return new WaitForSeconds(2f);
-        fiveBurstCannon.SetActive(false);
-        nineBurstCannon.SetActive(true);
-        upgradeEffect.SetActive(false);
+        fiveBurstCannonPrimary.SetActive(false);
+        fiveBurstCannonSecondary.SetActive(false);
+        nineBurstCannonPrimary.SetActive(true);
+        nineBurstCannonSecondary.SetActive(true);
+        upgradeEffectPrimary.SetActive(false);
+        upgradeEffectSecondary.SetActive(false);
         gunText.gameObject.SetActive(false);
         Player_CS_EF.instance.canBothFire = true;
         print("Gun Upgraded");
