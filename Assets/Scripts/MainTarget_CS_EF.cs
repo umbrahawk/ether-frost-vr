@@ -27,6 +27,7 @@ public class MainTarget_CS_EF : MonoBehaviour
 
     [Header("MISC")]
     public bool startTarget = false;
+    public bool swingTarget = false;
     public bool finalRound = false;
 
     [Header("CONNECTIONS")]
@@ -122,6 +123,25 @@ public class MainTarget_CS_EF : MonoBehaviour
             yield return null;
         }
 
+        /*
+        if (swingTarget)
+        {
+            // Variable for how long they will be deactived
+            float timer = lifetime;
+
+            // Timer to wait for the targets cooldown
+            while (timer > 0)
+            {
+                timer -= Time.deltaTime;
+
+                yield return null;
+
+                // Reactivates the target
+                StartCoroutine("ReactivateTarget");
+            }
+        }
+        */
+
         // Puts the target in the correct location
         target.transform.localEulerAngles = new Vector3(0, 0, -90);
 
@@ -145,7 +165,7 @@ public class MainTarget_CS_EF : MonoBehaviour
             }
         }
 
-        else if (startTarget)
+        else if (startTarget && LevelManager_CS_EF.instance.gameActive == false)
         {
             LevelManager_CS_EF.instance.BeginGame();
             gameObject.SetActive(false);
