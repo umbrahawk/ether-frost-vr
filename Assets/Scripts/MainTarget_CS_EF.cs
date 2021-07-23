@@ -123,7 +123,9 @@ public class MainTarget_CS_EF : MonoBehaviour
             yield return null;
         }
 
-        /*
+        // Puts the target in the correct location
+        target.transform.localEulerAngles = new Vector3(0, 0, -90);
+
         if (swingTarget)
         {
             // Variable for how long they will be deactived
@@ -140,12 +142,8 @@ public class MainTarget_CS_EF : MonoBehaviour
                 StartCoroutine("ReactivateTarget");
             }
         }
-        */
 
-        // Puts the target in the correct location
-        target.transform.localEulerAngles = new Vector3(0, 0, -90);
-
-        if (!startTarget)
+        else if (!startTarget)
         {
             // Variable for how long they will be deactived
             float timer = lifetime;
@@ -170,6 +168,7 @@ public class MainTarget_CS_EF : MonoBehaviour
             LevelManager_CS_EF.instance.BeginGame();
             gameObject.SetActive(false);
         }
+
     }
 
     // IEnumerator to return the target back to their regular position

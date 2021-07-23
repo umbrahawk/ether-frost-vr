@@ -10080,9 +10080,39 @@ PrefabInstance:
       propertyPath: roundThree
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9135659787337453878, guid: e428667bead488c4ca3d8dbb7f49cc31,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00000004997468
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135659787337453878, guid: e428667bead488c4ca3d8dbb7f49cc31,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7188827
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135659787337453878, guid: e428667bead488c4ca3d8dbb7f49cc31,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00000009967416
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135659787337453878, guid: e428667bead488c4ca3d8dbb7f49cc31,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6951315
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135659787337453878, guid: e428667bead488c4ca3d8dbb7f49cc31,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 91.925
+      objectReference: {fileID: 0}
     - target: {fileID: 5318131492139742668, guid: e428667bead488c4ca3d8dbb7f49cc31,
         type: 3}
       propertyPath: startTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5318131492139742668, guid: e428667bead488c4ca3d8dbb7f49cc31,
+        type: 3}
+      propertyPath: swingTarget
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9163738859513180024, guid: e428667bead488c4ca3d8dbb7f49cc31,
@@ -10090,9 +10120,64 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e76de6b655a8ff944aa5b47f64704103, type: 2}
+    - target: {fileID: 6403293380949943748, guid: e428667bead488c4ca3d8dbb7f49cc31,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6403293380949943748, guid: e428667bead488c4ca3d8dbb7f49cc31,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6403293380949943748, guid: e428667bead488c4ca3d8dbb7f49cc31,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6403293380949943748, guid: e428667bead488c4ca3d8dbb7f49cc31,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6403293380949943748, guid: e428667bead488c4ca3d8dbb7f49cc31,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601558009053535557, guid: e428667bead488c4ca3d8dbb7f49cc31,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00000012317544
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601558009053535557, guid: e428667bead488c4ca3d8dbb7f49cc31,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.99974436
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601558009053535557, guid: e428667bead488c4ca3d8dbb7f49cc31,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.000000106570965
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601558009053535557, guid: e428667bead488c4ca3d8dbb7f49cc31,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.022613166
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601558009053535557, guid: e428667bead488c4ca3d8dbb7f49cc31,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 182.592
+      objectReference: {fileID: 0}
     - target: {fileID: 8059401682724766014, guid: e428667bead488c4ca3d8dbb7f49cc31,
         type: 3}
       propertyPath: startTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8059401682724766014, guid: e428667bead488c4ca3d8dbb7f49cc31,
+        type: 3}
+      propertyPath: swingTarget
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6429258711273413514, guid: e428667bead488c4ca3d8dbb7f49cc31,
