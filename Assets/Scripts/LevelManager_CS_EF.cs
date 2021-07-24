@@ -25,7 +25,7 @@ public class LevelManager_CS_EF : MonoBehaviour
     public float startingTime = 120;
     public float currentTime;
     public float increaseAmount = 5;
-    public Text timerText;
+    public Text TimerText;
 
     [Header("TARGET STATS")]
     public int targetsHit = 0;
@@ -61,6 +61,8 @@ public class LevelManager_CS_EF : MonoBehaviour
     [Header("VISUAL EFFECTS")]
     public GameObject upgradeEffectPrimary;
     public GameObject upgradeEffectSecondary;
+    public GameObject secondEffectPrimary;
+    public GameObject secondEffectSecondary;
 
     [Header("MISC")]
     public Rigidbody[] gunBarrel;
@@ -84,12 +86,14 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         currentTime = startingTime;
 
-        timerText.text = "Time left: " + "2:00";
+        TimerText.text = "02  :  00";
 
         //targetText.text = "Targets hit: " + targetsHit;
 
         upgradeEffectPrimary.SetActive(false);
         upgradeEffectSecondary.SetActive(false);
+        secondEffectPrimary.SetActive(false);
+        secondEffectSecondary.SetActive(false);
     }
 
 
@@ -113,7 +117,7 @@ public class LevelManager_CS_EF : MonoBehaviour
             }
 
             //Making a String Format.
-            timerText.text = string.Format("Time left:" + " {0:00}:{1:00}", minutes, seconds);
+            TimerText.text = string.Format("{0:00}  :  {1:00}", minutes, seconds);
         }
         //Once timer hits 0, player can no longer shoot
         Player_CS_EF.instance.rightCanFire = false;
@@ -243,58 +247,107 @@ public class LevelManager_CS_EF : MonoBehaviour
 
     IEnumerator UpgradeGun1()
     {
+        //Disable Fire Button
         Player_CS_EF.instance.canBothFire = false;
+
+        //Activate the 1st Particle effect
         upgradeEffectPrimary.SetActive(true);
         upgradeEffectSecondary.SetActive(true);
+
+        //Show Gun upgrade text.
         gunText.gameObject.SetActive(true);
+
         print("Gun Down");
         yield return new WaitForSeconds(2f);
-        //Destroy(gunBarrel[0].gameObject);
+
+        //Turn off current mesh
         mainCannonPrimary.SetActive(false);
         mainCannonSecondary.SetActive(false);
+
+        //Turn on upgraded gun mesh
         threeBurstCannonPrimary.SetActive(true);
         threeBurstCannonSecondary.SetActive(true);
-        upgradeEffectPrimary.SetActive(false);
-        upgradeEffectSecondary.SetActive(false);
-        gunText.gameObject.SetActive(false);
-        Player_CS_EF.instance.canBothFire = true;
+
+        StartCoroutine("Effect2");
+
         print("Gun Upgraded");
     }
 
     IEnumerator UpgradeGun2()
     {
+        //Disable Fire Button
         Player_CS_EF.instance.canBothFire = false;
+
+        //Activate the 1st Particle effect
         upgradeEffectPrimary.SetActive(true);
         upgradeEffectSecondary.SetActive(true);
+
+        //Show Gun upgrade text.
         gunText.gameObject.SetActive(true);
+
         print("Gun Down");
         yield return new WaitForSeconds(2f);
+
+        //Turn off current mesh
         threeBurstCannonPrimary.SetActive(false);
         threeBurstCannonSecondary.SetActive(false);
+
+        //Turn on upgraded gun mesh
         fiveBurstCannonPrimary.SetActive(true);
         fiveBurstCannonSecondary.SetActive(true);
-        upgradeEffectPrimary.SetActive(false);
-        upgradeEffectSecondary.SetActive(false);
-        gunText.gameObject.SetActive(false);
-        Player_CS_EF.instance.canBothFire = true;
+
+        StartCoroutine("Effect2");
+
         print("Gun Upgraded");
     }
     IEnumerator UpgradeGun3()
     {
+        //Disable Fire Button
         Player_CS_EF.instance.canBothFire = false;
+
+        //Activate the 1st Particle effect
         upgradeEffectPrimary.SetActive(true);
         upgradeEffectSecondary.SetActive(true);
+
+        //Show Gun upgrade text.
         gunText.gameObject.SetActive(true);
+
         print("Gun Down");
         yield return new WaitForSeconds(2f);
+
+        //Turn off current mesh
         fiveBurstCannonPrimary.SetActive(false);
         fiveBurstCannonSecondary.SetActive(false);
+
+        //Turn on upgraded gun mesh
         nineBurstCannonPrimary.SetActive(true);
         nineBurstCannonSecondary.SetActive(true);
+
+        StartCoroutine("Effect2");
+
+        print("Gun Upgraded");
+    }
+
+    IEnumerator Effect2()
+    {
+        //turn off 1st effect
         upgradeEffectPrimary.SetActive(false);
         upgradeEffectSecondary.SetActive(false);
+
+        //turn on 2nd effect
+        secondEffectPrimary.SetActive(true);
+        secondEffectSecondary.SetActive(true);
+
+        //turn off gun upgrade text
         gunText.gameObject.SetActive(false);
+
+        //enable fire button
         Player_CS_EF.instance.canBothFire = true;
-        print("Gun Upgraded");
+
+        yield return new WaitForSeconds(2f);
+
+        //turn off 2nd effect
+        secondEffectPrimary.SetActive(false);
+        secondEffectSecondary.SetActive(false);
     }
 }
