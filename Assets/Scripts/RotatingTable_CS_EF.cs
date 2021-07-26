@@ -4,44 +4,54 @@ using UnityEngine;
 
 public class RotatingTable_CS_EF : MonoBehaviour
 {
-    /*
-    public GameObject starterTargetOne;
-    public GameObject starterTargetTwo;
-    public GameObject extraTargetOne;
-    public GameObject extraTargetTwo;
-    */
-
     public float rotateSpeed = 0.5f;
+
+    public bool isActivated = false;
+    public int spawnTime;
+
+    ParticleSystem smoke;
+    public Renderer rend;
+
+    [Header("TARGETS")]
+    public GameObject target1;
+    public GameObject target2;
+    public GameObject target3;
+    public GameObject target4;
 
     void Start()
     {
-        /*
-        StarterTargets();
-        ExtraTargets();
-        */
+        smoke = GetComponent<ParticleSystem>();
+
+        rend = GetComponent<Renderer>();
+
+        rend.enabled = false;
+        target1.SetActive(false);
+        target2.SetActive(false);
+        target3.SetActive(false);
+        target4.SetActive(false);
     }
 
     void Update()
     {
         transform.Rotate(0, rotateSpeed, 0);
+        
+        if (LevelManager_CS_EF.instance.currentTime == 115)
+        {
+            isActivated = true;
+
+            Activate();
+        }
+
     }
 
-    /*
-    public void StarterTargets()
+    void Activate()
     {
-        starterTargetOne.SetActive(true);
-        starterTargetTwo.SetActive(true);
-    }
-    public void ExtraTargets()
-    {
-        extraTargetOne.SetActive(false);
-        extraTargetTwo.SetActive(false);
-    }
+        smoke.Play();
 
-    public void ActivateExtraTargets()
-    {
-        extraTargetOne.SetActive(true);
-        extraTargetTwo.SetActive(true);
+        rend.enabled = true;
+        target1.SetActive(true);
+        target2.SetActive(true);
+        target3.SetActive(true);
+        target4.SetActive(true);
     }
-    */
 }

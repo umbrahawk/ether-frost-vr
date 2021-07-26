@@ -18,6 +18,8 @@ public class MainTarget_CS_EF : MonoBehaviour
     [Header("TARGET TYPES")]
     public bool regularTarget = false;
     public bool duckTarget = false;
+    public bool continuousTarget = false;
+    public bool startTarget = false;
 
     [Header("MOVING TARGET")]
     public bool movingTaget = false;
@@ -26,8 +28,6 @@ public class MainTarget_CS_EF : MonoBehaviour
     public bool dirRight = true;
 
     [Header("MISC")]
-    public bool startTarget = false;
-    public bool swingTarget = false;
     public bool finalRound = false;
 
     [Header("CONNECTIONS")]
@@ -126,7 +126,7 @@ public class MainTarget_CS_EF : MonoBehaviour
         // Puts the target in the correct location
         target.transform.localEulerAngles = new Vector3(0, 0, -90);
 
-        if (swingTarget)
+        if (continuousTarget)
         {
             // Variable for how long they will be deactived
             float timer = lifetime;

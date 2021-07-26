@@ -155,8 +155,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         else if (gameLevel == 4)
         {
-            print("Final round is true");
-            finalRound = true;
+            StartCoroutine("FinalRoundWait");
         }
 
         UpgradeCannon();
@@ -170,6 +169,12 @@ public class LevelManager_CS_EF : MonoBehaviour
         currentTime = currentTime + increaseAmount;
     }
 
+    IEnumerator FinalRoundWait()
+    {
+        yield return new WaitForSeconds(2f);
+
+        finalRound = true;
+    }
 
 
     // Increase the firerate depending on targets hit

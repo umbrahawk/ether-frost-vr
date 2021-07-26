@@ -68,7 +68,7 @@ public class Player_CS_EF : MonoBehaviour
         if (Input.GetButton("Fire1") && rightCanFire && canBothFire == true)
         {
             // Checks if the basic cannon is unlocked
-            if (LevelManager_CS_EF.instance.basicCannon == true )
+            if (LevelManager_CS_EF.instance.basicCannon == true)
             {
                 // Runs the coroutine
                 StartCoroutine("FireRightProjectile");
@@ -89,6 +89,7 @@ public class Player_CS_EF : MonoBehaviour
                 StartCoroutine("FireRightNineBurst");
             }
         }
+
         /*
         // Checks if the player has input the fire button and can fire
         if (Input.GetButton("Fire1") && leftCanFire && canBothFire == true)
