@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class RotatingTable_CS_EF : MonoBehaviour
 {
@@ -9,7 +7,7 @@ public class RotatingTable_CS_EF : MonoBehaviour
     public bool isActivated = false;
     public int spawnTime;
 
-    ParticleSystem smoke;
+    public ParticleSystem smoke;
     public Renderer rend;
 
     [Header("TARGETS")]

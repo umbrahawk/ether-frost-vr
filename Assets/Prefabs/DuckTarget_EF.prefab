@@ -222,11 +222,12 @@ MonoBehaviour:
   target: {fileID: 6369131675755890382}
   regularTarget: 0
   duckTarget: 1
+  continuousTarget: 0
+  startTarget: 0
   movingTaget: 0
   pivotTime: 2
   moveSpeed: 3
   dirRight: 1
-  startTarget: 0
   finalRound: 0
   hitSound1VFX: {fileID: 0}
   hitSound2VFX: {fileID: 0}
@@ -5047,7 +5048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 1
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 3
+  outlineWidth: 1.5
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []

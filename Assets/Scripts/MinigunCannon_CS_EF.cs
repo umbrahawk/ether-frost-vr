@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MinigunCannon_CS_EF : MonoBehaviour
 {
-    int fiveRotateSpeed = 1;
-    int nineRotateSpeed = 3;
+    public int fiveRotateSpeed = 1;
+    public int nineRotateSpeed = 3;
 
     // Update is called once per frame
     void Update()
