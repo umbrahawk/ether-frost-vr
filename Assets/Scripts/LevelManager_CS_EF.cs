@@ -53,7 +53,8 @@ public class LevelManager_CS_EF : MonoBehaviour
     public GameObject nineBurstCannonSecondary;
 
     [Header("GUN STATS")]
-    public Text gunText;
+    public Animator textAnimator;
+    public Animator lightAnimator;
 
     [Header("SOUND EFFECTS")]
     public AudioClip gameBackgroundMusic;
@@ -79,7 +80,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         ResetCannon();
 
-        gunText.gameObject.SetActive(false);
+
 
         // This will need to be fixed 
         //gameOverText.gameObject.SetActive(false);
@@ -252,6 +253,11 @@ public class LevelManager_CS_EF : MonoBehaviour
 
     IEnumerator UpgradeGun1()
     {
+
+        //Show Gun upgrade text.
+        textAnimator.SetBool("isUpgrading", true);
+        lightAnimator.SetBool("isUpgrading", true);
+
         //Disable Fire Button
         Player_CS_EF.instance.canBothFire = false;
 
@@ -259,8 +265,6 @@ public class LevelManager_CS_EF : MonoBehaviour
         upgradeEffectPrimary.SetActive(true);
         upgradeEffectSecondary.SetActive(true);
 
-        //Show Gun upgrade text.
-        gunText.gameObject.SetActive(true);
 
         print("Gun Down");
         yield return new WaitForSeconds(2f);
@@ -280,6 +284,11 @@ public class LevelManager_CS_EF : MonoBehaviour
 
     IEnumerator UpgradeGun2()
     {
+
+        //Show Gun upgrade text.
+        textAnimator.SetBool("isUpgrading", true);
+        lightAnimator.SetBool("isUpgrading", true);
+
         //Disable Fire Button
         Player_CS_EF.instance.canBothFire = false;
 
@@ -287,8 +296,6 @@ public class LevelManager_CS_EF : MonoBehaviour
         upgradeEffectPrimary.SetActive(true);
         upgradeEffectSecondary.SetActive(true);
 
-        //Show Gun upgrade text.
-        gunText.gameObject.SetActive(true);
 
         print("Gun Down");
         yield return new WaitForSeconds(2f);
@@ -307,15 +314,16 @@ public class LevelManager_CS_EF : MonoBehaviour
     }
     IEnumerator UpgradeGun3()
     {
+        //Show Gun upgrade text.
+        textAnimator.SetBool("isUpgrading", true);
+        lightAnimator.SetBool("isUpgrading", true);
+
         //Disable Fire Button
         Player_CS_EF.instance.canBothFire = false;
 
         //Activate the 1st Particle effect
         upgradeEffectPrimary.SetActive(true);
         upgradeEffectSecondary.SetActive(true);
-
-        //Show Gun upgrade text.
-        gunText.gameObject.SetActive(true);
 
         print("Gun Down");
         yield return new WaitForSeconds(2f);
@@ -344,8 +352,8 @@ public class LevelManager_CS_EF : MonoBehaviour
         secondEffectSecondary.SetActive(true);
 
         //turn off gun upgrade text
-        gunText.gameObject.SetActive(false);
-
+        textAnimator.SetBool("isUpgrading", false);
+        lightAnimator.SetBool("isUpgrading", false);
         //enable fire button
         Player_CS_EF.instance.canBothFire = true;
 
