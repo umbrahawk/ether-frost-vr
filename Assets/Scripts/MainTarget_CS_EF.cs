@@ -5,12 +5,13 @@ using UnityEngine;
 public class MainTarget_CS_EF : MonoBehaviour
 {
     // VARIABLES
-        // isActive = checks whether the target is currently active - not used for anything at the moment
-        // lifetime = how long the target will remain inactive
-        // GameObject target = the mesh of the whole target to be moved
+    // isActive = checks whether the target is currently active - not used for anything at the moment
+    // lifetime = how long the target will remain inactive
+    // GameObject target = the mesh of the whole target to be moved
 
     [Header("MAIN STATS")]
     public bool isActive = true;
+    public bool canBeHit = true;
     public float lifetime = 5.0f;
     public int speed = 1;
     public GameObject target;
@@ -136,10 +137,10 @@ public class MainTarget_CS_EF : MonoBehaviour
                 timer -= Time.deltaTime;
 
                 yield return null;
-
-                // Reactivates the target
-                StartCoroutine("ReactivateTarget");
             }
+
+            // Reactivates the target
+            StartCoroutine("ReactivateTarget");
         }
 
         else if (!startTarget)

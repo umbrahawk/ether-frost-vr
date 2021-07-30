@@ -1274,6 +1274,7 @@ MonoBehaviour:
   textAnimator: {fileID: 464304623}
   lightAnimator: {fileID: 1861683391}
   gameBackgroundMusic: {fileID: 8300000, guid: 3ce02814723aff34e809c6a1def60fad, type: 3}
+  cannonUpgradeSFX: {fileID: 8300000, guid: 87275155a9ba77b46ba26258b42cfc63, type: 3}
   upgradeEffectPrimary: {fileID: 1867636318}
   upgradeEffectSecondary: {fileID: 897931186}
   secondEffectPrimary: {fileID: 12320396}
@@ -14058,8 +14059,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ee61381fec833747bb16998372329ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fiveRotateSpeed: 1
-  nineRotateSpeed: 3
+  fiveRotateSpeed: 5
+  nineRotateSpeed: 10
 --- !u!1 &1012415952 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8504891547471277367, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
@@ -15088,8 +15089,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ee61381fec833747bb16998372329ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fiveRotateSpeed: 1
-  nineRotateSpeed: 3
+  fiveRotateSpeed: 5
+  nineRotateSpeed: 10
 --- !u!4 &1153342550 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5407029751185978104, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
@@ -17688,6 +17689,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104883539476782738, guid: c8e5341c837a8834c9e1834ad1d1db78,
+        type: 3}
+      propertyPath: nineRotateSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104883539476782738, guid: c8e5341c837a8834c9e1834ad1d1db78,
+        type: 3}
+      propertyPath: fiveRotateSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8366760700159582313, guid: c8e5341c837a8834c9e1834ad1d1db78,
+        type: 3}
+      propertyPath: fiveRotateSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8366760700159582313, guid: c8e5341c837a8834c9e1834ad1d1db78,
+        type: 3}
+      propertyPath: nineRotateSpeed
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8e5341c837a8834c9e1834ad1d1db78, type: 3}
@@ -32908,6 +32929,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5942830757166841249, guid: bafb791f2b8bfe94fb4d960b1da4c27c,
+        type: 3}
+      propertyPath: continuousTarget
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7312864276542036315, guid: bafb791f2b8bfe94fb4d960b1da4c27c,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -32922,11 +32948,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5942830757166841249, guid: bafb791f2b8bfe94fb4d960b1da4c27c,
-        type: 3}
-      propertyPath: continuousTarget
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bafb791f2b8bfe94fb4d960b1da4c27c, type: 3}

@@ -55,6 +55,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
     [Header("SOUND EFFECTS")]
     public AudioClip gameBackgroundMusic;
+    public AudioClip cannonUpgradeSFX;
 
     [Header("VISUAL EFFECTS")]
     public GameObject upgradeEffectPrimary;
@@ -349,6 +350,9 @@ public class LevelManager_CS_EF : MonoBehaviour
         //turn off 1st effect
         upgradeEffectPrimary.SetActive(false);
         upgradeEffectSecondary.SetActive(false);
+
+
+        AudioSource.PlayClipAtPoint(cannonUpgradeSFX, new Vector3(0, 0, 0));
 
         //turn on 2nd effect
         secondEffectPrimary.SetActive(true);

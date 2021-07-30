@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class RotatingTable_CS_EF : MonoBehaviour
 {
@@ -32,7 +34,7 @@ public class RotatingTable_CS_EF : MonoBehaviour
     void Update()
     {
         transform.Rotate(0, rotateSpeed, 0);
-        
+
         if (LevelManager_CS_EF.instance.currentTime == spawnTime)
         {
             isActivated = true;
@@ -47,6 +49,14 @@ public class RotatingTable_CS_EF : MonoBehaviour
         smoke.Play();
 
         rend.enabled = true;
+
+        StartCoroutine("DelayedStart");
+    }
+
+    IEnumerator DelayedStart()
+    {
+        yield return new WaitForSeconds(1f);
+
         target1.SetActive(true);
         target2.SetActive(true);
         target3.SetActive(true);
