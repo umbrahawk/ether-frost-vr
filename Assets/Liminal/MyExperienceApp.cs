@@ -7,6 +7,8 @@ namespace Liminal.Experience
     /// This is your base experience class,
     /// you may change the contents of the methods in this class to best suit your app.
     /// </summary>
+
+
     public class MyExperienceApp : ExperienceApp
     {
         public override void Pause()

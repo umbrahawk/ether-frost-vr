@@ -5,12 +5,9 @@ using UnityEngine.UI;
 
 public class LevelManager_CS_EF : MonoBehaviour
 {
-    // VARIABLES
-    // startingTime =
-    // currentTime =
-    // increaseAmount =
 
     [Header("GAME STATS")]
+    public GameObject player;
     public bool gameActive = false;
     public int gameLevel = 0;
     public bool roundOne = false;
@@ -67,6 +64,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
     [Header("MISC")]
     public Rigidbody[] gunBarrel;
+    public Transform playerGamePoint;
 
 
     public static LevelManager_CS_EF instance;
@@ -237,12 +235,17 @@ public class LevelManager_CS_EF : MonoBehaviour
 
     }
 
-
-    public void BeginGame()
+    IEnumerator BeginGame()
     {
+        player.transform.rotation = playerGamePoint.rotation;
+        player.transform.position = playerGamePoint.position;
+
+        yield return new WaitForSeconds(5f);
+
         gameActive = true;
 
         roundOne = true;
+
 
         IncreaseRound();
 

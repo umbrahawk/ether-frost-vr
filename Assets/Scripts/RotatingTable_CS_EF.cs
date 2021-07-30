@@ -33,7 +33,7 @@ public class RotatingTable_CS_EF : MonoBehaviour
     {
         transform.Rotate(0, rotateSpeed, 0);
         
-        if (LevelManager_CS_EF.instance.currentTime == 115)
+        if (LevelManager_CS_EF.instance.currentTime == spawnTime)
         {
             isActivated = true;
 

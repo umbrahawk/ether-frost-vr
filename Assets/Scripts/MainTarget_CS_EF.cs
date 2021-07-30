@@ -86,7 +86,6 @@ public class MainTarget_CS_EF : MonoBehaviour
         if (LevelManager_CS_EF.instance.finalRound == true && !finalRound)
         {
             finalRound = true;
-            print("Before the reactivate");
             StartCoroutine("ReactivateTarget");
         }
     }
@@ -165,7 +164,7 @@ public class MainTarget_CS_EF : MonoBehaviour
 
         else if (startTarget && LevelManager_CS_EF.instance.gameActive == false)
         {
-            LevelManager_CS_EF.instance.BeginGame();
+            LevelManager_CS_EF.instance.StartCoroutine("BeginGame");
             gameObject.SetActive(false);
         }
 
