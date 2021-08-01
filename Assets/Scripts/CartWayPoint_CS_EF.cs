@@ -9,6 +9,7 @@ public class CartWayPoint_CS_EF : MonoBehaviour
 
     public int currentWayPoint = 0;
     Transform targetWayPoint;
+    public int spawnTime;
 
     public float speed;
 
@@ -29,10 +30,7 @@ public class CartWayPoint_CS_EF : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //only activates last vehicle.
-        //if (cartActive == true)
-        //{
-        if (LevelManager_CS_EF.instance.targetsHit >= 2)
+        if (LevelManager_CS_EF.instance.currentTime <= spawnTime)
         {
             // check if we have somewere to walk
             if (currentWayPoint < this.wayPointList.Length)

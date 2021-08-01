@@ -14,6 +14,8 @@ public class DroppingSwing_CS_EF : MonoBehaviour
 
     public float speed;
     public float pivotTime;
+
+
     public float stayTime;
 
     // Update is called once per frame

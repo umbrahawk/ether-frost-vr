@@ -12,7 +12,7 @@ public class MainTarget_CS_EF : MonoBehaviour
     [Header("MAIN STATS")]
     public bool isActive = true;
     public bool canBeHit = true;
-    public float lifetime = 5.0f;
+    public float lifetime;
     public int speed = 1;
     public GameObject target;
 
