@@ -56,13 +56,13 @@ public class PlaneWaypoint_CS_EF : MonoBehaviour
 
         float startTime = Time.time;
         Vector3 startPosition = transform.position;
-        Vector3 startRotation = transform.localEulerAngles;
+        Quaternion startRotation = transform.rotation;
         while (transform.position != targetWayPoint.position)
         {
             float distance = Vector3.Distance(startPosition, targetWayPoint.position);
             float timeLeft = (Time.time - startTime) * speed;
             float distanceFraction = timeLeft / distance;
-            transform.localEulerAngles = Vector3.Lerp(startRotation, targetWayPoint.localEulerAngles, distanceFraction);
+            transform.rotation = Quaternion.Lerp(startRotation, targetWayPoint.rotation, distanceFraction);
 
             // move towards the target
             //transform.position = Vector3.MoveTowards(transform.position, targetWayPoint.position, speed * Time.deltaTime);
