@@ -21,12 +21,16 @@ public class MainTarget_CS_EF : MonoBehaviour
     public bool duckTarget = false;
     public bool continuousTarget = false;
     public bool startTarget = false;
+    public bool fallingTarget = false;
 
     [Header("MOVING TARGET")]
     public bool movingTaget = false;
     public float pivotTime = 2.0f;
     public float moveSpeed = 3.0f;
     public bool dirRight = true;
+
+    [Header("FALLING TARGET")]
+    public float fallSpeed;
 
     [Header("MISC")]
     public bool finalRound = false;
@@ -58,6 +62,11 @@ public class MainTarget_CS_EF : MonoBehaviour
         if (movingTaget == true)
         {
             StartCoroutine("MoveTarget");
+        }
+
+        else if (fallingTarget == true)
+        {
+            StartCoroutine("FallingTarget");
         }
     }
 
@@ -191,6 +200,16 @@ public class MainTarget_CS_EF : MonoBehaviour
 
         // This will reactive the target, allowing for it to be hit again 
         isActive = true;
+    }
+
+    IEnumerator FallingTarget()
+    {
+        while (transform.position.y > 2)
+        {
+            transform.Translate(Vector3.down * fallSpeed);
+
+            yield return null;
+        }
     }
 
     // Helps move the rings relative to time elapsed
