@@ -6,10 +6,15 @@ public class PlaneWaypoint_CS_EF : MonoBehaviour
 {
     // put the points from unity interface
     public Transform[] wayPointList;
+    Transform targetWayPoint;
+    public Transform lookCube;
+    public GameObject fallingTarget;
+    GameObject targetLook;
+    
 
+    public int[] dropPoint;
     public int lastPoint;
     public int currentWayPoint = 0;
-    Transform targetWayPoint;
     public int spawnTime;
 
     public float speed;
@@ -70,6 +75,20 @@ public class PlaneWaypoint_CS_EF : MonoBehaviour
             yield return null;
         }
         currentWayPoint++;
+        for(int i = 0; i < dropPoint.Length; i++)
+        {
+            if (dropPoint[i] == currentWayPoint)
+            {
+                //spawn falling target
+                targetLook = Instantiate(fallingTarget, transform.position, transform.rotation);
+
+                //Try to reset rotation when falling.
+                //targetLook.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+
+                //Supposed to look at cube when dropping?
+                targetLook.transform.LookAt(lookCube.transform);
+            }
+        }
         if (currentWayPoint == lastPoint)
         {
             planeActive = false;

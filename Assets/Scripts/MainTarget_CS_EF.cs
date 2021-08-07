@@ -202,6 +202,7 @@ public class MainTarget_CS_EF : MonoBehaviour
         isActive = true;
     }
 
+    
     IEnumerator FallingTarget()
     {
         while (transform.position.y > 2)
