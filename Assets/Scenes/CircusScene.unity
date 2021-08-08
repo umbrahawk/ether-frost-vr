@@ -3186,6 +3186,17 @@ MonoBehaviour:
   lightAnimator: {fileID: 1861683391}
   gameBackgroundMusic: {fileID: 8300000, guid: 3ce02814723aff34e809c6a1def60fad, type: 3}
   cannonUpgradeSFX: {fileID: 8300000, guid: 87275155a9ba77b46ba26258b42cfc63, type: 3}
+  finalCrowdCheerSFX: {fileID: 8300000, guid: 05a8ffdd7a6930543ade44eba8ea602d, type: 3}
+  playFinalCheer: 1
+  crowdCheering1SFX: {fileID: 8300000, guid: 1e98bdc7ecf2c4a47a9e15c1398e958e, type: 3}
+  crowdCheering2SFX: {fileID: 8300000, guid: a53d99b4647bf1944ad5eea566e35f7c, type: 3}
+  crowdCheering3SFX: {fileID: 8300000, guid: d9809ba363a28f84e98c802666baf5f0, type: 3}
+  crowdCheering4SFX: {fileID: 8300000, guid: fe25a9e9420f645428a7684dec02b343, type: 3}
+  crowdCheering5SFX: {fileID: 8300000, guid: a602dd8ba060d6844a2aa8b4a547e871, type: 3}
+  crowdCheering6SFX: {fileID: 8300000, guid: 660ad2d055065914a8ccb148adf8898d, type: 3}
+  crowdCheering7SFX: {fileID: 8300000, guid: 06c845126dbfc634a9227c0d2d90cfdd, type: 3}
+  crowdCheering8SFX: {fileID: 8300000, guid: 1ebf8ade2b6b8ec4eba713ec7227543e, type: 3}
+  crowdCheering9SFX: {fileID: 8300000, guid: ba0c920b01f71dc47b77dcdd5725c978, type: 3}
   upgradeEffectPrimary: {fileID: 1867636318}
   upgradeEffectSecondary: {fileID: 897931186}
   secondEffectPrimary: {fileID: 12320396}
@@ -25736,8 +25747,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ee61381fec833747bb16998372329ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fiveRotateSpeed: 5
-  nineRotateSpeed: 10
+  fiveRotateSpeed: 10
+  nineRotateSpeed: 25
 --- !u!1001 &1006432379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29976,8 +29987,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ee61381fec833747bb16998372329ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fiveRotateSpeed: 5
-  nineRotateSpeed: 10
+  fiveRotateSpeed: 10
+  nineRotateSpeed: 25
 --- !u!1001 &1149904957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36125,22 +36136,22 @@ PrefabInstance:
     - target: {fileID: 4104883539476782738, guid: c8e5341c837a8834c9e1834ad1d1db78,
         type: 3}
       propertyPath: nineRotateSpeed
-      value: 10
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4104883539476782738, guid: c8e5341c837a8834c9e1834ad1d1db78,
         type: 3}
       propertyPath: fiveRotateSpeed
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8366760700159582313, guid: c8e5341c837a8834c9e1834ad1d1db78,
         type: 3}
       propertyPath: fiveRotateSpeed
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8366760700159582313, guid: c8e5341c837a8834c9e1834ad1d1db78,
         type: 3}
       propertyPath: nineRotateSpeed
-      value: 10
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8e5341c837a8834c9e1834ad1d1db78, type: 3}

@@ -56,6 +56,19 @@ public class LevelManager_CS_EF : MonoBehaviour
     [Header("SOUND EFFECTS")]
     public AudioClip gameBackgroundMusic;
     public AudioClip cannonUpgradeSFX;
+    public AudioClip finalCrowdCheerSFX;
+    public bool playFinalCheer = true;
+
+    [Header("CROWD CHEERING SFX")]
+    public AudioClip crowdCheering1SFX;
+    public AudioClip crowdCheering2SFX;
+    public AudioClip crowdCheering3SFX;
+    public AudioClip crowdCheering4SFX;
+    public AudioClip crowdCheering5SFX;
+    public AudioClip crowdCheering6SFX;
+    public AudioClip crowdCheering7SFX;
+    public AudioClip crowdCheering8SFX;
+    public AudioClip crowdCheering9SFX;
 
     [Header("VISUAL EFFECTS")]
     public GameObject upgradeEffectPrimary;
@@ -96,6 +109,15 @@ public class LevelManager_CS_EF : MonoBehaviour
         secondEffectSecondary.SetActive(false);
     }
 
+    void Update()
+    {
+        if (currentTime == 2 && playFinalCheer == true)
+        {
+            playFinalCheer = false;
+
+            AudioSource.PlayClipAtPoint(finalCrowdCheerSFX, new Vector3(0, 0, 0));
+        }
+    }
 
     IEnumerator UpdateTimer()
     {
@@ -146,16 +168,19 @@ public class LevelManager_CS_EF : MonoBehaviour
         else if (gameLevel == 2)
         {
             roundTwo = true;
+            PlayRound1CrowdSound();
         }
 
         else if (gameLevel == 3)
         {
             roundThree = true;
+            PlayRound2CrowdSound();
         }
 
         else if (gameLevel == 4)
         {
             StartCoroutine("FinalRoundWait");
+            PlayRound3CrowdSound();
         }
 
         UpgradeCannon();
@@ -369,5 +394,75 @@ public class LevelManager_CS_EF : MonoBehaviour
         //turn off 2nd effect
         secondEffectPrimary.SetActive(false);
         secondEffectSecondary.SetActive(false);
+    }
+    public void PlayRound1CrowdSound()
+    {
+        int playSound = Random.Range(0, 3);
+        print(playSound);
+
+        switch (playSound)
+        {
+            case 0:
+                AudioSource.PlayClipAtPoint(crowdCheering1SFX, new Vector3(0, 0, 0));
+                break;
+
+            case 1:
+                AudioSource.PlayClipAtPoint(crowdCheering2SFX, new Vector3(0, 0, 0));
+                break;
+
+            case 2:
+                AudioSource.PlayClipAtPoint(crowdCheering3SFX, new Vector3(0, 0, 0));
+                break;
+
+            default:
+                break;
+        }
+    }
+    public void PlayRound2CrowdSound()
+    {
+        int playSound = Random.Range(0, 3);
+        print(playSound);
+
+        switch (playSound)
+        {
+            case 0:
+                AudioSource.PlayClipAtPoint(crowdCheering4SFX, new Vector3(0, 0, 0));
+                break;
+
+            case 1:
+                AudioSource.PlayClipAtPoint(crowdCheering5SFX, new Vector3(0, 0, 0));
+                break;
+
+            case 2:
+                AudioSource.PlayClipAtPoint(crowdCheering6SFX, new Vector3(0, 0, 0));
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    public void PlayRound3CrowdSound()
+    {
+        int playSound = Random.Range(0, 3);
+        print(playSound);
+
+        switch (playSound)
+        {
+            case 0:
+                AudioSource.PlayClipAtPoint(crowdCheering7SFX, new Vector3(0, 0, 0));
+                break;
+
+            case 1:
+                AudioSource.PlayClipAtPoint(crowdCheering8SFX, new Vector3(0, 0, 0));
+                break;
+
+            case 2:
+                AudioSource.PlayClipAtPoint(crowdCheering9SFX, new Vector3(0, 0, 0));
+                break;
+
+            default:
+                break;
+        }
     }
 }

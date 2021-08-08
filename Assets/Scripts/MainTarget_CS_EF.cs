@@ -75,9 +75,14 @@ public class MainTarget_CS_EF : MonoBehaviour
         sparks = GetComponent<ParticleSystem>();
 
         // Checks if the target is a moving ring or not
-        if (movingTaget == true)
+        if (movingTaget)
         {
             StartCoroutine("MoveTarget");
+        }
+
+        if (fallingTarget)
+        {
+            transform.localEulerAngles = new Vector3(0, 60, 0);
         }
     }
 
