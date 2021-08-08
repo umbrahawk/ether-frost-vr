@@ -10,7 +10,7 @@ public class CartWayPoint_CS_EF : MonoBehaviour
     public int lastPoint;
     public int currentWayPoint = 0;
     Transform targetWayPoint;
-    public int spawnTime;
+    public int[] spawnTime;
 
     public float speed;
 
@@ -30,26 +30,26 @@ public class CartWayPoint_CS_EF : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (LevelManager_CS_EF.instance.currentTime <= spawnTime)
-        //{
-            // check if we have somewere to walk
-            if (currentWayPoint < this.wayPointList.Length && cartActive)
+        if (LevelManager_CS_EF.instance.currentTime == spawnTime[0] || LevelManager_CS_EF.instance.currentTime == spawnTime[1])
+        {
+            print("Cart Active!");
+            cartActive = true;
+                                    
+            if (targetWayPoint == null && cartActive)
             {
-                cartActive = false;
-                if (targetWayPoint == null)
-                {
-                    targetWayPoint = wayPointList[currentWayPoint];
-                    StartCoroutine("walk");
-                }
+                targetWayPoint = wayPointList[currentWayPoint];
+                print("GO!");
+                StartCoroutine("walk");
             }
-        //}
-        //}
+            
+        }
     }
 
     IEnumerator walk()
     {
 
-
+        //cartActive = false;
+        
         // rotate towards the target
         //transform.forward = Vector3.RotateTowards(transform.forward, targetWayPoint.position - transform.position, speed * Time.deltaTime, 0.0f);
 
@@ -75,6 +75,8 @@ public class CartWayPoint_CS_EF : MonoBehaviour
         if (currentWayPoint == lastPoint)
         {
             cartActive = false;
+            print("TEST" + cartActive);
+            currentWayPoint = 1;
             targetWayPoint = null;
         }
         else
