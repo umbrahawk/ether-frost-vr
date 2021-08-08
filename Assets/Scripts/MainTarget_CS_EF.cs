@@ -83,6 +83,7 @@ public class MainTarget_CS_EF : MonoBehaviour
         if (fallingTarget)
         {
             transform.localEulerAngles = new Vector3(0, 60, 0);
+
         }
     }
 
@@ -105,7 +106,8 @@ public class MainTarget_CS_EF : MonoBehaviour
         }
     }
 
-    IEnumerator ToggleTarget()
+
+        IEnumerator ToggleTarget()
     {
         if (regularTarget)
         {
@@ -213,9 +215,16 @@ public class MainTarget_CS_EF : MonoBehaviour
         while (transform.position.y > 2)
         {
             transform.Translate(Vector3.down * fallSpeed);
-
+            StartCoroutine("RotateTarget");
             yield return null;
         }
+    }
+
+    IEnumerator RotateTarget()
+    {
+        GameObject obj = GameObject.Find("PlayerGamePoint_EF");
+        transform.LookAt(obj.transform);
+        yield return null;
     }
 
     // Helps move the rings relative to time elapsed
