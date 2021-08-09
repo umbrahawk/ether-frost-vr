@@ -79,12 +79,6 @@ public class MainTarget_CS_EF : MonoBehaviour
         {
             StartCoroutine("MoveTarget");
         }
-
-        if (fallingTarget)
-        {
-            transform.localEulerAngles = new Vector3(0, 60, 0);
-
-        }
     }
 
     void Update()

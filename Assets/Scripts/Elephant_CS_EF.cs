@@ -29,7 +29,7 @@ public class Elephant_CS_EF : MonoBehaviour
     {
         canSound = false;
 
-        int cooldownRange = Random.Range(1, 2);
+        int cooldownRange = Random.Range(2, 4);
 
         yield return new WaitForSeconds(cooldownRange);
 
