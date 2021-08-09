@@ -113,6 +113,13 @@ public class MainTarget_CS_EF : MonoBehaviour
             PlayDuckSound();
         }
 
+        else if (fallingTarget)
+        {
+            PlayRegularSound();
+            print("Destroyed Falling Target");
+            Destroy(gameObject, 2f);
+        }
+
         if (!startTarget)
         {
             // Deactives the target

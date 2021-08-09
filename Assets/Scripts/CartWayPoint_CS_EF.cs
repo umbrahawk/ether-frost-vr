@@ -75,7 +75,7 @@ public class CartWayPoint_CS_EF : MonoBehaviour
         if (currentWayPoint == lastPoint)
         {
             cartActive = false;
-            print("TEST" + cartActive);
+            print("Status of Cart: " + cartActive);
             currentWayPoint = 1;
             targetWayPoint = null;
         }

@@ -14,7 +14,7 @@ public class PlaneWaypoint_CS_EF : MonoBehaviour
     public int[] dropPoint;
     public int lastPoint;
     public int currentWayPoint = 0;
-    public int spawnTime;
+    public int[] spawnTime;
 
     public float speed;
 
@@ -36,15 +36,18 @@ public class PlaneWaypoint_CS_EF : MonoBehaviour
     void Update()
     {
 
-        // check if we have somewere to walk
-        if (currentWayPoint < this.wayPointList.Length && planeActive)
+        if (LevelManager_CS_EF.instance.currentTime == spawnTime[0])
         {
-            planeActive = false;
-            if (targetWayPoint == null)
+            print("Plane Active!");
+            planeActive = true;
+
+            if (targetWayPoint == null && planeActive)
             {
                 targetWayPoint = wayPointList[currentWayPoint];
+                print("GO!");
                 StartCoroutine("walk");
             }
+
         }
     }
 
@@ -86,6 +89,8 @@ public class PlaneWaypoint_CS_EF : MonoBehaviour
         if (currentWayPoint == lastPoint)
         {
             planeActive = false;
+            print("Status of plane: " + planeActive);
+            currentWayPoint = 1;
             targetWayPoint = null;
         }
         else
