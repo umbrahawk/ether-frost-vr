@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using Liminal.SDK.VR;
+using Liminal.SDK.VR.Input;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -64,13 +66,14 @@ public class Player_CS_EF : MonoBehaviour
 
     void Update()
     {
+        
+        // THIS IS FOR GAMEPLAY IN UNITY - TESTING ONLY
         // Checks if the player has input the fire button and can fire
-        if (Input.GetButton("Fire1") && rightCanFire && canBothFire == true)
+        if (Input.GetButton("Fire1") && rightCanFire && canBothFire)
         {
             // Checks if the basic cannon is unlocked
             if (LevelManager_CS_EF.instance.basicCannon == true)
             {
-                // Runs the coroutine
                 StartCoroutine("FireRightProjectile");
             }
 
@@ -89,33 +92,63 @@ public class Player_CS_EF : MonoBehaviour
                 StartCoroutine("FireRightNineBurst");
             }
         }
-
         
-        // Checks if the player has input the fire button and can fire
-        if (Input.GetButton("Fire1") && leftCanFire && canBothFire == true)
+
+        var device = VRDevice.Device;
+        if (device != null && device.SecondaryInputDevice != null)
         {
-            // Checks if the basic cannon is unlocked
-            if (LevelManager_CS_EF.instance.basicCannon == true)
+            if (device.PrimaryInputDevice.GetButtonDown(VRButton.Trigger) && rightCanFire && canBothFire)
             {
-                // Runs the coroutine
-                StartCoroutine("FireLeftProjectile");
+                // Checks if the basic cannon is unlocked
+                if (LevelManager_CS_EF.instance.basicCannon == true)
+                {
+                    // Runs the coroutine
+                    StartCoroutine("FireLeftProjectile");
+                }
+
+                if (LevelManager_CS_EF.instance.threeBurstActive == true)
+                {
+                    StartCoroutine("FireLeftThreeBurst");
+                }
+
+                if (LevelManager_CS_EF.instance.fiveBurstActive == true)
+                {
+                    StartCoroutine("FireLeftFiveBurst");
+                }
+
+                if (LevelManager_CS_EF.instance.nineBurstActive == true)
+                {
+                    StartCoroutine("FireLeftNineBurst");
+                }
             }
 
-            if (LevelManager_CS_EF.instance.threeBurstActive == true)
+            if (device.SecondaryInputDevice.GetButtonDown(VRButton.Trigger) && leftCanFire && canBothFire)
             {
-                StartCoroutine("FireLeftThreeBurst");
-            }
+                // Checks if the basic cannon is unlocked
+                if (LevelManager_CS_EF.instance.basicCannon == true)
+                {
+                    // Runs the coroutine
+                    StartCoroutine("FireLeftProjectile");
+                }
 
-            if (LevelManager_CS_EF.instance.fiveBurstActive == true)
-            {
-                StartCoroutine("FireLeftFiveBurst");
-            }
+                if (LevelManager_CS_EF.instance.threeBurstActive == true)
+                {
+                    StartCoroutine("FireLeftThreeBurst");
+                }
 
-            if (LevelManager_CS_EF.instance.nineBurstActive == true)
-            {
-                StartCoroutine("FireLeftNineBurst");
+                if (LevelManager_CS_EF.instance.fiveBurstActive == true)
+                {
+                    StartCoroutine("FireLeftFiveBurst");
+                }
+
+                if (LevelManager_CS_EF.instance.nineBurstActive == true)
+                {
+                    StartCoroutine("FireLeftNineBurst");
+                }
             }
         }
+
+
     }
 
     // Coroutine to fire the projectile

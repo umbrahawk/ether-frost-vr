@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 2063253802346338463}
   - component: {fileID: 2654361842886781408}
   - component: {fileID: 2655261904435772118}
+  - component: {fileID: 8487742367010665919}
   m_Layer: 0
   m_Name: FallingTarget_EF
   m_TagString: Untagged
@@ -104,7 +105,7 @@ Transform:
   m_GameObject: {fileID: 8504891547471277367}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 1198192502819225713}
   - {fileID: 8907423474631318009}
@@ -137,7 +138,7 @@ MonoBehaviour:
   pivotTime: 2
   moveSpeed: 3
   dirRight: 1
-  fallSpeed: 0.25
+  fallSpeed: 0.025
   finalRound: 0
   hitSound1VFX: {fileID: 8300000, guid: 1678826df663a2b47a394bf48e73966f, type: 3}
   hitSound2VFX: {fileID: 8300000, guid: a049543eacb01e24d911c2d695008d5f, type: 3}
@@ -159,12 +160,12 @@ Rigidbody:
   m_GameObject: {fileID: 8504891547471277367}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 1.5
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!198 &2063253802346338463
 ParticleSystem:
@@ -4962,6 +4963,19 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!65 &8487742367010665919
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8504891547471277367}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2567666, y: 2.1620073, z: 0.44135892}
+  m_Center: {x: 0, y: -0.31192136, z: 0}
 --- !u!1001 &2445694494945698147
 PrefabInstance:
   m_ObjectHideFlags: 0

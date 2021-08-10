@@ -63,11 +63,12 @@ public class MainTarget_CS_EF : MonoBehaviour
         {
             StartCoroutine("MoveTarget");
         }
-
+        
         else if (fallingTarget == true)
         {
-            StartCoroutine("FallingTarget");
+            StartCoroutine("RotateTarget");
         }
+        
     }
 
     void Start()
@@ -117,7 +118,7 @@ public class MainTarget_CS_EF : MonoBehaviour
         {
             PlayRegularSound();
             print("Destroyed Falling Target");
-            Destroy(gameObject, 2f);
+            Destroy(gameObject, .1f);
         }
 
         if (!startTarget)
@@ -210,7 +211,7 @@ public class MainTarget_CS_EF : MonoBehaviour
         isActive = true;
     }
 
-    
+    /*
     IEnumerator FallingTarget()
     {
         while (transform.position.y > 2)
@@ -220,10 +221,12 @@ public class MainTarget_CS_EF : MonoBehaviour
             yield return null;
         }
     }
+    */
 
     IEnumerator RotateTarget()
     {
-        GameObject obj = GameObject.Find("PlayerGamePoint_EF");
+        GameObject obj = GameObject.Find("PlaneLookPoint_EF");
+        
         transform.LookAt(obj.transform);
         yield return null;
     }
@@ -328,9 +331,18 @@ public class MainTarget_CS_EF : MonoBehaviour
 
             StartCoroutine("ToggleTarget");
         }
-        else
+
+        
+        if (fallingTarget)
         {
-            print("You hit a non active main Target!");
+            print("Gday");
+            if (other.gameObject.GetComponent<CircusFloor_EF_CS>())
+                {
+                    sparks.Play();
+
+                    Destroy(gameObject);
+                }
         }
+        
     }
 }

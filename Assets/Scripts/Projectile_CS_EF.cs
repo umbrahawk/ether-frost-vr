@@ -46,5 +46,10 @@ public class Projectile_CS_EF : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (other.gameObject.GetComponent<CircusFloor_EF_CS>())
+        {
+            Destroy(gameObject);
+        }
     }
 }
