@@ -26,7 +26,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
     [Header("TARGET STATS")]
     public int targetsHit = 0;
-    //public Text targetText;
+    public Text targetText;
 
     [Header("PLAYER STATS")]
     public bool rapidFireActive = false;

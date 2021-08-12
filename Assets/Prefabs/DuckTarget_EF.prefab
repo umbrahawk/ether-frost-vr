@@ -13,6 +13,43 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.15
   m_Center: {x: 0, y: 0.1, z: 0}
+--- !u!23 &218779362379376209
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2899522002706336747}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &3323714232213666185
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,6 +254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 1
+  canBeHit: 1
   lifetime: 3
   speed: 10
   target: {fileID: 6369131675755890382}
@@ -224,11 +262,15 @@ MonoBehaviour:
   duckTarget: 1
   continuousTarget: 0
   startTarget: 0
+  fallingTarget: 0
   movingTaget: 0
   pivotTime: 2
   moveSpeed: 3
   dirRight: 1
+  fallSpeed: 0
   finalRound: 0
+  sparks: {fileID: 2063253802346338463}
+  rend: {fileID: 218779362379376209}
   hitSound1VFX: {fileID: 0}
   hitSound2VFX: {fileID: 0}
   hitSound3VFX: {fileID: 0}

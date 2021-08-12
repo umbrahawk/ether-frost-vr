@@ -117,7 +117,6 @@ public class MainTarget_CS_EF : MonoBehaviour
         else if (fallingTarget)
         {
             PlayRegularSound();
-            print("Destroyed Falling Target");
             Destroy(gameObject, .1f);
         }
 
@@ -186,7 +185,6 @@ public class MainTarget_CS_EF : MonoBehaviour
             LevelManager_CS_EF.instance.StartCoroutine("BeginGame");
             gameObject.SetActive(false);
         }
-
     }
 
     // IEnumerator to return the target back to their regular position
@@ -211,23 +209,16 @@ public class MainTarget_CS_EF : MonoBehaviour
         isActive = true;
     }
 
-    /*
-    IEnumerator FallingTarget()
-    {
-        while (transform.position.y > 2)
-        {
-            transform.Translate(Vector3.down * fallSpeed);
-            StartCoroutine("RotateTarget");
-            yield return null;
-        }
-    }
-    */
-
     IEnumerator RotateTarget()
     {
-        GameObject obj = GameObject.Find("PlaneLookPoint_EF");
-        
-        transform.LookAt(obj.transform);
+        GameObject obj = GameObject.Find("PlayerGamePoint_EF");
+
+        Quaternion rot = Quaternion.LookRotation(obj.transform.position - transform.position);
+
+        rot.x = 0;
+        rot.z = 0;
+        transform.rotation = rot;
+
         yield return null;
     }
 
@@ -252,7 +243,6 @@ public class MainTarget_CS_EF : MonoBehaviour
     public void PlayRegularSound()
     {
         int playSound = Random.Range(0, 6);
-        print(playSound);
 
         switch (playSound)
         {
@@ -288,7 +278,6 @@ public class MainTarget_CS_EF : MonoBehaviour
     public void PlayDuckSound()
     {
         int playSound = Random.Range(0, 5);
-        print(playSound);
 
         switch (playSound)
         {
@@ -335,13 +324,10 @@ public class MainTarget_CS_EF : MonoBehaviour
         
         if (fallingTarget)
         {
-            print("Gday");
-            if (other.gameObject.GetComponent<CircusFloor_EF_CS>())
-                {
-                    sparks.Play();
-
-                    Destroy(gameObject);
-                }
+            if (other.gameObject.GetComponent<CircusFloor_EF_CS>() || other.gameObject.GetComponent<CartWayPoint_CS_EF>())
+            {
+                Destroy(gameObject);
+            }
         }
         
     }

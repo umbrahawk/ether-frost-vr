@@ -38,8 +38,6 @@ public class PlaneWaypoint_CS_EF : MonoBehaviour
 
         if (LevelManager_CS_EF.instance.currentTime == spawnTime[0])
         {
-            print("Plane Active!");
-            planeActive = true;
 
             if (targetWayPoint == null && planeActive)
             {
