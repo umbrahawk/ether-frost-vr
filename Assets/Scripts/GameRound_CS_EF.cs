@@ -41,9 +41,9 @@ public class GameRound_CS_EF : MonoBehaviour
         {
             objectsActivated = true;
 
-            StartCoroutine("ActivateTarget");
+            // StartCoroutine("ActivateTarget");
 
-            // ActivateSecondSubRoundTargets();
+            ActivateSecondSubRoundTargets();
             
         }
 
@@ -71,6 +71,7 @@ public class GameRound_CS_EF : MonoBehaviour
     // Used to actvate the targets in the first round of the experience
     public void ActivateFirstSubRoundTargets()
     {
+        print("Round1");
         if (LevelManager_CS_EF.instance.subRound == 1)
         {
             for (int i = 0; i < subRoundTargets1.Length; i++)
@@ -79,7 +80,7 @@ public class GameRound_CS_EF : MonoBehaviour
             }
         }
 
-        if (LevelManager_CS_EF.instance.subRound == 2)
+        else if (LevelManager_CS_EF.instance.subRound == 2)
         {
             for (int i = 0; i < subRoundTargets2.Length; i++)
             {
@@ -87,7 +88,7 @@ public class GameRound_CS_EF : MonoBehaviour
             }
         }
 
-        if (LevelManager_CS_EF.instance.subRound == 3)
+        else if (LevelManager_CS_EF.instance.subRound == 3)
         {
             for (int i = 0; i < subRoundTargets3.Length; i++)
             {
@@ -95,7 +96,7 @@ public class GameRound_CS_EF : MonoBehaviour
             }
         }
 
-        if (LevelManager_CS_EF.instance.subRound == 4)
+        else if (LevelManager_CS_EF.instance.subRound == 4)
         {
             for (int i = 0; i < subRoundTargets4.Length; i++)
             {
@@ -103,12 +104,16 @@ public class GameRound_CS_EF : MonoBehaviour
             }
         }
 
-        StartCoroutine("WaitForNextSubRound");
+        if (LevelManager_CS_EF.instance.subRound < 4)
+        {
+            StartCoroutine("WaitForNextSubRound");
+        }
     }
 
 
     public void ActivateSecondSubRoundTargets()
     {
+        print("Round2");
         if (LevelManager_CS_EF.instance.subRound == 1)
         {
             for (int i = 0; i < subRoundTargets1.Length; i++)
@@ -117,7 +122,7 @@ public class GameRound_CS_EF : MonoBehaviour
             }
         }
 
-        if (LevelManager_CS_EF.instance.subRound == 2)
+        else if (LevelManager_CS_EF.instance.subRound == 2)
         {
             for (int i = 0; i < subRoundTargets2.Length; i++)
             {
@@ -125,7 +130,7 @@ public class GameRound_CS_EF : MonoBehaviour
             }
         }
 
-        if (LevelManager_CS_EF.instance.subRound == 3)
+        else if (LevelManager_CS_EF.instance.subRound == 3)
         {
             for (int i = 0; i < subRoundTargets3.Length; i++)
             {
@@ -133,7 +138,7 @@ public class GameRound_CS_EF : MonoBehaviour
             }
         }
 
-        if (LevelManager_CS_EF.instance.subRound == 4)
+        else if (LevelManager_CS_EF.instance.subRound == 4)
         {
             for (int i = 0; i < subRoundTargets4.Length; i++)
             {
@@ -141,19 +146,15 @@ public class GameRound_CS_EF : MonoBehaviour
             }
         }
 
-        if (LevelManager_CS_EF.instance.subRound == 5)
+        if (LevelManager_CS_EF.instance.subRound < 4)
         {
-            for (int i = 0; i < subRoundTargets5.Length; i++)
-            {
-                subRoundTargets5[i].SetActive(true);
-            }
+            StartCoroutine("WaitForNextSubRound");
         }
-
-        StartCoroutine("WaitForNextSubRound");
     }
 
     public void ActivateThirdSubRoundTargets()
     {
+        print("Round3");
         if (LevelManager_CS_EF.instance.subRound == 1)
         {
             for (int i = 0; i < subRoundTargets1.Length; i++)
@@ -194,7 +195,10 @@ public class GameRound_CS_EF : MonoBehaviour
             }
         }
 
-        StartCoroutine("WaitForNextSubRound");
+        if (LevelManager_CS_EF.instance.subRound < 5)
+        {
+            StartCoroutine("WaitForNextSubRound");
+        }
     }
 
     IEnumerator WaitForNextSubRound()
@@ -202,6 +206,7 @@ public class GameRound_CS_EF : MonoBehaviour
         yield return new WaitForSeconds(5f);
 
         LevelManager_CS_EF.instance.subRound++;
+        print(LevelManager_CS_EF.instance.subRound);
 
         if (roundOne)
         {
