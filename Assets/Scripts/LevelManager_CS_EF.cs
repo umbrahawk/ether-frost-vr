@@ -10,6 +10,7 @@ public class LevelManager_CS_EF : MonoBehaviour
     public GameObject player;
     public bool gameActive = false;
     public int gameLevel = 0;
+    public int subRound = 0;
     public bool roundOne = false;
     public bool roundTwo = false;
     public bool roundThree = false;
@@ -159,6 +160,7 @@ public class LevelManager_CS_EF : MonoBehaviour
     public void IncreaseRound()
     {
         gameLevel++;
+        subRound = 1;
 
         if (gameLevel == 1)
         {
@@ -271,7 +273,6 @@ public class LevelManager_CS_EF : MonoBehaviour
         gameActive = true;
 
         roundOne = true;
-
 
         IncreaseRound();
 

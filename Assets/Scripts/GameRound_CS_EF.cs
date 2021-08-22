@@ -5,9 +5,11 @@ using UnityEngine;
 public class GameRound_CS_EF : MonoBehaviour
 {
     public GameObject[] targets;
-    public GameObject[] subRoundTargets;
     public GameObject[] subRoundTargets1;
     public GameObject[] subRoundTargets2;
+    public GameObject[] subRoundTargets3;
+    public GameObject[] subRoundTargets4;
+    public GameObject[] subRoundTargets5;
     public bool roundOne = false;
     public bool roundTwo = false;
     public bool roundThree = false;
@@ -31,7 +33,7 @@ public class GameRound_CS_EF : MonoBehaviour
         {
             objectsActivated = true;
 
-            ActivateFirstRound();
+            ActivateFirstSubRoundTargets();
         }
 
         // Checks which round it is, whether if it the round two targets, and whether the targets are activated
@@ -40,6 +42,9 @@ public class GameRound_CS_EF : MonoBehaviour
             objectsActivated = true;
 
             StartCoroutine("ActivateTarget");
+
+            // ActivateSecondSubRoundTargets();
+            
         }
 
         // Checks which round it is, whether if it the round three targets, and whether the targets are activated
@@ -48,6 +53,8 @@ public class GameRound_CS_EF : MonoBehaviour
             objectsActivated = true;
 
             StartCoroutine("ActivateTarget");
+
+            // ActivateThirdSubRoundTargets();
         }
     }
 
@@ -60,57 +67,155 @@ public class GameRound_CS_EF : MonoBehaviour
             targets[i].SetActive(true);
         }
     }
-
-    public void ActivateFirstRound()
+    
+    // Used to actvate the targets in the first round of the experience
+    public void ActivateFirstSubRoundTargets()
     {
-        for (int i = 0; i < targets.Length; i++)
+        if (LevelManager_CS_EF.instance.subRound == 1)
         {
-            targets[i].SetActive(true);
-        }
-    }
-
-    /*
-    public void ActivateSubRoundTargets()
-    {
-        for (int i = 0; i < subRoundTargets.Length; i++)
-        {
-            subRoundTargets[i].SetActive(true);
+            for (int i = 0; i < subRoundTargets1.Length; i++)
+            {
+                subRoundTargets1[i].SetActive(true);
+            }
         }
 
-        StartCoroutine("WaitForNextRound");
-    }
-
-    public void ActivateSubRoundTargets1()
-    {
-        for (int i = 0; i < subRoundTargets1.Length; i++)
+        if (LevelManager_CS_EF.instance.subRound == 2)
         {
-            subRoundTargets1[i].SetActive(true);
+            for (int i = 0; i < subRoundTargets2.Length; i++)
+            {
+                subRoundTargets2[i].SetActive(true);
+            }
         }
 
-        StartCoroutine("WaitForNextRound1");
-    }
-    public void ActivateSubRoundTargets2()
-    {
-        for (int i = 0; i < subRoundTargets2.Length; i++)
+        if (LevelManager_CS_EF.instance.subRound == 3)
         {
-            subRoundTargets2[i].SetActive(true);
+            for (int i = 0; i < subRoundTargets3.Length; i++)
+            {
+                subRoundTargets3[i].SetActive(true);
+            }
         }
 
-        StartCoroutine("WaitForNextRound1");
+        if (LevelManager_CS_EF.instance.subRound == 4)
+        {
+            for (int i = 0; i < subRoundTargets4.Length; i++)
+            {
+                subRoundTargets4[i].SetActive(true);
+            }
+        }
+
+        StartCoroutine("WaitForNextSubRound");
     }
 
-    IEnumerator WaitForNextRound()
+
+    public void ActivateSecondSubRoundTargets()
     {
-        yield return new WaitForSeconds(4f);
+        if (LevelManager_CS_EF.instance.subRound == 1)
+        {
+            for (int i = 0; i < subRoundTargets1.Length; i++)
+            {
+                subRoundTargets1[i].SetActive(true);
+            }
+        }
 
-        ActivateSubRoundTargets1();
+        if (LevelManager_CS_EF.instance.subRound == 2)
+        {
+            for (int i = 0; i < subRoundTargets2.Length; i++)
+            {
+                subRoundTargets2[i].SetActive(true);
+            }
+        }
+
+        if (LevelManager_CS_EF.instance.subRound == 3)
+        {
+            for (int i = 0; i < subRoundTargets3.Length; i++)
+            {
+                subRoundTargets3[i].SetActive(true);
+            }
+        }
+
+        if (LevelManager_CS_EF.instance.subRound == 4)
+        {
+            for (int i = 0; i < subRoundTargets4.Length; i++)
+            {
+                subRoundTargets4[i].SetActive(true);
+            }
+        }
+
+        if (LevelManager_CS_EF.instance.subRound == 5)
+        {
+            for (int i = 0; i < subRoundTargets5.Length; i++)
+            {
+                subRoundTargets5[i].SetActive(true);
+            }
+        }
+
+        StartCoroutine("WaitForNextSubRound");
     }
 
-    IEnumerator WaitForNextRound1()
+    public void ActivateThirdSubRoundTargets()
     {
-        yield return new WaitForSeconds(3f);
+        if (LevelManager_CS_EF.instance.subRound == 1)
+        {
+            for (int i = 0; i < subRoundTargets1.Length; i++)
+            {
+                subRoundTargets1[i].SetActive(true);
+            }
+        }
 
-        ActivateSubRoundTargets2();
+        if (LevelManager_CS_EF.instance.subRound == 2)
+        {
+            for (int i = 0; i < subRoundTargets2.Length; i++)
+            {
+                subRoundTargets2[i].SetActive(true);
+            }
+        }
+
+        if (LevelManager_CS_EF.instance.subRound == 3)
+        {
+            for (int i = 0; i < subRoundTargets3.Length; i++)
+            {
+                subRoundTargets3[i].SetActive(true);
+            }
+        }
+
+        if (LevelManager_CS_EF.instance.subRound == 4)
+        {
+            for (int i = 0; i < subRoundTargets4.Length; i++)
+            {
+                subRoundTargets4[i].SetActive(true);
+            }
+        }
+
+        if (LevelManager_CS_EF.instance.subRound == 5)
+        {
+            for (int i = 0; i < subRoundTargets5.Length; i++)
+            {
+                subRoundTargets5[i].SetActive(true);
+            }
+        }
+
+        StartCoroutine("WaitForNextSubRound");
     }
-    */
+
+    IEnumerator WaitForNextSubRound()
+    {
+        yield return new WaitForSeconds(5f);
+
+        LevelManager_CS_EF.instance.subRound++;
+
+        if (roundOne)
+        {
+            ActivateFirstSubRoundTargets();
+        }
+
+        else if (roundTwo)
+        {
+            ActivateFirstSubRoundTargets();
+        }
+
+        else if (roundThree)
+        {
+            ActivateFirstSubRoundTargets();
+        }
+    }    
 }
