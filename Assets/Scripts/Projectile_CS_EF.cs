@@ -5,9 +5,10 @@ using UnityEngine;
 public class Projectile_CS_EF : MonoBehaviour
 {
     Rigidbody rb;
-    public int forwardSpeed = 2000;
-    public int upwardSpeed = 200;
+    public int forwardSpeed;
     public float lifetime = 2.5f;
+
+    public static Projectile_CS_EF instance;
 
 
     // Start is called before the first frame update

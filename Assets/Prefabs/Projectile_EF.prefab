@@ -106,7 +106,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forwardSpeed: 4000
-  upwardSpeed: 200
   lifetime: 1.5
 --- !u!54 &8332712147340923
 Rigidbody:

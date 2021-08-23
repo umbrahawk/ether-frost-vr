@@ -95,9 +95,15 @@ MonoBehaviour:
   descend: 1
   canMove: 1
   startMove: 0
+  isActive: 0
+  roundOne: 0
+  roundTwo: 0
+  roundThree: 0
   speed: 0
   pivotTime: 0
   stayTime: 0
+  swingMesh: {fileID: 0}
+  targetLoc: {fileID: 0}
 --- !u!1001 &296048795021131472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -105,20 +111,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3612794194644144803}
     m_Modifications:
+    - target: {fileID: 8504891547471277367, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
+        type: 3}
+      propertyPath: m_Name
+      value: MainTarget_EF
+      objectReference: {fileID: 0}
+    - target: {fileID: 8504891547471277367, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5407029751185978104, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.05
+      value: 0.012
       objectReference: {fileID: 0}
     - target: {fileID: 5407029751185978104, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.875
+      value: -4.851
       objectReference: {fileID: 0}
     - target: {fileID: 5407029751185978104, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.03
+      value: 0.045
       objectReference: {fileID: 0}
     - target: {fileID: 5407029751185978104, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
         type: 3}
@@ -174,11 +190,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8504891547471277367, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
-        type: 3}
-      propertyPath: m_Name
-      value: MainTarget_EF
       objectReference: {fileID: 0}
     - target: {fileID: 8938535505704244738, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
         type: 3}

@@ -57,7 +57,10 @@ public class MainTarget_CS_EF : MonoBehaviour
     // For targets which start inactive
     void OnEnable()
     {
-        ReactivateTarget();
+        if (!fallingTarget)
+        {
+            SpawnTarget();
+        }
 
         if (movingTaget == true)
         {
@@ -304,6 +307,13 @@ public class MainTarget_CS_EF : MonoBehaviour
             default:
                 break;
         }
+    }
+    public void SpawnTarget()
+    {
+        // Starts in the down position
+        target.transform.localEulerAngles = new Vector3(0, 0, -90);
+
+        StartCoroutine("ReactivateTarget");
     }
 
     public void OnCollisionEnter(Collision other)

@@ -220,8 +220,6 @@ public class LevelManager_CS_EF : MonoBehaviour
             StartCoroutine("UpgradeGun1");
             basicCannon = false;
             threeBurstActive = true;
-
-
         }
 
         // Make the gun turn into the five/star burst gun
@@ -235,7 +233,6 @@ public class LevelManager_CS_EF : MonoBehaviour
             StartCoroutine("UpgradeGun2");
             threeBurstActive = false;
             fiveBurstActive = true;
-
         }
 
         // Make the gun turn into a nine burst gun with rapid fire
@@ -249,7 +246,6 @@ public class LevelManager_CS_EF : MonoBehaviour
             StartCoroutine("UpgradeGun3");
             fiveBurstActive = false;
             nineBurstActive = true;
-
         }
     }
 

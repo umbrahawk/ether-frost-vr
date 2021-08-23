@@ -13,16 +13,12 @@ public class GameRound_CS_EF : MonoBehaviour
     public bool roundOne = false;
     public bool roundTwo = false;
     public bool roundThree = false;
-    public bool finalRound = false;
 
     public bool objectsActivated = false;
 
     private void Start()
     {
-        for (int i = 0; i < targets.Length; i++)
-        {
-            targets[i].SetActive(false);
-        }
+        DeactivateAllTargets();
     }
 
 
@@ -41,10 +37,9 @@ public class GameRound_CS_EF : MonoBehaviour
         {
             objectsActivated = true;
 
-            // StartCoroutine("ActivateTarget");
+            StartCoroutine("ActivateTargetDelay");
 
-            ActivateSecondSubRoundTargets();
-            
+
         }
 
         // Checks which round it is, whether if it the round three targets, and whether the targets are activated
@@ -52,22 +47,26 @@ public class GameRound_CS_EF : MonoBehaviour
         {
             objectsActivated = true;
 
-            StartCoroutine("ActivateTarget");
+            StartCoroutine("ActivateTargetDelay");
 
-            // ActivateThirdSubRoundTargets();
         }
     }
 
-    IEnumerator ActivateTarget()
+    IEnumerator ActivateTargetDelay()
     {
         yield return new WaitForSeconds(2);
 
-        for (int i = 0; i < targets.Length; i++)
+        if (roundTwo)
         {
-            targets[i].SetActive(true);
+            ActivateSecondSubRoundTargets();
+        }
+
+        else if (roundThree)
+        {
+            ActivateThirdSubRoundTargets();
         }
     }
-    
+
     // Used to actvate the targets in the first round of the experience
     public void ActivateFirstSubRoundTargets()
     {
@@ -222,5 +221,33 @@ public class GameRound_CS_EF : MonoBehaviour
         {
             ActivateFirstSubRoundTargets();
         }
-    }    
+    }
+
+    public void DeactivateAllTargets()
+    {
+        for (int i = 0; i < subRoundTargets1.Length; i++)
+        {
+            subRoundTargets1[i].SetActive(false);
+        }
+
+        for (int i = 0; i < subRoundTargets2.Length; i++)
+        {
+            subRoundTargets2[i].SetActive(false);
+        }
+
+        for (int i = 0; i < subRoundTargets3.Length; i++)
+        {
+            subRoundTargets3[i].SetActive(false);
+        }
+
+        for (int i = 0; i < subRoundTargets4.Length; i++)
+        {
+            subRoundTargets4[i].SetActive(false);
+        }
+
+        for (int i = 0; i < subRoundTargets5.Length; i++)
+        {
+            subRoundTargets5[i].SetActive(false);
+        }
+    }
 }

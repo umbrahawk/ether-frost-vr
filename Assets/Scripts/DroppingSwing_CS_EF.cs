@@ -26,7 +26,7 @@ public class DroppingSwing_CS_EF : MonoBehaviour
             if (LevelManager_CS_EF.instance.roundOne == true && startMove == false)
             {
                 startMove = true;
-                StartCoroutine("MoveRing");
+                StartCoroutine("MoveSwing");
             }
 
             if (LevelManager_CS_EF.instance.roundOne == true || LevelManager_CS_EF.instance.finalRound == true)
@@ -46,7 +46,7 @@ public class DroppingSwing_CS_EF : MonoBehaviour
             if (LevelManager_CS_EF.instance.roundTwo == true && startMove == false)
             {
                 startMove = true;
-                StartCoroutine("MoveRing");
+                StartCoroutine("MoveSwing");
             }
 
             if (LevelManager_CS_EF.instance.roundTwo == true || LevelManager_CS_EF.instance.finalRound == true)
@@ -66,7 +66,7 @@ public class DroppingSwing_CS_EF : MonoBehaviour
             if (LevelManager_CS_EF.instance.roundThree == true && startMove == false)
             {
                 startMove = true;
-                StartCoroutine("MoveRing");
+                StartCoroutine("MoveSwing");
             }
 
             if (LevelManager_CS_EF.instance.roundThree == true || LevelManager_CS_EF.instance.finalRound == true)
@@ -82,7 +82,7 @@ public class DroppingSwing_CS_EF : MonoBehaviour
         }
     }
 
-    IEnumerator MoveRing()
+    IEnumerator MoveSwing()
     {
         if (descend)
         {
@@ -102,6 +102,6 @@ public class DroppingSwing_CS_EF : MonoBehaviour
 
         descend = !descend;
 
-        StartCoroutine("MoveRing");
+        StartCoroutine("MoveSwing");
     }
 }
