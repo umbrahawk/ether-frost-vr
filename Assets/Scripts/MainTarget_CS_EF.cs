@@ -100,7 +100,7 @@ public class MainTarget_CS_EF : MonoBehaviour
         if (LevelManager_CS_EF.instance.finalRound == true && !finalRound)
         {
             finalRound = true;
-            StartCoroutine("ReactivateTarget");
+            SpawnTarget();
         }
     }
 
