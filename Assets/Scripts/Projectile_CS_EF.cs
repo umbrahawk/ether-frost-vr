@@ -6,6 +6,7 @@ public class Projectile_CS_EF : MonoBehaviour
 {
     Rigidbody rb;
     public int forwardSpeed;
+    public int randomInt = 2;
     public float lifetime = 2.5f;
 
     public static Projectile_CS_EF instance;
@@ -16,9 +17,12 @@ public class Projectile_CS_EF : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
 
-        // rb.AddForce(transform.forward * forwardSpeed);
-
         MoveForward();
+    }
+
+    private void Update()
+    {
+        transform.localScale += new Vector3 (randomInt, randomInt, randomInt) * Time.deltaTime;
     }
 
     void MoveForward()
@@ -49,6 +53,16 @@ public class Projectile_CS_EF : MonoBehaviour
         }
 
         if (other.gameObject.GetComponent<CircusFloor_EF_CS>())
+        {
+            Destroy(gameObject);
+        }
+
+        if (other.gameObject.GetComponent<Elephant_CS_EF>())
+        {
+            Destroy(gameObject);
+        }
+
+        if (other.gameObject.GetComponent<BlockProjectile_CS_EF>())
         {
             Destroy(gameObject);
         }
