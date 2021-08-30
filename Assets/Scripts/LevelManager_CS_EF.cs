@@ -93,8 +93,6 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         ResetCannon();
 
-
-
         // This will need to be fixed 
         //gameOverText.gameObject.SetActive(false);
 
@@ -102,7 +100,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         TimerText.text = "02  :  00";
 
-        //targetText.text = "Targets hit: " + targetsHit;
+        targetText.text = "HIT: " + targetsHit;
 
         upgradeEffectPrimary.SetActive(false);
         upgradeEffectSecondary.SetActive(false);
@@ -154,7 +152,7 @@ public class LevelManager_CS_EF : MonoBehaviour
         // Program that runs when a main target is hit
         // This will increase the score and the UI
         targetsHit++;
-        //targetText.text = "Targets Hit: " + targetsHit;
+        targetText.text = "HIT: " + targetsHit;
     }
 
     public void IncreaseRound()

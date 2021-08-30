@@ -57,32 +57,36 @@ public class MainTarget_CS_EF : MonoBehaviour
     // For targets which start inactive
     void OnEnable()
     {
+        if (movingTaget == true)
+        {
+            StartCoroutine("MoveTarget");
+        }
+
+        if (continuousTarget)
+        {
+            lifetime = 4;
+        }
+
+        else if (!continuousTarget)
+        {
+            lifetime = 7;
+        }
+
         if (!fallingTarget)
         {
             SpawnTarget();
         }
 
-        if (movingTaget == true)
-        {
-            StartCoroutine("MoveTarget");
-        }
-        
         else if (fallingTarget == true)
         {
             StartCoroutine("RotateTarget");
         }
-        
+
     }
 
     void Start()
     {
         sparks = GetComponent<ParticleSystem>();
-
-        // Checks if the target is a moving ring or not
-        if (movingTaget)
-        {
-            StartCoroutine("MoveTarget");
-        }
     }
 
     void Update()
@@ -231,14 +235,14 @@ public class MainTarget_CS_EF : MonoBehaviour
         if (dirRight)
         {
             yield return new WaitForSeconds(pivotTime);
+            dirRight = false;
         }
 
         else if (!dirRight)
         {
             yield return new WaitForSeconds(pivotTime);
+            dirRight = true;
         }
-
-        dirRight = !dirRight;
 
         StartCoroutine("MoveTarget");
     }

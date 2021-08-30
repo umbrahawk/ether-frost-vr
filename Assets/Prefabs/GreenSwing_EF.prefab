@@ -26,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3614657626828621431}
-  m_LocalRotation: {x: -0.000000074565286, y: -0.5220296, z: -0.000000045637275, w: 0.8529274}
-  m_LocalPosition: {x: 3.560351, y: 10.06296, z: -2.644461}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 5697728793146428456}
   m_Father: {fileID: 0}
@@ -95,15 +95,12 @@ MonoBehaviour:
   descend: 1
   canMove: 1
   startMove: 0
-  isActive: 0
   roundOne: 0
   roundTwo: 0
   roundThree: 0
   speed: 0
   pivotTime: 0
   stayTime: 0
-  swingMesh: {fileID: 0}
-  targetLoc: {fileID: 0}
 --- !u!1001 &296048795021131472
 PrefabInstance:
   m_ObjectHideFlags: 0

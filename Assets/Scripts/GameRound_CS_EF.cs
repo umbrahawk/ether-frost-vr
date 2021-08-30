@@ -70,7 +70,6 @@ public class GameRound_CS_EF : MonoBehaviour
     // Used to actvate the targets in the first round of the experience
     public void ActivateFirstSubRoundTargets()
     {
-        print("Round1");
         if (LevelManager_CS_EF.instance.subRound == 1)
         {
             for (int i = 0; i < subRoundTargets1.Length; i++)
@@ -105,14 +104,14 @@ public class GameRound_CS_EF : MonoBehaviour
 
         if (LevelManager_CS_EF.instance.subRound < 4)
         {
-            StartCoroutine("WaitForNextSubRound");
+            StartCoroutine("WaitForNextSubRound_RoundOne");
         }
     }
 
 
+    // Used to actvate the targets in the second round of the experience
     public void ActivateSecondSubRoundTargets()
     {
-        print("Round2");
         if (LevelManager_CS_EF.instance.subRound == 1)
         {
             for (int i = 0; i < subRoundTargets1.Length; i++)
@@ -147,13 +146,13 @@ public class GameRound_CS_EF : MonoBehaviour
 
         if (LevelManager_CS_EF.instance.subRound < 4)
         {
-            StartCoroutine("WaitForNextSubRound");
+            StartCoroutine("WaitForNextSubRound_RoundTwo");
         }
     }
 
+    // Used to actvate the targets in the third round of the experience
     public void ActivateThirdSubRoundTargets()
     {
-        print("Round3");
         if (LevelManager_CS_EF.instance.subRound == 1)
         {
             for (int i = 0; i < subRoundTargets1.Length; i++)
@@ -196,31 +195,38 @@ public class GameRound_CS_EF : MonoBehaviour
 
         if (LevelManager_CS_EF.instance.subRound < 5)
         {
-            StartCoroutine("WaitForNextSubRound");
+            StartCoroutine("WaitForNextSubRound_RoundThree");
         }
     }
 
-    IEnumerator WaitForNextSubRound()
+    // Timer used for round one and its subrounds
+    IEnumerator WaitForNextSubRound_RoundOne()
     {
         yield return new WaitForSeconds(5f);
 
         LevelManager_CS_EF.instance.subRound++;
-        print(LevelManager_CS_EF.instance.subRound);
 
-        if (roundOne)
-        {
-            ActivateFirstSubRoundTargets();
-        }
+        ActivateFirstSubRoundTargets();
+    }
 
-        else if (roundTwo)
-        {
-            ActivateFirstSubRoundTargets();
-        }
+    // Timer used for round two and its subrounds
+    IEnumerator WaitForNextSubRound_RoundTwo()
+    {
+        yield return new WaitForSeconds(5f);
 
-        else if (roundThree)
-        {
-            ActivateFirstSubRoundTargets();
-        }
+        LevelManager_CS_EF.instance.subRound++;
+
+        ActivateFirstSubRoundTargets();
+    }
+
+    // Timer used for round three and it's subrounds
+    IEnumerator WaitForNextSubRound_RoundThree()
+    {
+        yield return new WaitForSeconds(6f);
+
+        LevelManager_CS_EF.instance.subRound++;
+
+        ActivateFirstSubRoundTargets();
     }
 
     public void DeactivateAllTargets()

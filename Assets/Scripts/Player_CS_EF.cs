@@ -66,7 +66,6 @@ public class Player_CS_EF : MonoBehaviour
 
     void Update()
     {
-        
         // THIS IS FOR GAMEPLAY IN UNITY - TESTING ONLY
         // Checks if the player has input the fire button and can fire
         if (Input.GetButton("Fire1") && rightCanFire && canBothFire)

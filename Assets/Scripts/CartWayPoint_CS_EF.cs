@@ -30,7 +30,7 @@ public class CartWayPoint_CS_EF : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (LevelManager_CS_EF.instance.currentTime == spawnTime[0] || LevelManager_CS_EF.instance.currentTime == spawnTime[1])
+        if (LevelManager_CS_EF.instance.currentTime == spawnTime[0])
         {
             print("Cart Active!");
             cartActive = true;
@@ -47,7 +47,6 @@ public class CartWayPoint_CS_EF : MonoBehaviour
 
     IEnumerator walk()
     {
-
         //cartActive = false;
         
         // rotate towards the target
