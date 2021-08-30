@@ -54,6 +54,9 @@ public class MainTarget_CS_EF : MonoBehaviour
     public AudioClip duckSound4VFX;
     public AudioClip duckSound5VFX;
 
+    [Header("TEXT ANIMATION")]
+    public Animator textAnimation;
+
     // For targets which start inactive
     void OnEnable()
     {
@@ -332,6 +335,11 @@ public class MainTarget_CS_EF : MonoBehaviour
 
             sparks.Play();
 
+            if (textAnimation != null)
+            {
+                textAnimation.Play("PoppingText1");
+            }
+            
             StartCoroutine("ToggleTarget");
         }
 

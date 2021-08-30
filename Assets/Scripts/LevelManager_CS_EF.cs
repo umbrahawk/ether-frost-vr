@@ -80,7 +80,7 @@ public class LevelManager_CS_EF : MonoBehaviour
     [Header("MISC")]
     public Rigidbody[] gunBarrel;
     public Transform playerGamePoint;
-
+    public Animator screenTransition;
 
     public static LevelManager_CS_EF instance;
 
@@ -259,6 +259,10 @@ public class LevelManager_CS_EF : MonoBehaviour
 
     IEnumerator BeginGame()
     {
+        screenTransition.Play("ScreenTransition");
+
+        yield return new WaitForSeconds(1f);
+
         player.transform.rotation = playerGamePoint.rotation;
         player.transform.position = playerGamePoint.position;
 
