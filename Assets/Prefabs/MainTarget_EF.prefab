@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0.8302622, a: 1}
+  m_Color: {r: 0.8679245, g: 0.15966538, b: 0.6883075, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -68,7 +68,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: ffe7c90e443e7b344b5bf12403c30737, type: 3}
     m_FontSize: 1
     m_FontStyle: 0
     m_BestFit: 0
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 100
+  m_DynamicPixelsPerUnit: 30
 --- !u!114 &5524577519547914876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0.8302622, a: 1}
+  m_Color: {r: 0.8679245, g: 0.15966538, b: 0.6883075, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -279,7 +279,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: ffe7c90e443e7b344b5bf12403c30737, type: 3}
     m_FontSize: 1
     m_FontStyle: 0
     m_BestFit: 0
@@ -5313,6 +5313,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1198192502819225713}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: bd0fc70d421ceb44fa9707b0d591ca1d,
+        type: 3}
+      propertyPath: m_Name
+      value: Target_Mesh_01
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bd0fc70d421ceb44fa9707b0d591ca1d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5382,11 +5387,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: bd0fc70d421ceb44fa9707b0d591ca1d,
-        type: 3}
-      propertyPath: m_Name
-      value: Target_Mesh_01
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: bd0fc70d421ceb44fa9707b0d591ca1d,
         type: 3}

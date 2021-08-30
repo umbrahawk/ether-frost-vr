@@ -4361,6 +4361,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 127849810}
     m_Modifications:
+    - target: {fileID: 1010059550500130, guid: 40d071ae5a6a80b47a216fbcc9c01115, type: 3}
+      propertyPath: m_Name
+      value: "circus_dressing_room_\u0441oatstand"
+      objectReference: {fileID: 0}
     - target: {fileID: 4086165618752856, guid: 40d071ae5a6a80b47a216fbcc9c01115, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.93
@@ -4416,10 +4420,6 @@ PrefabInstance:
     - target: {fileID: 4086165618752856, guid: 40d071ae5a6a80b47a216fbcc9c01115, type: 3}
       propertyPath: m_LocalScale.z
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1010059550500130, guid: 40d071ae5a6a80b47a216fbcc9c01115, type: 3}
-      propertyPath: m_Name
-      value: "circus_dressing_room_\u0441oatstand"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40d071ae5a6a80b47a216fbcc9c01115, type: 3}
@@ -6208,21 +6208,6 @@ PrefabInstance:
       propertyPath: dirRight
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7244724867281734265, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7244724867281734265, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 7244724867281734265, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.09
-      objectReference: {fileID: 0}
     - target: {fileID: 2063253802346338463, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
         type: 3}
       propertyPath: playOnAwake
@@ -6237,6 +6222,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244724867281734265, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244724867281734265, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244724867281734265, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.09
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9, type: 3}
@@ -8845,11 +8845,6 @@ PrefabInstance:
       propertyPath: movingTaget
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7244724867281734265, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2063253802346338463, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
         type: 3}
       propertyPath: playOnAwake
@@ -8863,6 +8858,11 @@ PrefabInstance:
     - target: {fileID: 9116585139842492835, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
         type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244724867281734265, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
+        type: 3}
+      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9098,6 +9098,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4760864248977433}
     m_Modifications:
+    - target: {fileID: 1232343526366258, guid: f79b354138b56524480ab0671e8f9b95, type: 3}
+      propertyPath: m_Name
+      value: circus_dressing_room_teapot
+      objectReference: {fileID: 0}
     - target: {fileID: 4064482662211580, guid: f79b354138b56524480ab0671e8f9b95, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.407
@@ -9153,10 +9157,6 @@ PrefabInstance:
     - target: {fileID: 4064482662211580, guid: f79b354138b56524480ab0671e8f9b95, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.6666667
-      objectReference: {fileID: 0}
-    - target: {fileID: 1232343526366258, guid: f79b354138b56524480ab0671e8f9b95, type: 3}
-      propertyPath: m_Name
-      value: circus_dressing_room_teapot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f79b354138b56524480ab0671e8f9b95, type: 3}
@@ -9813,16 +9813,6 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2654361842886781408, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e76de6b655a8ff944aa5b47f64704103, type: 2}
-    - target: {fileID: 2654361842886781408, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
-        type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: e76de6b655a8ff944aa5b47f64704103, type: 2}
     - target: {fileID: 5399219148918131894, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -9833,6 +9823,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2654361842886781408, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e76de6b655a8ff944aa5b47f64704103, type: 2}
+    - target: {fileID: 2654361842886781408, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e76de6b655a8ff944aa5b47f64704103, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9, type: 3}
 --- !u!4 &247634931 stripped
@@ -10458,11 +10458,6 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 2.9
       objectReference: {fileID: 0}
-    - target: {fileID: 7244724867281734265, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2063253802346338463, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
         type: 3}
       propertyPath: playOnAwake
@@ -10476,6 +10471,11 @@ PrefabInstance:
     - target: {fileID: 9116585139842492835, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
         type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244724867281734265, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
+        type: 3}
+      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -11080,6 +11080,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4060562916472014}
     m_Modifications:
+    - target: {fileID: 1795107877505004, guid: 4b0ea8f5154ca7940aca90863d025601, type: 3}
+      propertyPath: m_Name
+      value: circus_elephant (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 4210749105732288, guid: 4b0ea8f5154ca7940aca90863d025601, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.7
@@ -11127,10 +11131,6 @@ PrefabInstance:
     - target: {fileID: 4210749105732288, guid: 4b0ea8f5154ca7940aca90863d025601, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1795107877505004, guid: 4b0ea8f5154ca7940aca90863d025601, type: 3}
-      propertyPath: m_Name
-      value: circus_elephant (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b0ea8f5154ca7940aca90863d025601, type: 3}
@@ -14053,16 +14053,6 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2654361842886781408, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 3111bbd9a1b114f4fa071520c154f908, type: 2}
-    - target: {fileID: 2654361842886781408, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
-        type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 3111bbd9a1b114f4fa071520c154f908, type: 2}
     - target: {fileID: 5399219148918131894, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -14073,6 +14063,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2654361842886781408, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3111bbd9a1b114f4fa071520c154f908, type: 2}
+    - target: {fileID: 2654361842886781408, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3111bbd9a1b114f4fa071520c154f908, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9, type: 3}
 --- !u!1001 &386321768
@@ -14974,6 +14974,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 127849810}
     m_Modifications:
+    - target: {fileID: 3614657626828621431, guid: d1b1b5957258cbd4790e880d070f05eb,
+        type: 3}
+      propertyPath: m_Name
+      value: GreenSwing_EF
+      objectReference: {fileID: 0}
+    - target: {fileID: 3614657626828621431, guid: d1b1b5957258cbd4790e880d070f05eb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3612794194644144803, guid: d1b1b5957258cbd4790e880d070f05eb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15043,16 +15053,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3614657626828621431, guid: d1b1b5957258cbd4790e880d070f05eb,
-        type: 3}
-      propertyPath: m_Name
-      value: GreenSwing_EF
-      objectReference: {fileID: 0}
-    - target: {fileID: 3614657626828621431, guid: d1b1b5957258cbd4790e880d070f05eb,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8584641277647661089, guid: d1b1b5957258cbd4790e880d070f05eb,
         type: 3}
@@ -16410,11 +16410,6 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 1.9
       objectReference: {fileID: 0}
-    - target: {fileID: 7244724867281734265, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2063253802346338463, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
         type: 3}
       propertyPath: playOnAwake
@@ -16428,6 +16423,11 @@ PrefabInstance:
     - target: {fileID: 9116585139842492835, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
         type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244724867281734265, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
+        type: 3}
+      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -19535,11 +19535,6 @@ PrefabInstance:
       propertyPath: pivotTime
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7244724867281734265, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2063253802346338463, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
         type: 3}
       propertyPath: playOnAwake
@@ -19553,6 +19548,11 @@ PrefabInstance:
     - target: {fileID: 9116585139842492835, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
         type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244724867281734265, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
+        type: 3}
+      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -22616,6 +22616,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4760864248977433}
     m_Modifications:
+    - target: {fileID: 1351464955433994, guid: e21a5f841adf69c4c899e1c8c176b45b, type: 3}
+      propertyPath: m_Name
+      value: circus_dressing_room_chair
+      objectReference: {fileID: 0}
     - target: {fileID: 4807403563422574, guid: e21a5f841adf69c4c899e1c8c176b45b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.774
@@ -22671,10 +22675,6 @@ PrefabInstance:
     - target: {fileID: 4807403563422574, guid: e21a5f841adf69c4c899e1c8c176b45b, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1351464955433994, guid: e21a5f841adf69c4c899e1c8c176b45b, type: 3}
-      propertyPath: m_Name
-      value: circus_dressing_room_chair
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e21a5f841adf69c4c899e1c8c176b45b, type: 3}
@@ -22936,11 +22936,6 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 7244724867281734265, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2063253802346338463, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
         type: 3}
       propertyPath: playOnAwake
@@ -22954,6 +22949,11 @@ PrefabInstance:
     - target: {fileID: 9116585139842492835, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
         type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244724867281734265, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
+        type: 3}
+      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -24083,6 +24083,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4760864248977433}
     m_Modifications:
+    - target: {fileID: 1957416532040636, guid: 72a74d7224fadd44aa61a8013d72e073, type: 3}
+      propertyPath: m_Name
+      value: circus_dressing_room_pill_bottles
+      objectReference: {fileID: 0}
     - target: {fileID: 4468522000209334, guid: 72a74d7224fadd44aa61a8013d72e073, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.796
@@ -24138,10 +24142,6 @@ PrefabInstance:
     - target: {fileID: 4468522000209334, guid: 72a74d7224fadd44aa61a8013d72e073, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.5000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 1957416532040636, guid: 72a74d7224fadd44aa61a8013d72e073, type: 3}
-      propertyPath: m_Name
-      value: circus_dressing_room_pill_bottles
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72a74d7224fadd44aa61a8013d72e073, type: 3}
@@ -26744,6 +26744,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4760864248977433}
     m_Modifications:
+    - target: {fileID: 1047991397567576, guid: 898edd83b7e9c1844a940b437cb57878, type: 3}
+      propertyPath: m_Name
+      value: circus_dressing_room_telephone
+      objectReference: {fileID: 0}
     - target: {fileID: 4080811414114590, guid: 898edd83b7e9c1844a940b437cb57878, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.83
@@ -26799,10 +26803,6 @@ PrefabInstance:
     - target: {fileID: 4080811414114590, guid: 898edd83b7e9c1844a940b437cb57878, type: 3}
       propertyPath: m_LocalScale.z
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1047991397567576, guid: 898edd83b7e9c1844a940b437cb57878, type: 3}
-      propertyPath: m_Name
-      value: circus_dressing_room_telephone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 898edd83b7e9c1844a940b437cb57878, type: 3}
@@ -30218,6 +30218,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4760864248977433}
     m_Modifications:
+    - target: {fileID: 1010059550500130, guid: 40d071ae5a6a80b47a216fbcc9c01115, type: 3}
+      propertyPath: m_Name
+      value: "circus_dressing_room_\u0441oatstand (1)"
+      objectReference: {fileID: 0}
     - target: {fileID: 4086165618752856, guid: 40d071ae5a6a80b47a216fbcc9c01115, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.27
@@ -30273,10 +30277,6 @@ PrefabInstance:
     - target: {fileID: 4086165618752856, guid: 40d071ae5a6a80b47a216fbcc9c01115, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1010059550500130, guid: 40d071ae5a6a80b47a216fbcc9c01115, type: 3}
-      propertyPath: m_Name
-      value: "circus_dressing_room_\u0441oatstand (1)"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40d071ae5a6a80b47a216fbcc9c01115, type: 3}
@@ -35790,6 +35790,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4060562916472014}
     m_Modifications:
+    - target: {fileID: 1795107877505004, guid: 4b0ea8f5154ca7940aca90863d025601, type: 3}
+      propertyPath: m_Name
+      value: circus_elephant (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 4210749105732288, guid: 4b0ea8f5154ca7940aca90863d025601, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.82
@@ -35837,10 +35841,6 @@ PrefabInstance:
     - target: {fileID: 4210749105732288, guid: 4b0ea8f5154ca7940aca90863d025601, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1795107877505004, guid: 4b0ea8f5154ca7940aca90863d025601, type: 3}
-      propertyPath: m_Name
-      value: circus_elephant (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b0ea8f5154ca7940aca90863d025601, type: 3}
@@ -43303,21 +43303,6 @@ PrefabInstance:
       propertyPath: dirRight
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7244724867281734265, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7244724867281734265, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 7244724867281734265, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.09
-      objectReference: {fileID: 0}
     - target: {fileID: 2063253802346338463, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
         type: 3}
       propertyPath: playOnAwake
@@ -43332,6 +43317,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244724867281734265, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244724867281734265, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244724867281734265, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.09
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cfd6e9cbbdf88647b0860f33f02a4b9, type: 3}
@@ -44971,6 +44971,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2130316772}
     m_Modifications:
+    - target: {fileID: 1290678636138548, guid: f0370a6727102464cb6592769603d697, type: 3}
+      propertyPath: m_Name
+      value: circus_dressing_room
+      objectReference: {fileID: 0}
+    - target: {fileID: 1290678636138548, guid: f0370a6727102464cb6592769603d697, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4760865057208776, guid: f0370a6727102464cb6592769603d697, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.4
@@ -45027,14 +45035,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 1290678636138548, guid: f0370a6727102464cb6592769603d697, type: 3}
-      propertyPath: m_Name
-      value: circus_dressing_room
-      objectReference: {fileID: 0}
-    - target: {fileID: 1290678636138548, guid: f0370a6727102464cb6592769603d697, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1606022482264440, guid: f0370a6727102464cb6592769603d697, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -45053,6 +45053,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4760864248977433}
     m_Modifications:
+    - target: {fileID: 1860106986464594, guid: c48e3de8087449f499a6b9beb2cbf87a, type: 3}
+      propertyPath: m_Name
+      value: circus_dressing_room_boots
+      objectReference: {fileID: 0}
     - target: {fileID: 4152475746535908, guid: c48e3de8087449f499a6b9beb2cbf87a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.254
@@ -45108,10 +45112,6 @@ PrefabInstance:
     - target: {fileID: 4152475746535908, guid: c48e3de8087449f499a6b9beb2cbf87a, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1860106986464594, guid: c48e3de8087449f499a6b9beb2cbf87a, type: 3}
-      propertyPath: m_Name
-      value: circus_dressing_room_boots
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c48e3de8087449f499a6b9beb2cbf87a, type: 3}
@@ -45707,26 +45707,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gun_Upgrade_03_Primary
       objectReference: {fileID: 0}
-    - target: {fileID: 5923442198591874443, guid: c8e5341c837a8834c9e1834ad1d1db78,
-        type: 3}
-      propertyPath: m_Name
-      value: Gun_Upgrade_01_Primary
-      objectReference: {fileID: 0}
-    - target: {fileID: 3597627642483894231, guid: c8e5341c837a8834c9e1834ad1d1db78,
-        type: 3}
-      propertyPath: m_Name
-      value: Gun_Upgrade_04_Primary
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283690377074430716, guid: c8e5341c837a8834c9e1834ad1d1db78,
-        type: 3}
-      propertyPath: m_Name
-      value: Gun_Upgrade_02_Primary
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892723903260082267, guid: c8e5341c837a8834c9e1834ad1d1db78,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4809944811233797237, guid: c8e5341c837a8834c9e1834ad1d1db78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -45780,6 +45760,26 @@ PrefabInstance:
     - target: {fileID: 4809944811233797237, guid: c8e5341c837a8834c9e1834ad1d1db78,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923442198591874443, guid: c8e5341c837a8834c9e1834ad1d1db78,
+        type: 3}
+      propertyPath: m_Name
+      value: Gun_Upgrade_01_Primary
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597627642483894231, guid: c8e5341c837a8834c9e1834ad1d1db78,
+        type: 3}
+      propertyPath: m_Name
+      value: Gun_Upgrade_04_Primary
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283690377074430716, guid: c8e5341c837a8834c9e1834ad1d1db78,
+        type: 3}
+      propertyPath: m_Name
+      value: Gun_Upgrade_02_Primary
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892723903260082267, guid: c8e5341c837a8834c9e1834ad1d1db78,
+        type: 3}
+      propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4809944811438271203, guid: c8e5341c837a8834c9e1834ad1d1db78,
@@ -49687,6 +49687,11 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5832652291620766208, guid: bafb791f2b8bfe94fb4d960b1da4c27c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7312864276542036315, guid: bafb791f2b8bfe94fb4d960b1da4c27c,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -49701,11 +49706,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5832652291620766208, guid: bafb791f2b8bfe94fb4d960b1da4c27c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bafb791f2b8bfe94fb4d960b1da4c27c, type: 3}
@@ -52207,6 +52207,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2130316772}
     m_Modifications:
+    - target: {fileID: 1593235692033300, guid: 6ebe82224c556704fa5906a7fb2edf63, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4619964874856966, guid: 6ebe82224c556704fa5906a7fb2edf63, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.6
@@ -52250,10 +52254,6 @@ PrefabInstance:
     - target: {fileID: 4619964874856966, guid: 6ebe82224c556704fa5906a7fb2edf63, type: 3}
       propertyPath: m_LocalScale.z
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1593235692033300, guid: 6ebe82224c556704fa5906a7fb2edf63, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1445828420394624, guid: 6ebe82224c556704fa5906a7fb2edf63, type: 3}
       propertyPath: m_IsActive
@@ -57749,6 +57749,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4760864248977433}
     m_Modifications:
+    - target: {fileID: 1572999398673114, guid: 822ca9da5d3c9b74bbc02b06cf5f64ba, type: 3}
+      propertyPath: m_Name
+      value: circus_dressing_room_umbrella
+      objectReference: {fileID: 0}
     - target: {fileID: 4861929124612032, guid: 822ca9da5d3c9b74bbc02b06cf5f64ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.156
@@ -57804,10 +57808,6 @@ PrefabInstance:
     - target: {fileID: 4861929124612032, guid: 822ca9da5d3c9b74bbc02b06cf5f64ba, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572999398673114, guid: 822ca9da5d3c9b74bbc02b06cf5f64ba, type: 3}
-      propertyPath: m_Name
-      value: circus_dressing_room_umbrella
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 822ca9da5d3c9b74bbc02b06cf5f64ba, type: 3}
@@ -59012,6 +59012,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4760864248977433}
     m_Modifications:
+    - target: {fileID: 1462504389281214, guid: a1a12079e4da79d44ae21f9ac1b10248, type: 3}
+      propertyPath: m_Name
+      value: circus_dressing_room_carpet
+      objectReference: {fileID: 0}
     - target: {fileID: 4671690669123870, guid: a1a12079e4da79d44ae21f9ac1b10248, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -59067,10 +59071,6 @@ PrefabInstance:
     - target: {fileID: 4671690669123870, guid: a1a12079e4da79d44ae21f9ac1b10248, type: 3}
       propertyPath: m_LocalScale.z
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1462504389281214, guid: a1a12079e4da79d44ae21f9ac1b10248, type: 3}
-      propertyPath: m_Name
-      value: circus_dressing_room_carpet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1a12079e4da79d44ae21f9ac1b10248, type: 3}
@@ -67665,10 +67665,10 @@ RectTransform:
   m_Father: {fileID: 213466161}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 990.51, y: 806.3}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2106902290
 MonoBehaviour:
@@ -70441,6 +70441,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4538225841172694}
     m_Modifications:
+    - target: {fileID: 3614657626828621431, guid: d1b1b5957258cbd4790e880d070f05eb,
+        type: 3}
+      propertyPath: m_Name
+      value: circus_air_swing_01
+      objectReference: {fileID: 0}
     - target: {fileID: 3612794194644144803, guid: d1b1b5957258cbd4790e880d070f05eb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -70510,11 +70515,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3614657626828621431, guid: d1b1b5957258cbd4790e880d070f05eb,
-        type: 3}
-      propertyPath: m_Name
-      value: circus_air_swing_01
       objectReference: {fileID: 0}
     - target: {fileID: -8584641277647661089, guid: d1b1b5957258cbd4790e880d070f05eb,
         type: 3}
@@ -72209,6 +72209,11 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5832652291620766208, guid: bafb791f2b8bfe94fb4d960b1da4c27c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7312864276542036315, guid: bafb791f2b8bfe94fb4d960b1da4c27c,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -72223,11 +72228,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5832652291620766208, guid: bafb791f2b8bfe94fb4d960b1da4c27c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bafb791f2b8bfe94fb4d960b1da4c27c, type: 3}
@@ -72612,7 +72612,7 @@ MonoBehaviour:
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 100
+  m_DynamicPixelsPerUnit: 72
 --- !u!114 &7753083794614114523
 MonoBehaviour:
   m_ObjectHideFlags: 0
