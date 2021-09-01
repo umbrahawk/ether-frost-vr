@@ -49,7 +49,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.15
-  m_Center: {x: 0, y: 0.1, z: 0}
+  m_Center: {x: 0, y: 0.12, z: 0}
 --- !u!1 &3323714232213666185
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,8 +261,8 @@ MonoBehaviour:
   regularTarget: 0
   duckTarget: 1
   continuousTarget: 0
-  fallingTarget: 0
   startTarget: 0
+  fallingTarget: 0
   movingTaget: 0
   pivotTime: 2
   moveSpeed: 3
@@ -280,6 +280,7 @@ MonoBehaviour:
   duckSound3VFX: {fileID: 8300000, guid: 3bec796c8c9f94f4ba574842b654ac30, type: 3}
   duckSound4VFX: {fileID: 8300000, guid: fecf7b215fe0cdc47b2b0fbd79076d4e, type: 3}
   duckSound5VFX: {fileID: 8300000, guid: 72db67affeedab3459cc25e2973302c0, type: 3}
+  textAnimation: {fileID: 0}
 --- !u!54 &954544581164987481
 Rigidbody:
   m_ObjectHideFlags: 0

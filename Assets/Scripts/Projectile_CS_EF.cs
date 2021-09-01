@@ -22,7 +22,7 @@ public class Projectile_CS_EF : MonoBehaviour
 
     private void Update()
     {
-        transform.localScale += new Vector3 (randomInt, randomInt, randomInt) * Time.deltaTime;
+        // transform.localScale += new Vector3 (randomInt, randomInt, randomInt) * Time.deltaTime;
     }
 
     void MoveForward()
@@ -63,6 +63,11 @@ public class Projectile_CS_EF : MonoBehaviour
         }
 
         if (other.gameObject.GetComponent<BlockProjectile_CS_EF>())
+        {
+            Destroy(gameObject);
+        }
+
+        if (other.gameObject.GetComponent<CartWayPoint_CS_EF>())
         {
             Destroy(gameObject);
         }

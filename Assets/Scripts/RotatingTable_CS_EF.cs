@@ -6,6 +6,8 @@ public class RotatingTable_CS_EF : MonoBehaviour
 {
     public float rotateSpeed = 0.5f;
 
+    public bool updateSpeed = false;
+
     public bool isActivated = false;
     public int spawnTime;
 
@@ -17,6 +19,10 @@ public class RotatingTable_CS_EF : MonoBehaviour
     public GameObject target2;
     public GameObject target3;
     public GameObject target4;
+    public GameObject target5;
+    public GameObject target6;
+    public GameObject target7;
+    public GameObject target8;
 
     void Start()
     {
@@ -29,6 +35,10 @@ public class RotatingTable_CS_EF : MonoBehaviour
         target2.SetActive(false);
         target3.SetActive(false);
         target4.SetActive(false);
+        target5.SetActive(false);
+        target6.SetActive(false);
+        target7.SetActive(false);
+        target8.SetActive(false);
     }
 
     void Update()
@@ -40,6 +50,18 @@ public class RotatingTable_CS_EF : MonoBehaviour
             isActivated = true;
 
             Activate();
+        }
+
+        if (LevelManager_CS_EF.instance.finalRound && !updateSpeed)
+        {
+            updateSpeed = true;
+
+            rotateSpeed = 1f;
+
+            target5.SetActive(true);
+            target6.SetActive(true);
+            target7.SetActive(true);
+            target8.SetActive(true);
         }
 
     }
