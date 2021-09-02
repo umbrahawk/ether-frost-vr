@@ -281,6 +281,8 @@ MonoBehaviour:
   duckSound4VFX: {fileID: 8300000, guid: fecf7b215fe0cdc47b2b0fbd79076d4e, type: 3}
   duckSound5VFX: {fileID: 8300000, guid: 72db67affeedab3459cc25e2973302c0, type: 3}
   textAnimation: {fileID: 0}
+  popppingText1: {fileID: 0}
+  popppingText2: {fileID: 0}
 --- !u!54 &954544581164987481
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5100,10 +5102,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1198192502819225713}
     m_Modifications:
-    - target: {fileID: 1767663768970106, guid: ca9fda2f4d77c4d4f88d4ed8b939f69b, type: 3}
-      propertyPath: m_Name
-      value: Toon Chick
-      objectReference: {fileID: 0}
     - target: {fileID: 4429102427960218, guid: ca9fda2f4d77c4d4f88d4ed8b939f69b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5159,6 +5157,10 @@ PrefabInstance:
     - target: {fileID: 4429102427960218, guid: ca9fda2f4d77c4d4f88d4ed8b939f69b, type: 3}
       propertyPath: m_LocalScale.z
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1767663768970106, guid: ca9fda2f4d77c4d4f88d4ed8b939f69b, type: 3}
+      propertyPath: m_Name
+      value: Toon Chick
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca9fda2f4d77c4d4f88d4ed8b939f69b, type: 3}

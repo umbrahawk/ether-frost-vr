@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainTarget_CS_EF : MonoBehaviour
 {
@@ -56,6 +57,9 @@ public class MainTarget_CS_EF : MonoBehaviour
 
     [Header("TEXT ANIMATION")]
     public Animator textAnimation;
+    public Text popppingText1;
+    public Text popppingText2;
+
 
     // For targets which start inactive
     void OnEnable()
@@ -335,9 +339,70 @@ public class MainTarget_CS_EF : MonoBehaviour
 
             sparks.Play();
 
-            if (textAnimation != null)
+            int toPopText = Random.Range(0, 2);
+
+            if (textAnimation != null && toPopText == 1)
             {
-                textAnimation.Play("PoppingText1");
+                int randAnim = Random.Range(0, 2);
+                print(randAnim);
+
+                int randText1 = Random.Range(0, 6);
+                print(randText1);
+
+                if(randText1 == 1)
+                {
+                    popppingText1.text = "DANG";
+                }
+                else if (randText1 == 2)
+                {
+                    popppingText1.text = "WOW";
+                }
+                else if (randText1 == 3)
+                {
+                    popppingText1.text = "NICE";
+                }
+                else if (randText1 == 4)
+                {
+                    popppingText1.text = "AWESOME";
+                }
+                else if (randText1 == 5)
+                {
+                    popppingText1.text = "AMAZING";
+                }
+
+                int randText2 = Random.Range(0, 6);
+                print(randText2);
+
+                if (randText2 == 1)
+                {
+                    popppingText2.text = "DANG";
+                }
+                else if (randText2 == 2)
+                {
+                    popppingText2.text = "WOW";
+                }
+                else if (randText2 == 3)
+                {
+                    popppingText2.text = "NICE";
+                }
+                else if (randText2 == 4)
+                {
+                    popppingText2.text = "AWESOME";
+                }
+                else if (randText2 == 5)
+                {
+                    popppingText2.text = "AMAZING";
+                }
+
+                if (randAnim == 1)
+                {
+                    textAnimation.Play("PoppingText1");
+                }
+                else
+                {
+                    textAnimation.Play("PoppingText2");
+                }
+
             }
             
             StartCoroutine("ToggleTarget");
