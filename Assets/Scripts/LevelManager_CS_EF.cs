@@ -8,6 +8,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
     [Header("GAME STATS")]
     public GameObject player;
+    public int starsAchieved = 0;
     public bool gameActive = false;
     public int gameLevel = 0;
     public int subRound = 0;
@@ -28,6 +29,7 @@ public class LevelManager_CS_EF : MonoBehaviour
     [Header("TARGET STATS")]
     public int targetsHit = 0;
     public Text targetText;
+    public Text starsAchievedText;
 
     [Header("PLAYER STATS")]
     public bool rapidFireActive = false;
@@ -102,6 +104,8 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         targetText.text = "HIT: " + targetsHit;
 
+        starsAchievedText.text = " ";
+
         upgradeEffectPrimary.SetActive(false);
         upgradeEffectSecondary.SetActive(false);
         secondEffectPrimary.SetActive(false);
@@ -153,6 +157,11 @@ public class LevelManager_CS_EF : MonoBehaviour
         // This will increase the score and the UI
         targetsHit++;
         targetText.text = "HIT: " + targetsHit;
+
+        if (targetsHit == 30 || targetsHit == 80 || targetsHit == 150 || targetsHit == 250 || targetsHit == 400)
+        {
+            IncreaseStars();
+        }
     }
 
     public void IncreaseRound()
@@ -394,6 +403,42 @@ public class LevelManager_CS_EF : MonoBehaviour
         secondEffectPrimary.SetActive(false);
         secondEffectSecondary.SetActive(false);
     }
+
+    public void IncreaseStars()
+    {
+        if (targetsHit == 30)
+        {
+            starsAchieved = 1;
+            starsAchievedText.text = "Z";
+        }
+
+        else if (targetsHit == 80)
+        {
+            starsAchieved = 2;
+            starsAchievedText.text = "ZZ";
+        }
+
+        else if (targetsHit == 150)
+        {
+            starsAchieved = 3;
+            starsAchievedText.text = "ZZZ";
+        }
+
+        else if (targetsHit == 250)
+        {
+            starsAchieved = 4;
+            starsAchievedText.text = "ZZZZ";
+        }
+
+        else if (targetsHit == 400)
+        {
+            starsAchieved = 5;
+            starsAchievedText.text = "ZZZZZ";
+        }
+    }
+
+
+
     public void PlayRound1CrowdSound()
     {
         int playSound = Random.Range(0, 3);
