@@ -52,9 +52,14 @@ public class LevelManager_CS_EF : MonoBehaviour
     public GameObject fiveBurstCannonSecondary;
     public GameObject nineBurstCannonSecondary;
 
-    [Header("GUN STATS")]
+    [Header("GUN UPGRADE")]
     public Animator textAnimator;
     public Animator lightAnimator;
+    public GameObject effectClock;
+    public GameObject effectAntiClock;
+    public GameObject effect1;
+    public bool canSpin = false;
+    
 
     [Header("SOUND EFFECTS")]
     public AudioClip gameBackgroundMusic;
@@ -88,6 +93,10 @@ public class LevelManager_CS_EF : MonoBehaviour
 
     void Start()
     {
+        effectClock.SetActive(false);
+        effectAntiClock.SetActive(false);
+        effect1.SetActive(false);
+
         if (instance == null)
         {
             instance = this;
@@ -119,6 +128,13 @@ public class LevelManager_CS_EF : MonoBehaviour
             playFinalCheer = false;
 
             AudioSource.PlayClipAtPoint(finalCrowdCheerSFX, new Vector3(0, 0, 0));
+        }
+
+        if (canSpin == true)
+        {
+            print("SPINNING!");
+            effectClock.transform.Rotate(0, 1, 0);
+            effectAntiClock.transform.Rotate(0, -1, 0);
         }
     }
 
@@ -302,6 +318,11 @@ public class LevelManager_CS_EF : MonoBehaviour
         upgradeEffectPrimary.SetActive(true);
         upgradeEffectSecondary.SetActive(true);
 
+        //Turn on spinningVFX
+        canSpin = true;
+        effectClock.SetActive(true);
+        effectAntiClock.SetActive(true);
+        effect1.SetActive(true);
 
         print("Gun Down");
         yield return new WaitForSeconds(2f);
@@ -333,6 +354,11 @@ public class LevelManager_CS_EF : MonoBehaviour
         upgradeEffectPrimary.SetActive(true);
         upgradeEffectSecondary.SetActive(true);
 
+        //Turn on spinningVFX
+        canSpin = true;
+        effectClock.SetActive(true);
+        effectAntiClock.SetActive(true);
+        effect1.SetActive(true);
 
         print("Gun Down");
         yield return new WaitForSeconds(2f);
@@ -361,6 +387,12 @@ public class LevelManager_CS_EF : MonoBehaviour
         //Activate the 1st Particle effect
         upgradeEffectPrimary.SetActive(true);
         upgradeEffectSecondary.SetActive(true);
+        
+        //Turn on spinningVFX
+        canSpin = true;
+        effectClock.SetActive(true);
+        effectAntiClock.SetActive(true);
+        effect1.SetActive(true);
 
         print("Gun Down");
         yield return new WaitForSeconds(2f);
@@ -398,6 +430,12 @@ public class LevelManager_CS_EF : MonoBehaviour
         Player_CS_EF.instance.canBothFire = true;
 
         yield return new WaitForSeconds(2f);
+
+        //Turn on spinningVFX
+        canSpin = false;
+        effectClock.SetActive(false);
+        effectAntiClock.SetActive(false);
+        effect1.SetActive(false);
 
         //turn off 2nd effect
         secondEffectPrimary.SetActive(false);

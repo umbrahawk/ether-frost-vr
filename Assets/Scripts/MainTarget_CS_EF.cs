@@ -344,12 +344,76 @@ public class MainTarget_CS_EF : MonoBehaviour
             if (textAnimation != null && toPopText == 1)
             {
                 int randAnim = Random.Range(0, 2);
-                print(randAnim);
+                //print(randAnim);
+
+                int randColor1 = Random.Range(0, 8);
+                print(randColor1);
+                if (randColor1 == 1)
+                {
+                    popppingText1.color = new Color32(251,237,72,255);
+                }
+                else if (randColor1 == 2)
+                {
+                    popppingText1.color = new Color32(44, 50, 223, 255);
+                }
+                else if (randColor1 == 3)
+                {
+                    popppingText1.color = new Color32(227, 50, 52, 255);
+                }
+                else if (randColor1 == 4)
+                {
+                    popppingText1.color = new Color32(138, 48, 219, 255);
+                }
+                else if (randColor1 == 5)
+                {
+                    popppingText1.color = new Color32(93, 247, 93, 255);
+                }
+                else if (randColor1 == 6)
+                {
+                    popppingText1.color = new Color32(232, 83, 217, 255);
+                }
+                else if (randColor1 == 7)
+                {
+                    popppingText1.color = new Color32(227, 133, 32, 255);
+                }
+
+                int randColor2 = Random.Range(0, 8);
+                print(randColor2);
+                if (randColor2 == 1)
+                {
+                    popppingText2.color = new Color32(251, 237, 72, 255);
+                }
+                else if (randColor2 == 2)
+                {
+                    popppingText2.color = new Color32(44, 50, 223, 255);
+                }
+                else if (randColor2 == 3)
+                {
+                    popppingText2.color = new Color32(227, 50, 52, 255);
+                }
+                else if (randColor2 == 4)
+                {
+                    popppingText2.color = new Color32(138, 48, 219, 255);
+                }
+                else if (randColor2 == 5)
+                {
+                    popppingText2.color = new Color32(93, 247, 93, 255);
+                }
+                else if (randColor2 == 6)
+                {
+                    popppingText2.color = new Color32(232, 83, 217, 255);
+                }
+                else if (randColor2 == 7)
+                {
+                    popppingText2.color = new Color32(227, 133, 32, 255);
+                }
+
+                //Apply Random text for randText1
 
                 int randText1 = Random.Range(0, 6);
-                print(randText1);
+                //print(randText1);
 
-                if(randText1 == 1)
+                if (randText1 == 1)
                 {
                     popppingText1.text = "DANG";
                 }
@@ -370,9 +434,10 @@ public class MainTarget_CS_EF : MonoBehaviour
                     popppingText1.text = "AMAZING";
                 }
 
+                //Apply Random text for randText2
+
                 int randText2 = Random.Range(0, 6);
                 print(randText2);
-
                 if (randText2 == 1)
                 {
                     popppingText2.text = "DANG";
