@@ -62,10 +62,10 @@ public class Projectile_CS_EF : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (other.gameObject.GetComponent<BlockProjectile_CS_EF>())
-        {
-            Destroy(gameObject);
-        }
+        //if (other.gameObject.GetComponent<BlockProjectile_CS_EF>())
+        //{
+        //    Destroy(gameObject);
+        //}
 
         if (other.gameObject.GetComponent<CartWayPoint_CS_EF>())
         {
