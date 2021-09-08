@@ -5392,7 +5392,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toon Chick
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 95777776565643564, guid: ca9fda2f4d77c4d4f88d4ed8b939f69b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ca9fda2f4d77c4d4f88d4ed8b939f69b, type: 3}
 --- !u!1 &2899522002706336747 stripped
 GameObject:
