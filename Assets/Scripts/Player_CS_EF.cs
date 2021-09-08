@@ -120,7 +120,7 @@ public class Player_CS_EF : MonoBehaviour
             }
         }
 
-        /*
+        
         // THIS IS FOR GAMEPLAY IN UNITY - TESTING ONLY
         // Checks if the player has input the fire button and can fire
         else if (Input.GetButton("Fire1") && rightCanFire && canBothFire)
@@ -146,7 +146,7 @@ public class Player_CS_EF : MonoBehaviour
                 StartCoroutine("FireRightNineBurst");
             }
         }
-        */
+        
 
     }
 
