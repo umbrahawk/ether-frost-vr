@@ -58,7 +58,6 @@ public class MainTarget_CS_EF : MonoBehaviour
     [Header("TEXT ANIMATION")]
     public Animator textAnimation;
     public Text popppingText1;
-    public Text popppingText2;
 
 
     // For targets which start inactive
@@ -116,7 +115,7 @@ public class MainTarget_CS_EF : MonoBehaviour
     }
 
 
-        IEnumerator ToggleTarget()
+    IEnumerator ToggleTarget()
     {
         if (regularTarget)
         {
@@ -350,7 +349,7 @@ public class MainTarget_CS_EF : MonoBehaviour
                 print(randColor1);
                 if (randColor1 == 1)
                 {
-                    popppingText1.color = new Color32(251,237,72,255);
+                    popppingText1.color = new Color32(251, 237, 72, 255);
                 }
                 else if (randColor1 == 2)
                 {
@@ -377,36 +376,6 @@ public class MainTarget_CS_EF : MonoBehaviour
                     popppingText1.color = new Color32(227, 133, 32, 255);
                 }
 
-                int randColor2 = Random.Range(0, 8);
-                print(randColor2);
-                if (randColor2 == 1)
-                {
-                    popppingText2.color = new Color32(251, 237, 72, 255);
-                }
-                else if (randColor2 == 2)
-                {
-                    popppingText2.color = new Color32(44, 50, 223, 255);
-                }
-                else if (randColor2 == 3)
-                {
-                    popppingText2.color = new Color32(227, 50, 52, 255);
-                }
-                else if (randColor2 == 4)
-                {
-                    popppingText2.color = new Color32(138, 48, 219, 255);
-                }
-                else if (randColor2 == 5)
-                {
-                    popppingText2.color = new Color32(93, 247, 93, 255);
-                }
-                else if (randColor2 == 6)
-                {
-                    popppingText2.color = new Color32(232, 83, 217, 255);
-                }
-                else if (randColor2 == 7)
-                {
-                    popppingText2.color = new Color32(227, 133, 32, 255);
-                }
 
                 //Apply Random text for randText1
 
@@ -434,30 +403,6 @@ public class MainTarget_CS_EF : MonoBehaviour
                     popppingText1.text = "AMAZING";
                 }
 
-                //Apply Random text for randText2
-
-                int randText2 = Random.Range(0, 6);
-                print(randText2);
-                if (randText2 == 1)
-                {
-                    popppingText2.text = "DANG";
-                }
-                else if (randText2 == 2)
-                {
-                    popppingText2.text = "WOW";
-                }
-                else if (randText2 == 3)
-                {
-                    popppingText2.text = "NICE";
-                }
-                else if (randText2 == 4)
-                {
-                    popppingText2.text = "AWESOME";
-                }
-                else if (randText2 == 5)
-                {
-                    popppingText2.text = "AMAZING";
-                }
 
                 if (randAnim == 1)
                 {
@@ -469,11 +414,11 @@ public class MainTarget_CS_EF : MonoBehaviour
                 }
 
             }
-            
+
             StartCoroutine("ToggleTarget");
         }
 
-        
+
         if (fallingTarget)
         {
             if (other.gameObject.GetComponent<CircusFloor_EF_CS>() || other.gameObject.GetComponent<CartWayPoint_CS_EF>())
@@ -481,6 +426,6 @@ public class MainTarget_CS_EF : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        
+
     }
 }
