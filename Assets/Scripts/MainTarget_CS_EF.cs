@@ -59,6 +59,8 @@ public class MainTarget_CS_EF : MonoBehaviour
     public Animator textAnimation;
     public Text popppingText1;
 
+    [Header("OUTLINE")]
+    public Outline toggle;
 
     // For targets which start inactive
     void OnEnable()
@@ -93,6 +95,7 @@ public class MainTarget_CS_EF : MonoBehaviour
     void Start()
     {
         sparks = GetComponent<ParticleSystem>();
+        toggle = GetComponent<Outline>();
     }
 
     void Update()
@@ -112,6 +115,12 @@ public class MainTarget_CS_EF : MonoBehaviour
             finalRound = true;
             SpawnTarget();
         }
+
+        if(Player_CS_EF.instance.canBothFire == false)
+        {
+            toggle.enabled = false;
+        }
+
     }
 
 

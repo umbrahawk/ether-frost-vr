@@ -88,6 +88,8 @@ public class LevelManager_CS_EF : MonoBehaviour
     public Rigidbody[] gunBarrel;
     public Transform playerGamePoint;
     public Animator screenTransition;
+    public Text endScore;
+
 
     public static LevelManager_CS_EF instance;
 
@@ -161,10 +163,13 @@ public class LevelManager_CS_EF : MonoBehaviour
             TimerText.text = string.Format("{0:00}  :  {1:00}", minutes, seconds);
         }
         //Once timer hits 0, player can no longer shoot
-        Player_CS_EF.instance.rightCanFire = false;
+        Player_CS_EF.instance.canBothFire = false;
 
+        endScore.text = "Your Score: " + targetsHit.ToString();
+        screenTransition.Play("ScreenTransitionEnd");
+        
         // gameOverText.gameObject.SetActive(true);
-        print("Finish!");
+        print("Finished!");
     }
 
     public void TargetHit()
