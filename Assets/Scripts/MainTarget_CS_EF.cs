@@ -66,7 +66,7 @@ public class MainTarget_CS_EF : MonoBehaviour
     void OnEnable()
     {
         toggle = GetComponent<Outline>();
-
+        toggle.enabled = true;
         if (movingTaget == true)
         {
             StartCoroutine("MoveTarget");
@@ -98,6 +98,7 @@ public class MainTarget_CS_EF : MonoBehaviour
     {
         sparks = GetComponent<ParticleSystem>();
         toggle = GetComponent<Outline>();
+        toggle.enabled = true;
     }
 
     void Update()
