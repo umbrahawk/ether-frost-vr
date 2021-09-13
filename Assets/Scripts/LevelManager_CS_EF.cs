@@ -89,6 +89,7 @@ public class LevelManager_CS_EF : MonoBehaviour
     public Transform playerGamePoint;
     public Animator screenTransition;
     public Text endScore;
+    public bool gameEnded = false;
 
 
     public static LevelManager_CS_EF instance;
@@ -164,6 +165,8 @@ public class LevelManager_CS_EF : MonoBehaviour
         }
         //Once timer hits 0, player can no longer shoot
         Player_CS_EF.instance.canBothFire = false;
+        gameEnded = true;
+
 
         endScore.text = "Your Score: " + targetsHit.ToString();
         screenTransition.Play("ScreenTransitionEnd");

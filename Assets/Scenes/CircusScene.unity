@@ -3805,7 +3805,7 @@ MonoBehaviour:
   roundTwoTransition: 95
   roundThreeTransition: 69
   finalRoundTransition: 37
-  startingTime: 10
+  startingTime: 120
   currentTime: 0
   increaseAmount: 5
   TimerText: {fileID: 7753083794549288319}
@@ -3860,6 +3860,7 @@ MonoBehaviour:
   playerGamePoint: {fileID: 1804160415}
   screenTransition: {fileID: 420384813}
   endScore: {fileID: 181015218}
+  gameEnded: 0
 --- !u!4 &75735238
 Transform:
   m_ObjectHideFlags: 0

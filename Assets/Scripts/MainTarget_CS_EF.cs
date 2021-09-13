@@ -60,11 +60,13 @@ public class MainTarget_CS_EF : MonoBehaviour
     public Text popppingText1;
 
     [Header("OUTLINE")]
-    public Outline toggle;
+    Outline toggle;
 
     // For targets which start inactive
     void OnEnable()
     {
+        toggle = GetComponent<Outline>();
+
         if (movingTaget == true)
         {
             StartCoroutine("MoveTarget");
@@ -116,8 +118,9 @@ public class MainTarget_CS_EF : MonoBehaviour
             SpawnTarget();
         }
 
-        if(Player_CS_EF.instance.canBothFire == false)
+        if(LevelManager_CS_EF.instance.gameEnded == true && toggle != null)
         {
+            print("Yay");
             toggle.enabled = false;
         }
 
