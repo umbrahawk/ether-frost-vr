@@ -22,7 +22,7 @@ public class BlockProjectile_CS_EF : MonoBehaviour
         if(other.gameObject.GetComponent<Projectile_CS_EF>())
         {
             print("DELETED!");
-            Destroy(gameObject);
+            Destroy(other.gameObject);
         }
     }
 }
