@@ -77,10 +77,28 @@ public class LevelManager_CS_EF : MonoBehaviour
     public AudioClip crowdCheering9SFX;
     public bool finalCountdown = false;
     public AudioClip crowdCountingDownSFX;
+    public float crowdVolume;
 
     [Header("ANNOUNCER SFX")]
     public AudioClip announcerStartSFX;
     public AudioClip announcerCongratulationsSFX;
+    public AudioClip announcerNiceJobSFX;
+    public AudioClip announcerPerfect1SFX;
+    public AudioClip announcerPerfect2SFX;
+    public AudioClip announcerTerrific1SFX;
+    public AudioClip announcerTerrific2SFX;
+    public AudioClip announcerAmazing1SFX;
+    public AudioClip announcerAmazing2SFX;
+    public AudioClip announcerUnbelievable1SFX;
+    public AudioClip announcerUnbelievable2SFX;
+    public AudioClip announcerWayToGo1SFX;
+    public AudioClip announcerWayToGo2SFX;
+    public AudioClip announcerWow1SFX;
+    public AudioClip announcerWow2SFX;
+    public AudioClip announcerYouDidIt1SFX;
+    public AudioClip announcerYouDidIt2SFX;
+    public float announcerVolume;
+
 
     [Header("VISUAL EFFECTS")]
     public GameObject upgradeEffectPrimary;
@@ -132,8 +150,8 @@ public class LevelManager_CS_EF : MonoBehaviour
         {
             playFinalCheer = false;
 
-            AudioSource.PlayClipAtPoint(finalCrowdCheerSFX, new Vector3(0, 0, 0), 50);
-            AudioSource.PlayClipAtPoint(announcerCongratulationsSFX, new Vector3(0, 0, 0), 80);
+            AudioSource.PlayClipAtPoint(finalCrowdCheerSFX, player.transform.position, crowdVolume);
+            AudioSource.PlayClipAtPoint(announcerCongratulationsSFX, player.transform.position, announcerVolume);
         }
 
         if (canSpin == true)
@@ -147,7 +165,7 @@ public class LevelManager_CS_EF : MonoBehaviour
         {
             finalCountdown = true;
 
-            AudioSource.PlayClipAtPoint(crowdCountingDownSFX, new Vector3(0, 0, 0), 50);
+            AudioSource.PlayClipAtPoint(crowdCountingDownSFX, player.transform.position, crowdVolume);
         }
     }
 
@@ -306,7 +324,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        AudioSource.PlayClipAtPoint(announcerStartSFX, new Vector3(0, 0, 0));
+        AudioSource.PlayClipAtPoint(announcerStartSFX, player.transform.position, announcerVolume);
 
         gameActive = true;
 
@@ -314,7 +332,7 @@ public class LevelManager_CS_EF : MonoBehaviour
 
         IncreaseRound();
 
-        AudioSource.PlayClipAtPoint(gameBackgroundMusic, new Vector3(0, 0, 0));
+        AudioSource.PlayClipAtPoint(gameBackgroundMusic, player.transform.position, 0.3f);
 
         StartCoroutine("UpdateTimer");
     }
@@ -432,7 +450,7 @@ public class LevelManager_CS_EF : MonoBehaviour
         upgradeEffectSecondary.SetActive(false);
 
 
-        AudioSource.PlayClipAtPoint(cannonUpgradeSFX, new Vector3(0, 0, 0));
+        AudioSource.PlayClipAtPoint(cannonUpgradeSFX, player.transform.position, 0.5f);
 
         //turn on 2nd effect
         secondEffectPrimary.SetActive(true);
@@ -465,15 +483,30 @@ public class LevelManager_CS_EF : MonoBehaviour
         switch (playSound)
         {
             case 0:
-                AudioSource.PlayClipAtPoint(crowdCheering1SFX, new Vector3(0, 0, 0));
+                AudioSource.PlayClipAtPoint(crowdCheering1SFX, player.transform.position, crowdVolume);
                 break;
 
             case 1:
-                AudioSource.PlayClipAtPoint(crowdCheering2SFX, new Vector3(0, 0, 0));
+                AudioSource.PlayClipAtPoint(crowdCheering2SFX, player.transform.position, crowdVolume);
                 break;
 
             case 2:
-                AudioSource.PlayClipAtPoint(crowdCheering3SFX, new Vector3(0, 0, 0));
+                AudioSource.PlayClipAtPoint(crowdCheering3SFX, player.transform.position, crowdVolume);
+                break;
+
+            default:
+                break;
+        }
+
+        int announcerSound = Random.Range(0, 2);
+        switch (announcerSound)
+        {
+            case 0:
+                AudioSource.PlayClipAtPoint(announcerNiceJobSFX, player.transform.position, announcerVolume);
+                break;
+
+            case 1:
+                AudioSource.PlayClipAtPoint(announcerYouDidIt2SFX, player.transform.position, announcerVolume);
                 break;
 
             default:
@@ -483,20 +516,38 @@ public class LevelManager_CS_EF : MonoBehaviour
     public void PlayRound2CrowdSound()
     {
         int playSound = Random.Range(0, 3);
-        print(playSound);
 
         switch (playSound)
         {
             case 0:
-                AudioSource.PlayClipAtPoint(crowdCheering4SFX, new Vector3(0, 0, 0));
+                AudioSource.PlayClipAtPoint(crowdCheering4SFX, player.transform.position, crowdVolume);
                 break;
 
             case 1:
-                AudioSource.PlayClipAtPoint(crowdCheering5SFX, new Vector3(0, 0, 0));
+                AudioSource.PlayClipAtPoint(crowdCheering5SFX, player.transform.position, crowdVolume);
                 break;
 
             case 2:
-                AudioSource.PlayClipAtPoint(crowdCheering6SFX, new Vector3(0, 0, 0));
+                AudioSource.PlayClipAtPoint(crowdCheering6SFX, player.transform.position, crowdVolume);
+                break;
+
+            default:
+                break;
+        }
+
+        int announcerSound = Random.Range(0, 3);
+        switch (announcerSound)
+        {
+            case 0:
+                AudioSource.PlayClipAtPoint(announcerWayToGo1SFX, player.transform.position, announcerVolume);
+                break;
+
+            case 1:
+                AudioSource.PlayClipAtPoint(announcerWayToGo2SFX, player.transform.position, announcerVolume);
+                break;
+
+            case 2:
+                AudioSource.PlayClipAtPoint(announcerYouDidIt1SFX, player.transform.position, announcerVolume);
                 break;
 
             default:
@@ -512,15 +563,38 @@ public class LevelManager_CS_EF : MonoBehaviour
         switch (playSound)
         {
             case 0:
-                AudioSource.PlayClipAtPoint(crowdCheering7SFX, new Vector3(0, 0, 0));
+                AudioSource.PlayClipAtPoint(crowdCheering7SFX, player.transform.position, crowdVolume);
                 break;
 
             case 1:
-                AudioSource.PlayClipAtPoint(crowdCheering8SFX, new Vector3(0, 0, 0));
+                AudioSource.PlayClipAtPoint(crowdCheering8SFX, player.transform.position, crowdVolume);
                 break;
 
             case 2:
-                AudioSource.PlayClipAtPoint(crowdCheering9SFX, new Vector3(0, 0, 0));
+                AudioSource.PlayClipAtPoint(crowdCheering9SFX, player.transform.position, crowdVolume);
+                break;
+
+            default:
+                break;
+        }
+
+        int announcerSound = Random.Range(0, 4);
+        switch (announcerSound)
+        {
+            case 0:
+                AudioSource.PlayClipAtPoint(announcerUnbelievable1SFX, player.transform.position, announcerVolume);
+                break;
+
+            case 1:
+                AudioSource.PlayClipAtPoint(announcerUnbelievable2SFX, player.transform.position, announcerVolume);
+                break;
+
+            case 2:
+                AudioSource.PlayClipAtPoint(announcerTerrific1SFX, player.transform.position, announcerVolume);
+                break;
+
+            case 3:
+                AudioSource.PlayClipAtPoint(announcerTerrific2SFX, player.transform.position, announcerVolume);
                 break;
 
             default:

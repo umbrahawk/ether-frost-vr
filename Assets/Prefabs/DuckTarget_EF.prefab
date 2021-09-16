@@ -433,6 +433,7 @@ MonoBehaviour:
   lifetime: 3
   speed: 10
   target: {fileID: 6369131675755890382}
+  player: {fileID: 4809944811233797240, guid: c8e5341c837a8834c9e1834ad1d1db78, type: 3}
   regularTarget: 0
   duckTarget: 1
   continuousTarget: 0

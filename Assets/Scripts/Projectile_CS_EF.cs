@@ -22,7 +22,7 @@ public class Projectile_CS_EF : MonoBehaviour
 
     private void Update()
     {
-        // transform.localScale += new Vector3 (randomInt, randomInt, randomInt) * Time.deltaTime;
+        transform.localScale += new Vector3 (randomInt, randomInt, randomInt) * Time.deltaTime;
     }
 
     void MoveForward()

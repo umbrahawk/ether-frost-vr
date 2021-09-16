@@ -16,6 +16,7 @@ public class MainTarget_CS_EF : MonoBehaviour
     public float lifetime;
     public int speed = 1;
     public GameObject target;
+    public GameObject player;
 
     [Header("TARGET TYPES")]
     public bool regularTarget = false;
@@ -215,7 +216,6 @@ public class MainTarget_CS_EF : MonoBehaviour
     // IEnumerator to return the target back to their regular position
     IEnumerator ReactivateTarget()
     {
-        print("Inside Coroutine");
         // How many times the loop will run below
         float t = 0;
 
@@ -272,27 +272,27 @@ public class MainTarget_CS_EF : MonoBehaviour
         switch (playSound)
         {
             case 0:
-                AudioSource.PlayClipAtPoint(hitSound1VFX, new Vector3(0, 0, 0));
+                AudioSource.PlayClipAtPoint(hitSound1VFX, player.transform.position, 1f);
                 break;
-
+                
             case 1:
-                AudioSource.PlayClipAtPoint(hitSound2VFX, new Vector3(0, 0, 0));
+                AudioSource.PlayClipAtPoint(hitSound2VFX, player.transform.position, 1f);
                 break;
 
             case 2:
-                AudioSource.PlayClipAtPoint(hitSound3VFX, new Vector3(0, 0, 0));
+                AudioSource.PlayClipAtPoint(hitSound3VFX, player.transform.position, 1f);
                 break;
 
             case 3:
-                AudioSource.PlayClipAtPoint(hitSound4VFX, new Vector3(0, 0, 0));
+                AudioSource.PlayClipAtPoint(hitSound4VFX, player.transform.position, 1f);
                 break;
 
             case 4:
-                AudioSource.PlayClipAtPoint(hitSound5VFX, new Vector3(0, 0, 0));
+                AudioSource.PlayClipAtPoint(hitSound5VFX, player.transform.position, 1f);
                 break;
 
             case 5:
-                AudioSource.PlayClipAtPoint(hitSound6VFX, new Vector3(0, 0, 0));
+                AudioSource.PlayClipAtPoint(hitSound6VFX, player.transform.position, 1f);
                 break;
 
             default:
@@ -307,23 +307,23 @@ public class MainTarget_CS_EF : MonoBehaviour
         switch (playSound)
         {
             case 0:
-                AudioSource.PlayClipAtPoint(duckSound1VFX, new Vector3(0, 0, 0));
+                AudioSource.PlayClipAtPoint(duckSound1VFX, player.transform.position, 1f);
                 break;
 
             case 1:
-                AudioSource.PlayClipAtPoint(duckSound2VFX, new Vector3(0, 0, 0));
+                AudioSource.PlayClipAtPoint(duckSound2VFX, player.transform.position, 1f);
                 break;
 
             case 2:
-                AudioSource.PlayClipAtPoint(duckSound3VFX, new Vector3(0, 0, 0));
+                AudioSource.PlayClipAtPoint(duckSound3VFX, player.transform.position, 1f);
                 break;
 
             case 3:
-                AudioSource.PlayClipAtPoint(duckSound4VFX, new Vector3(0, 0, 0));
+                AudioSource.PlayClipAtPoint(duckSound4VFX, player.transform.position, 1f);
                 break;
 
             case 4:
-                AudioSource.PlayClipAtPoint(duckSound5VFX, new Vector3(0, 0, 0));
+                AudioSource.PlayClipAtPoint(duckSound5VFX, player.transform.position, 1f);
                 break;
 
             default:

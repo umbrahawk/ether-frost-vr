@@ -114,6 +114,7 @@ MonoBehaviour:
   lifetime: 3
   speed: 10
   target: {fileID: 6369131675755890382}
+  player: {fileID: 4809944811233797240, guid: c8e5341c837a8834c9e1834ad1d1db78, type: 3}
   regularTarget: 1
   duckTarget: 0
   continuousTarget: 0
@@ -136,6 +137,8 @@ MonoBehaviour:
   duckSound3VFX: {fileID: 0}
   duckSound4VFX: {fileID: 0}
   duckSound5VFX: {fileID: 0}
+  textAnimation: {fileID: 0}
+  popppingText1: {fileID: 0}
 --- !u!54 &954544581164987481
 Rigidbody:
   m_ObjectHideFlags: 0
