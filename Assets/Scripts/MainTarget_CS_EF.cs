@@ -119,9 +119,8 @@ public class MainTarget_CS_EF : MonoBehaviour
             SpawnTarget();
         }
 
-        if(LevelManager_CS_EF.instance.gameEnded == true && toggle != null)
+        if (LevelManager_CS_EF.instance.gameEnded == true && toggle != null)
         {
-            print("Yay");
             toggle.enabled = false;
         }
 

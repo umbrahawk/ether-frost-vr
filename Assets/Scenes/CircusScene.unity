@@ -3794,7 +3794,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 420384811}
-  starsAchieved: 0
   gameActive: 0
   gameLevel: 0
   subRound: 0
@@ -3811,7 +3810,6 @@ MonoBehaviour:
   TimerText: {fileID: 7753083794549288319}
   targetsHit: 0
   targetText: {fileID: 1449345977}
-  starsAchievedText: {fileID: 1473162594}
   rapidFireActive: 0
   attackSpeed: 0
   fireRate: 0.2
@@ -3846,6 +3844,12 @@ MonoBehaviour:
   crowdCheering7SFX: {fileID: 8300000, guid: 06c845126dbfc634a9227c0d2d90cfdd, type: 3}
   crowdCheering8SFX: {fileID: 8300000, guid: 1ebf8ade2b6b8ec4eba713ec7227543e, type: 3}
   crowdCheering9SFX: {fileID: 8300000, guid: ba0c920b01f71dc47b77dcdd5725c978, type: 3}
+  finalCountdown: 0
+  crowdCountingDownSFX: {fileID: 8300000, guid: 4f21094208717ab408f6d08a9ca196b7,
+    type: 3}
+  announcerStartSFX: {fileID: 8300000, guid: 65ccd5c642994b547a925c57cb3dfd66, type: 3}
+  announcerCongratulationsSFX: {fileID: 8300000, guid: 436134b63d6d4564abf5ec52c7123201,
+    type: 3}
   upgradeEffectPrimary: {fileID: 1867636318}
   upgradeEffectSecondary: {fileID: 897931186}
   secondEffectPrimary: {fileID: 12320396}
@@ -7562,7 +7566,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &181015217
 RectTransform:
   m_ObjectHideFlags: 0
@@ -44517,7 +44521,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1303157857
 RectTransform:
   m_ObjectHideFlags: 0
@@ -46013,7 +46017,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1876ca4c606d11f4499881d682be7ae3, type: 2}
+  - {fileID: 2100000, guid: 3b75e2ced9e5f2b40812b025533bbffa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -47191,7 +47195,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1876ca4c606d11f4499881d682be7ae3, type: 2}
+  - {fileID: 2100000, guid: 3b75e2ced9e5f2b40812b025533bbffa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -49640,101 +49644,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1468573663}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1473162591
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1473162592}
-  - component: {fileID: 1473162595}
-  - component: {fileID: 1473162594}
-  - component: {fileID: 1473162593}
-  m_Layer: 5
-  m_Name: StarsAchievedText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1473162592
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1473162591}
-  m_LocalRotation: {x: -0, y: 0.12435339, z: -0, w: 0.992238}
-  m_LocalPosition: {x: 0, y: 0, z: 0.14219998}
-  m_LocalScale: {x: 0.0026132367, y: 0.002613237, z: 0.0026132367}
-  m_Children: []
-  m_Father: {fileID: 1956905904}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 14.287001, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.107409835, y: -0.01923}
-  m_SizeDelta: {x: 74, y: 10.1}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1473162593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1473162591}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: 1}
-  m_UseGraphicAlpha: 1
---- !u!114 &1473162594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1473162591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.33889318, g: 1, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: c6fd46ec21d359d4d8d36d0c08b4e5a2, type: 3}
-    m_FontSize: 1
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 300
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: ZZZZZ
---- !u!222 &1473162595
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1473162591}
-  m_CullTransparentMesh: 0
 --- !u!1 &1473381685
 GameObject:
   m_ObjectHideFlags: 0
@@ -49752,7 +49661,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1473381686
 RectTransform:
   m_ObjectHideFlags: 0
@@ -67956,7 +67865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2097720344
 Transform:
   m_ObjectHideFlags: 0
