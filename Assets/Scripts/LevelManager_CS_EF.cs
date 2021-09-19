@@ -191,6 +191,7 @@ public class LevelManager_CS_EF : MonoBehaviour
             //Making a String Format.
             TimerText.text = string.Format("{0:00}  :  {1:00}", minutes, seconds);
         }
+
         //Once timer hits 0, player can no longer shoot
         Player_CS_EF.instance.canBothFire = false;
         gameEnded = true;

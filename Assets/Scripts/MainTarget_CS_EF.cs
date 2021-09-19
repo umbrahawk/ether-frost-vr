@@ -80,7 +80,7 @@ public class MainTarget_CS_EF : MonoBehaviour
 
         else if (!continuousTarget)
         {
-            lifetime = 7;
+            lifetime = 10;
         }
 
         if (!fallingTarget)
